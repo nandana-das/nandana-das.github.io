@@ -9,22 +9,25 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <div class="container">
-      <div class="logo">Nandana</div>
+  <nav class="simple-nav">
+    <div class="nav-content">
+      <span class="nav-logo">Nandana Narayan Das</span>
       <button class="menu-btn" id="menu-btn" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <ul id="nav-links">
-        <li><a href="#about" class="active">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <!-- Dropdown menu must be here! -->
+      <div id="dropdown-menu" class="dropdown-menu">
+        <ul>
+          <li><a href="#about" class="dropdown-link">About</a></li>
+          <li><a href="#projects" class="dropdown-link">Projects</a></li>
+          <li><a href="#experience" class="dropdown-link">Experience</a></li>
+          <li><a href="#certifications" class="dropdown-link">Certifications</a></li>
+          <li><a href="#education" class="dropdown-link">Education</a></li>
+          <li><a href="#contact" class="dropdown-link">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -89,7 +92,7 @@
             class="pub-link" 
             target="_blank"
           >
-            https://ieeexplore.ieee.org/document/11042469
+            View on IEEE
           </a>
         </div>
       </div>
@@ -284,48 +287,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    // Hamburger menu toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const navLinks = document.getElementById('nav-links');
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      menuBtn.classList.toggle('open');
-    });
-
-    // SPA Section navigation logic
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('#nav-links a');
-
-    function showSection(id) {
-      sections.forEach(sec => {
-        if (sec.id === id) {
-          sec.classList.remove('hidden-section');
-          sec.classList.add('visible-section');
-        } else {
-          sec.classList.remove('visible-section');
-          sec.classList.add('hidden-section');
-        }
-      });
-    }
-
-    navItems.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').replace('#', '');
-        showSection(targetId);
-        navLinks.classList.remove('open');
-        menuBtn.classList.remove('open');
-        // Update active link styling
-        navItems.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      });
-    });
-
-    // Show only About on load
-    window.addEventListener('DOMContentLoaded', () => {
-      showSection('about');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
