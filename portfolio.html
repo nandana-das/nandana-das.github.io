@@ -38,6 +38,39 @@
       font-weight: 700;
       letter-spacing: 0.5px;
     }
+    /* --- Animation Styles --- */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animated {
+      opacity: 0;
+      transition: opacity 0.4s, transform 0.4s;
+      will-change: opacity, transform;
+    }
+    .animated.visible {
+      opacity: 1;
+      animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) forwards;
+    }
+    /* SPA Section Transitions */
+    .hidden-section {
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s;
+    }
+    .visible-section {
+      display: block !important;
+      opacity: 1 !important;
+      pointer-events: auto;
+      animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) forwards;
+    }
     /* Navigation */
     nav {
       background: var(--bg-light);
@@ -633,17 +666,17 @@
         <span></span>
       </button>
       <ul id="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about" class="active">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <section id="hero">
+  <section id="hero" class="visible-section">
     <div class="container">
       <div class="hero-content">
         <h1>Nandana Narayan Das</h1>
@@ -655,7 +688,7 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" class="hidden-section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <p class="section-subtitle">Driven by curiosity and passion for artificial intelligence, I specialize in creating intelligent solutions that bridge complex algorithms and real-world applications.</p>
@@ -669,7 +702,7 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="hidden-section">
     <div class="container">
       <h2 class="section-title">Featured Projects</h2>
       <p class="section-subtitle">Showcasing innovative AI/ML solutions that demonstrate my expertise in developing intelligent systems for real-world applications.</p>
@@ -690,12 +723,7 @@
           <div class="project-tags"><span>NLP</span><span>Speech Recognition</span><span>NLTK</span></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="publications" style="padding: 0;">
-    <div class="container">
-      <div class="publications-row">
+      <div class="publications-row" style="margin-top:3rem;">
         <div class="publication-card">
           <h2 class="section-title" style="margin-bottom: 0.5rem;">Publications</h2>
           <div class="pub-title">
@@ -716,9 +744,9 @@
     </div>
   </section>
 
-  <section id="experience">
+  <section id="experience" class="hidden-section">
     <div class="container">
-      <h2 class="section-title">Work Experience</h2>
+      <h2 class="section-title">Experience & Skills</h2>
       <div class="grid">
         <div class="exp-card">
           <h4>Backend Servicing Intern</h4>
@@ -730,12 +758,7 @@
           </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="positions">
-    <div class="container">
-      <h2 class="section-title">Positions Held</h2>
+      <h3 style="margin-top:2.5rem;">Positions Held</h3>
       <div class="grid">
         <div class="exp-card">
           <h4>Mentor</h4>
@@ -753,12 +776,7 @@
           <p>Editorial responsibilities including content creation, review, and publication management.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title">Technical Skills</h2>
+      <h3 style="margin-top:2.5rem;">Technical Skills</h3>
       <div class="about-content">
         <div class="card">
           <p><strong>Programming Languages</strong></p>
@@ -770,43 +788,46 @@
     </div>
   </section>
 
-  <section id="certifications">
+  <section id="certifications" class="hidden-section">
     <div class="container">
       <h2 class="section-title">Certifications</h2>
       <div class="grid">
         <div class="cert-card">
           <strong>Artificial Intelligence Foundation Digital Credential</strong>
           <div class="sub">IBM</div>
+          <a href="https://www.credly.com/badges/8cc05afc-9b8b-46b7-a26f-04c243d404da/linked_in?t=sqsi62" target="_blank" style="display:inline-block;margin-top:0.5rem;color:#fff;background:#0077b5;padding:0.4rem 1rem;border-radius:2rem;text-decoration:none;">View Certificate</a>
         </div>
         <div class="cert-card">
           <strong>Career Essentials in Generative AI</strong>
           <div class="sub">Microsoft & LinkedIn (LinkedIn Learning)</div>
-        </div>
-        <div class="cert-card">
-          <strong>30 Hours Add-on Course on Generative AI</strong>
-          <div class="sub">Self-Paced</div>
+          <a href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2" target="_blank" style="display:inline-block;margin-top:0.5rem;color:#fff;background:#0077b5;padding:0.4rem 1rem;border-radius:2rem;text-decoration:none;">View Certificate</a>
         </div>
         <div class="cert-card">
           <strong>Career Essentials in GitHub Professional Certificate</strong>
           <div class="sub">LinkedIn Learning</div>
+          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d" target="_blank" style="display:inline-block;margin-top:0.5rem;color:#fff;background:#0077b5;padding:0.4rem 1rem;border-radius:2rem;text-decoration:none;">View Certificate</a>
         </div>
         <div class="cert-card">
           <strong>Data Science Professional Certificate</strong>
           <div class="sub">KNIME (LinkedIn Learning)</div>
-        </div>
-        <div class="cert-card">
-          <strong>Artificial Intelligence Foundation Certification</strong>
-          <div class="sub">Infosys Springboard</div>
+          <a href="https://www.linkedin.com/learning/certificates/589d0ec89ecbe07a2e8961cb48dc0790156acc70fe9a0132cfacab3cb3776abb" target="_blank" style="display:inline-block;margin-top:0.5rem;color:#fff;background:#0077b5;padding:0.4rem 1rem;border-radius:2rem;text-decoration:none;">View Certificate</a>
         </div>
         <div class="cert-card">
           <strong>Java Object-Oriented Programming</strong>
           <div class="sub">LinkedIn Learning</div>
+          <a href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177?trk=share_certificate" target="_blank" style="display:inline-block;margin-top:0.5rem;color:#fff;background:#0077b5;padding:0.4rem 1rem;border-radius:2rem;text-decoration:none;">View Certificate</a>
         </div>
+        <div class="cert-card">
+          <strong>Artificial Intelligence Foundation Certification</strong>
+          <div class="sub">Infosys Springboard</div>
+          <img src="C:\Users\user\OneDrive\Pictures\Screenshots\AI foundation certification infosys.png" alt="Infosys AI Foundation Certificate" style="width:100%;max-width:350px;margin:1rem 0;border-radius:10px;">
+        </div>
+        <!-- Add more cert-card blocks for other certificates/photos as needed -->
       </div>
     </div>
   </section>
 
-  <section id="education">
+  <section id="education" class="hidden-section">
     <div class="container">
       <h2 class="section-title">Education</h2>
       <div class="grid">
@@ -840,7 +861,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="hidden-section">
     <div class="container">
       <div class="contact-content">
         <h2 class="section-title" style="color: white;">Let's Connect</h2>
@@ -919,12 +940,39 @@
       navLinks.classList.toggle('open');
       menuBtn.classList.toggle('open');
     });
-    // Optional: Close menu when a link is clicked (for better UX)
-    document.querySelectorAll('#nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
+
+    // SPA Section navigation logic
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('#nav-links a');
+
+    function showSection(id) {
+      sections.forEach(sec => {
+        if (sec.id === id) {
+          sec.classList.remove('hidden-section');
+          sec.classList.add('visible-section');
+        } else {
+          sec.classList.remove('visible-section');
+          sec.classList.add('hidden-section');
+        }
+      });
+    }
+
+    navItems.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').replace('#', '');
+        showSection(targetId);
         navLinks.classList.remove('open');
         menuBtn.classList.remove('open');
+        // Update active link styling
+        navItems.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
       });
+    });
+
+    // Show only About on load
+    window.addEventListener('DOMContentLoaded', () => {
+      showSection('about');
     });
   </script>
 </body>
