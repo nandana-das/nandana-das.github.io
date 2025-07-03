@@ -78,7 +78,7 @@ h1, h2, h3, .logo {
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  position: relative; /* Make nav-content the positioning context */
+  position: relative;
 }
 .nav-logo {
   font-family: 'Inter', Arial, sans-serif;
@@ -122,8 +122,8 @@ h1, h2, h3, .logo {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* Place just below the nav-content */
-  right: 0;  /* Align to the right edge of nav-content */
+  top: 100%;
+  right: 0;
   background: #fff8f1;
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px rgba(217, 168, 131, 0.13);
@@ -518,19 +518,19 @@ p.section-subtitle {
   border-color: var(--accent);
 }
 
-/* Certificate Button Gradient - OVERRIDE ALL OLD BUTTON STYLES */
+/* Certificate Button Gradient - Optimized */
 .cert-card a,
 .cert-card a:visited,
 .cert-card a:active,
 .cert-card a:focus {
-  background: linear-gradient(90deg, #f7e3d2 60%, #ffe7d1 100%) !important;
-  color: var(--mocha-latte) !important;
+  background: linear-gradient(90deg, #f7e3d2 60%, #ffe7d1 100%);
+  color: var(--mocha-latte);
   border-radius: 2rem;
   font-weight: 600;
   border: 1px solid var(--toasty);
   box-shadow: 0 2px 8px rgba(217, 168, 131, 0.08);
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
-  text-decoration: none !important;
+  text-decoration: none;
   display: inline-block;
   padding: 0.6rem 1.5rem;
   font-size: 1.08rem;
@@ -539,12 +539,11 @@ p.section-subtitle {
   outline: none;
   border: 2px solid transparent;
 }
-
 .cert-card a:hover,
-.cert-card a:active:hover,
-.cert-card a:focus:hover {
-  background: linear-gradient(90deg, var(--toasty) 60%, var(--mocha-latte) 100%) !important;
-  color: #fff !important;
+.cert-card a:focus,
+.cert-card a:active {
+  background: linear-gradient(90deg, var(--toasty) 60%, var(--mocha-latte) 100%);
+  color: #fff;
   border: 2px solid var(--expresso-foam);
   box-shadow: 0 4px 18px rgba(217, 168, 131, 0.18);
   transform: scale(1.07);
