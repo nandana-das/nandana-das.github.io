@@ -170,7 +170,22 @@ h1, h2, h3, .logo {
 }
 @media (max-width: 600px) {
   .nav-content { padding: 0 1rem; }
-  .dropdown-menu { right: 1rem; min-width: 150px; padding: 1rem 0.5rem; }
+  .dropdown-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 1rem !important;
+    left: auto !important;
+    z-index: 2000 !important;
+    background: #fff8f1 !important;
+    min-width: 150px !important;
+    padding: 1rem 0.5rem !important;
+    border-radius: 1.5rem !important;
+    box-shadow: 0 8px 32px rgba(217, 168, 131, 0.13) !important;
+  }
+  .dropdown-menu.open {
+    display: block !important;
+  }
   .dropdown-link { font-size: 1rem; padding: 0.6rem 1rem; }
 }
 @media (max-width: 900px) {
