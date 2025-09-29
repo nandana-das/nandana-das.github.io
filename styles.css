@@ -263,6 +263,7 @@ h1, h2, h3, .logo {
     min-width: 200px !important;
     z-index: 1200 !important;
     margin-top: 0.5rem !important;
+    min-height: 200px !important;
   }
   .dropdown-menu.open {
     display: block !important;
@@ -271,9 +272,13 @@ h1, h2, h3, .logo {
     list-style: none !important;
     margin: 0 !important;
     padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
   }
   .dropdown-menu li {
     margin: 0.7rem 0 !important;
+    display: block !important;
+    width: 100% !important;
   }
   .dropdown-link {
     display: block !important;
@@ -293,6 +298,11 @@ h1, h2, h3, .logo {
     margin-top: 0.5rem !important;
     width: 100% !important;
     text-align: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+    min-height: 40px !important;
+    line-height: 1.2 !important;
   }
   .dropdown-link:hover,
   .dropdown-link.active {
