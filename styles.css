@@ -982,13 +982,16 @@ footer {
     box-sizing: border-box !important;
   }
   .cert-card strong {
-    font-size: 1.1rem !important;
+    font-size: 1.3rem !important;
     line-height: 1.4 !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     hyphens: auto !important;
     display: block !important;
     width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
   }
   .cert-card .sub {
     font-size: 1rem !important;
@@ -1003,6 +1006,16 @@ footer {
     text-align: center !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+  
+  /* Force grid to not constrain text */
+  .grid {
+    max-width: 100% !important;
+    overflow-x: visible !important;
+  }
+  .grid > * {
+    min-width: 0 !important;
+    max-width: none !important;
   }
   .footer-links {
     gap: 1rem;
