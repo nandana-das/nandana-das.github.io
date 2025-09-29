@@ -871,15 +871,36 @@ footer {
   .exp-card,
   .edu-card,
   .cert-card {
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
   }
   .project-card h3,
   .exp-card h4,
   .edu-card h4,
   .cert-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .cert-card strong {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .cert-card .sub {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+  .cert-card a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.8rem;
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
   }
   .skills-list {
     gap: 0.4rem;
