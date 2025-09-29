@@ -30,6 +30,15 @@ body {
   overflow-x: hidden;
 }
 
+/* Ensure all text is visible */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent);
+}
+
+p, span, div {
+  color: var(--text-dark);
+}
+
 /* Loading animation */
 @keyframes shimmer {
   0% {
@@ -298,8 +307,8 @@ h1, h2, h3, .logo {
 .hero-content h1 { 
   font-size: 3rem; 
   margin-bottom: 0.5rem;
-  color: #fff; /* Fallback color */
-  background: linear-gradient(45deg, #fff, var(--accent), #fff, var(--accent), #fff);
+  color: var(--accent); /* Visible fallback color */
+  background: linear-gradient(45deg, var(--accent), #fff, var(--accent), #fff, var(--accent));
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -349,6 +358,7 @@ h1, h2, h3, .logo {
   font-size: 1.2rem; 
   margin-bottom: 2rem; 
   opacity: 0.9; 
+  color: var(--accent);
 }
 .hero-tagline { 
   background: rgba(255,255,255,0.1); 
@@ -357,6 +367,7 @@ h1, h2, h3, .logo {
   border-radius: 50px; 
   display: inline-block; 
   margin-top: 1rem;
+  color: var(--accent);
 }
 section { 
   padding: 4rem 2rem; 
@@ -701,6 +712,14 @@ p.section-subtitle {
   background: var(--gradient-bg); 
   color: white; 
   position: relative;
+}
+
+#contact h2,
+#contact h3,
+#contact p,
+#contact span,
+#contact div {
+  color: white !important;
 }
 #contact::before {
   content: '';
