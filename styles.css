@@ -467,17 +467,17 @@ p.section-subtitle {
   margin-bottom: 1rem;
 }
 .skills-list div {
-  background: linear-gradient(90deg, #f7e3d2 60%, #ffe7d1 100%);
-  color: var(--mocha-latte);
+  background: var(--bg-gray);
+  color: var(--text-dark);
   padding: .55rem 1.2rem;
-  border-radius: 2rem;
+  border-radius: var(--border-radius);
   font-weight: 600;
   font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(217, 168, 131, 0.08);
-  border: 1px solid var(--toasty);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
-  transition: transform 0.2s, background 0.2s, color 0.2s;
+  transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
 }
@@ -486,9 +486,9 @@ p.section-subtitle {
   display: none !important;
 }
 .skills-list div:hover {
-  transform: scale(1.08) translateY(-2px);
-  background: var(--accent);
-  color: #fff;
+  transform: translateY(-2px);
+  background: var(--gradient-primary);
+  color: white;
   border-color: var(--accent);
 }
 /* Featured projects */
@@ -519,31 +519,32 @@ p.section-subtitle {
   gap: .5rem; 
 }
 .project-tags span { 
-  background: var(--accent); 
-  color: white; 
+  background: var(--bg-gray); 
+  color: var(--text-dark); 
   padding: .25rem .75rem; 
-  border-radius: 2rem; 
+  border-radius: var(--border-radius); 
   font-size: .85rem; 
+  border: 1px solid var(--border);
 }
 .project-link {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background: linear-gradient(90deg, #f7e3d2 60%, #ffe7d1 100%);
-  color: var(--mocha-latte);
+  background: var(--bg-gray);
+  color: var(--text-dark);
   text-decoration: none;
-  border-radius: 2rem;
+  border-radius: var(--border-radius);
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  border: 1px solid var(--toasty);
-  box-shadow: 0 2px 8px rgba(217, 168, 131, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 .project-link:hover {
-  background: linear-gradient(90deg, var(--toasty) 60%, var(--mocha-latte) 100%);
-  color: #fff;
+  background: var(--gradient-primary);
+  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(217, 168, 131, 0.2);
+  box-shadow: var(--shadow-hover);
 }
 /* Publications */
 .publications-row {
@@ -675,17 +676,17 @@ p.section-subtitle {
   margin-bottom: 0.5rem;
 }
 .edu-card .courses span {
-  background: linear-gradient(90deg, var(--toasty) 60%, var(--bg-light) 100%);
+  background: var(--bg-gray);
   color: var(--text-dark);
   padding: .45rem 1.1rem;
-  border-radius: 2rem;
+  border-radius: var(--border-radius);
   font-weight: 600;
   font-size: 0.97rem;
-  box-shadow: 0 2px 8px rgba(217, 168, 131, 0.08);
-  border: 1px solid var(--toasty);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
-  transition: transform 0.2s, background 0.2s, color 0.2s;
+  transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
 }
@@ -694,9 +695,9 @@ p.section-subtitle {
   display: none !important;
 }
 .edu-card .courses span:hover {
-  transform: scale(1.08) translateY(-2px);
-  background: var(--accent);
-  color: #fff;
+  transform: translateY(-2px);
+  background: var(--gradient-primary);
+  color: white;
   border-color: var(--accent);
 }
 
@@ -813,10 +814,12 @@ p.section-subtitle {
   margin-top: 1rem; 
 }
 .language-tag { 
-  background: rgba(255,255,255,0.2); 
+  background: var(--bg-gray); 
   padding: 0.5rem 1rem; 
-  border-radius: 25px; 
+  border-radius: var(--border-radius); 
   font-size: 0.9rem;
+  color: var(--text-dark);
+  border: 1px solid var(--border);
 }
 .innovation-card {
   background: rgba(255,255,255,0.1);
