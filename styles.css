@@ -432,6 +432,26 @@ p.section-subtitle {
   border-radius: 2rem; 
   font-size: .85rem; 
 }
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #f7e3d2 60%, #ffe7d1 100%);
+  color: var(--mocha-latte);
+  text-decoration: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--toasty);
+  box-shadow: 0 2px 8px rgba(217, 168, 131, 0.08);
+}
+.project-link:hover {
+  background: linear-gradient(90deg, var(--toasty) 60%, var(--mocha-latte) 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 168, 131, 0.2);
+}
 /* Publications */
 .publications-row {
   display: flex;
@@ -827,4 +847,131 @@ footer {
   .nav-content { padding: 0 1rem; }
   .dropdown-menu { right: 1rem; min-width: 150px; padding: 1rem 0.5rem; }
   .dropdown-link { font-size: 1rem; padding: 0.6rem 1rem; }
+  
+  /* Mobile-specific fixes */
+  .hero-content h1 { 
+    font-size: 1.8rem; 
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-tagline {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  section {
+    padding: 2rem 0.8rem;
+  }
+  .container {
+    padding: 0 0.8rem;
+  }
+  .project-card,
+  .exp-card,
+  .edu-card,
+  .cert-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .project-card h3,
+  .exp-card h4,
+  .edu-card h4,
+  .cert-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .skills-list {
+    gap: 0.4rem;
+  }
+  .skills-list div {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .courses {
+    gap: 0.3rem;
+  }
+  .courses span {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .contact-grid {
+    gap: 1.5rem;
+  }
+  .contact-info,
+  .innovation-card {
+    padding: 1.5rem;
+  }
+  .footer-content h3 {
+    font-size: 1.5rem;
+  }
+  .footer-subtitle {
+    font-size: 0.9rem;
+  }
+  .publications-row {
+    padding: 1.5rem 1rem;
+  }
+  .pub-title {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .pub-meta {
+    font-size: 0.9rem;
+  }
+  .pub-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+  }
+  
+  /* Additional mobile fixes */
+  .nav-logo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .menu-btn span {
+    width: 22px;
+    height: 2px;
+  }
+  .dropdown-menu {
+    right: 0.5rem;
+    min-width: 140px;
+    padding: 0.8rem 0.5rem;
+  }
+  .dropdown-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .project-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .footer-links {
+    gap: 1rem;
+  }
+  .footer-link {
+    width: 40px;
+    height: 40px;
+  }
+  .language-tags {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .language-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
 }
