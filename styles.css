@@ -1,17 +1,37 @@
 :root {
-  --toasty: #D9A883;
-  --expresso-foam: #A98062;
-  --mocha-latte: #956643;
-  --cold-brew: #623528;
-  --expresso-noir: #343434;
-  --bg-light: #f7f3ec;
-  --accent: var(--toasty);
-  --text-dark: var(--expresso-noir);
-  --card-bg: rgba(255, 255, 255, 0.8);
+  /* New Harmonious Color Palette */
+  --fern: #768E78;           /* FERN - Dark green for backgrounds */
+  --pistachio: #C6C09C;      /* PISTACHIO - Light green for accents */
+  --fennel: #EBDEC0;         /* FENNEL - Cream background */
+  --peony: #E79897;          /* PEONY - Soft pink for highlights */
+  --peach: #FCAC83;          /* PEACH - Primary accent */
+  --honey: #FCC88A;          /* HONEY - Secondary accent */
+  
+  /* Semantic Color Assignments */
+  --bg-light: var(--fennel);
+  --bg-dark: var(--fern);
+  --accent: var(--peach);
+  --accent-secondary: var(--honey);
+  --accent-tertiary: var(--peony);
+  --text-dark: #2C2C2C;
+  --text-light: #F5F5F0;
+  --card-bg: rgba(255, 255, 255, 0.9);
   --border-radius: 1rem;
-  --gradient-bg: linear-gradient(135deg, var(--expresso-foam) 0%, var(--mocha-latte) 100%);
-  --menu-bg: #fff8f1;
-  --menu-shadow: 0 8px 32px rgba(217,168,131,0.15);
+  
+  /* Gradients */
+  --gradient-bg: linear-gradient(135deg, var(--fern) 0%, #2C2C2C 100%);
+  --gradient-accent: linear-gradient(135deg, var(--peach) 0%, var(--honey) 100%);
+  --gradient-soft: linear-gradient(135deg, var(--fennel) 0%, var(--pistachio) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--peach) 0%, var(--peony) 100%);
+  
+  /* Legacy variables for compatibility */
+  --toasty: var(--peach);
+  --expresso-foam: var(--fern);
+  --mocha-latte: var(--pistachio);
+  --cold-brew: #2C2C2C;
+  --expresso-noir: #2C2C2C;
+  --menu-bg: var(--fennel);
+  --menu-shadow: 0 8px 32px rgba(118, 142, 120, 0.15);
 }
 * {
   box-sizing: border-box;
@@ -308,13 +328,13 @@ h1, h2, h3, .logo {
   font-size: 3rem; 
   margin-bottom: 0.5rem;
   color: var(--accent); /* Visible fallback color */
-  background: linear-gradient(45deg, #ff6b35, #fff, #ff6b35, #fff, #ff6b35);
+  background: linear-gradient(45deg, var(--peach), var(--honey), var(--peach), var(--honey), var(--peach));
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: nameGradient 3s ease-in-out infinite, nameGlow 1.5s ease-in-out infinite alternate;
-  text-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
+  text-shadow: 0 0 30px rgba(252, 172, 131, 0.6);
   display: inline-block;
   position: relative;
   font-weight: bold;
@@ -347,11 +367,11 @@ h1, h2, h3, .logo {
 
 @keyframes nameGlow {
   0% { 
-    text-shadow: 0 0 20px rgba(255, 107, 53, 0.8), 0 0 40px rgba(255, 107, 53, 0.4);
+    text-shadow: 0 0 20px rgba(252, 172, 131, 0.8), 0 0 40px rgba(252, 200, 138, 0.4);
     filter: brightness(1);
   }
   100% { 
-    text-shadow: 0 0 40px rgba(255, 107, 53, 1), 0 0 60px rgba(255, 107, 53, 0.6), 0 0 80px rgba(255, 107, 53, 0.3);
+    text-shadow: 0 0 40px rgba(252, 172, 131, 1), 0 0 60px rgba(252, 200, 138, 0.6), 0 0 80px rgba(231, 152, 151, 0.3);
     filter: brightness(1.2);
   }
 }
@@ -375,27 +395,27 @@ section {
   position: relative;
 }
 section:nth-child(even) { 
-  background: linear-gradient(135deg, rgba(165,161,126,0.15) 0%, rgba(217,168,131,0.25) 100%) !important;
+  background: linear-gradient(135deg, rgba(198, 192, 156, 0.15) 0%, rgba(252, 172, 131, 0.1) 100%) !important;
 }
 section:nth-child(odd) {
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(217,168,131,0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(235, 222, 192, 0.3) 0%, rgba(198, 192, 156, 0.1) 100%) !important;
 }
 
 /* Specific section gradients */
 #about {
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(217,168,131,0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(235, 222, 192, 0.3) 0%, rgba(198, 192, 156, 0.1) 100%) !important;
 }
 #projects {
-  background: linear-gradient(135deg, rgba(165,161,126,0.15) 0%, rgba(217,168,131,0.25) 100%) !important;
+  background: linear-gradient(135deg, rgba(198, 192, 156, 0.15) 0%, rgba(252, 172, 131, 0.1) 100%) !important;
 }
 #experience {
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(217,168,131,0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(235, 222, 192, 0.3) 0%, rgba(231, 152, 151, 0.08) 100%) !important;
 }
 #certifications {
-  background: linear-gradient(135deg, rgba(165,161,126,0.15) 0%, rgba(217,168,131,0.25) 100%) !important;
+  background: linear-gradient(135deg, rgba(198, 192, 156, 0.15) 0%, rgba(252, 200, 138, 0.1) 100%) !important;
 }
 #education {
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(217,168,131,0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(235, 222, 192, 0.3) 0%, rgba(198, 192, 156, 0.1) 100%) !important;
 }
 .container { 
   max-width: 1200px; 
@@ -1181,16 +1201,16 @@ footer {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, var(--accent) 60%, var(--mocha-latte) 100%);
+  background: var(--gradient-accent);
   color: white !important;
-  box-shadow: 0 4px 15px rgba(217, 168, 131, 0.3);
+  box-shadow: 0 4px 15px rgba(252, 172, 131, 0.3);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(217, 168, 131, 0.4);
-  border-color: var(--expresso-foam);
+  box-shadow: 0 8px 25px rgba(252, 172, 131, 0.4);
+  border-color: var(--fern);
 }
 
 .btn-secondary {
@@ -1202,7 +1222,7 @@ footer {
 
 .btn-secondary:hover {
   background: white;
-  color: var(--accent);
+  color: var(--peach);
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
@@ -1214,7 +1234,7 @@ footer {
   right: 2rem;
   width: 50px;
   height: 50px;
-  background: var(--accent);
+  background: var(--gradient-accent);
   color: white;
   border: none;
   border-radius: 50%;
@@ -1223,14 +1243,14 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(217, 168, 131, 0.3);
+  box-shadow: 0 4px 15px rgba(252, 172, 131, 0.3);
   transition: all 0.3s ease;
 }
 
 .back-to-top:hover {
   transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 8px 25px rgba(217, 168, 131, 0.4);
-  background: var(--mocha-latte);
+  box-shadow: 0 8px 25px rgba(252, 172, 131, 0.4);
+  background: var(--gradient-warm);
 }
 
 .back-to-top.show {
