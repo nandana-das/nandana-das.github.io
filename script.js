@@ -136,3 +136,9 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// Initialize the page - show hero section by default
+document.addEventListener('DOMContentLoaded', () => {
+  // Show hero section by default
+  showSection('hero');
+});
