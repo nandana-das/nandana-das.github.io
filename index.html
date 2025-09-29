@@ -8,22 +8,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="simple-nav">
+  <nav class="simple-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-content">
       <span class="nav-logo">Nandana Narayan Das</span>
-      <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+      <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="dropdown-menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div id="dropdown-menu" class="dropdown-menu">
-        <ul>
-          <li><a href="#about" class="dropdown-link">About</a></li>
-          <li><a href="#projects" class="dropdown-link">Projects</a></li>
-          <li><a href="#experience" class="dropdown-link">Experience</a></li>
-          <li><a href="#certifications" class="dropdown-link">Certifications</a></li>
-          <li><a href="#education" class="dropdown-link">Education</a></li>
-          <li><a href="#contact" class="dropdown-link">Contact</a></li>
+      <div id="dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="menu-btn">
+        <ul role="menubar">
+          <li role="none"><a href="#about" class="dropdown-link" role="menuitem">About</a></li>
+          <li role="none"><a href="#projects" class="dropdown-link" role="menuitem">Projects</a></li>
+          <li role="none"><a href="#experience" class="dropdown-link" role="menuitem">Experience</a></li>
+          <li role="none"><a href="#certifications" class="dropdown-link" role="menuitem">Certifications</a></li>
+          <li role="none"><a href="#education" class="dropdown-link" role="menuitem">Education</a></li>
+          <li role="none"><a href="#contact" class="dropdown-link" role="menuitem">Contact</a></li>
         </ul>
       </div>
     </div>

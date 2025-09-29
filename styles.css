@@ -18,11 +18,32 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Inter', Arial, sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
   background: var(--bg-light);
+  overflow-x: hidden;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
 }
 h1, h2, h3, .logo {
   font-family: 'Inter', Arial, sans-serif;
@@ -40,9 +61,32 @@ h1, h2, h3, .logo {
     transform: translateY(0);
   }
 }
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .animated {
   opacity: 0;
-  transition: opacity 0.4s, transform 0.4s;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   will-change: opacity, transform;
 }
 .animated.visible {
@@ -54,12 +98,14 @@ h1, h2, h3, .logo {
   display: none;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 .visible-section {
   display: block !important;
   opacity: 1 !important;
   pointer-events: auto;
+  transform: translateY(0);
   animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) forwards;
 }
 /* --- Navigation Bar --- */
@@ -103,7 +149,13 @@ h1, h2, h3, .logo {
   cursor: pointer;
   z-index: 1100;
   box-shadow: 0 2px 12px rgba(217, 168, 131, 0.18);
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: var(--mocha-latte);
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(217, 168, 131, 0.3);
 }
 .menu-btn span {
   display: block;
@@ -701,66 +753,74 @@ footer {
 }
 @media (max-width: 768px) {
   .hero-content h1 { 
-    font-size: 2rem; 
+    font-size: 2.2rem; 
+    line-height: 1.2;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-tagline {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
   .contact-grid { 
     grid-template-columns: 1fr; 
+    gap: 2rem;
   }
   #experience .grid-2, #education .grid-2 { 
     grid-template-columns: 1fr; 
   }
-  nav .container {
-    flex-direction: column;
-    align-items: flex-start;
+  .section-title {
+    font-size: 2rem;
   }
-  nav .logo {
-    margin-bottom: 1rem;
-  }
-  nav ul {
-    position: static;
-    width: 100%;
-    background: var(--menu-bg);
-    border-radius: 0;
-    box-shadow: none;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-  }
-  nav ul li {
-    width: auto;
-    text-align: center;
-  }
-  nav a {
-    padding: 0.5rem 1rem;
+  .section-subtitle {
     font-size: 1rem;
-  }
-  .menu-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    margin-bottom: 2rem;
   }
   .footer-links {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
   }
   .footer-link {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     font-size: 1.1rem;
   }
   .grid,
   .grid-3 {
     grid-template-columns: 1fr !important;
+    gap: 1.5rem;
   }
   #about .about-content {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   section {
-    padding: 2rem 0.5rem;
+    padding: 3rem 1rem;
   }
   .container {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+  }
+  .project-card,
+  .exp-card,
+  .edu-card,
+  .cert-card {
+    padding: 1.2rem;
+  }
+  .skills-list {
+    gap: 0.5rem;
+  }
+  .skills-list div {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  .courses {
+    gap: 0.4rem;
+  }
+  .courses span {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
   }
 }
 @media (max-width: 600px) {

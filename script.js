@@ -5,8 +5,13 @@ const dropdownLinks = document.querySelectorAll('.dropdown-link');
 
 if (menuBtn && dropdownMenu) {
   menuBtn.addEventListener('click', () => {
+    const isOpen = menuBtn.classList.contains('open');
     menuBtn.classList.toggle('open');
     dropdownMenu.classList.toggle('open');
+    
+    // Update ARIA attributes
+    menuBtn.setAttribute('aria-expanded', !isOpen);
+    dropdownMenu.setAttribute('aria-hidden', isOpen);
   });
 }
 
@@ -17,12 +22,24 @@ function showSection(id) {
     if (sec.id === id) {
       sec.classList.remove('hidden-section');
       sec.classList.add('visible-section');
+      // Update URL without page reload
+      history.pushState({}, '', `#${id}`);
     } else {
       sec.classList.remove('visible-section');
       sec.classList.add('hidden-section');
     }
   });
 }
+
+// Handle browser back/forward buttons
+window.addEventListener('popstate', () => {
+  const hash = window.location.hash.replace('#', '');
+  if (hash && document.getElementById(hash)) {
+    showSection(hash);
+  } else {
+    showSection('hero');
+  }
+});
 
 dropdownLinks.forEach(link => {
   link.addEventListener('click', e => {
@@ -36,9 +53,17 @@ dropdownLinks.forEach(link => {
   });
 });
 
-// Show only About on load
+// Show appropriate section on load
 window.addEventListener('DOMContentLoaded', () => {
-  showSection('about');
+  // Add a small delay to ensure smooth loading
+  setTimeout(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+      showSection(hash);
+    } else {
+      showSection('hero');
+    }
+  }, 100);
 });
 
 // Fix: Close dropdown menu when clicking outside (for better mobile UX)
@@ -51,5 +76,18 @@ document.addEventListener('click', (event) => {
   ) {
     dropdownMenu.classList.remove('open');
     menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+  }
+});
+
+// Add keyboard navigation support
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && dropdownMenu.classList.contains('open')) {
+    dropdownMenu.classList.remove('open');
+    menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    menuBtn.focus();
   }
 });
