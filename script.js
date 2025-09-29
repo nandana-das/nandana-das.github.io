@@ -18,17 +18,44 @@ if (menuBtn && dropdownMenu) {
 // SPA Section navigation logic
 const sections = document.querySelectorAll('section');
 function showSection(id) {
-  sections.forEach(sec => {
-    if (sec.id === id) {
-      sec.classList.remove('hidden-section');
-      sec.classList.add('visible-section');
-      // Update URL without page reload
-      history.pushState({}, '', `#${id}`);
-    } else {
-      sec.classList.remove('visible-section');
-      sec.classList.add('hidden-section');
-    }
-  });
+  // Show loading overlay
+  showLoading();
+  
+  setTimeout(() => {
+    sections.forEach(sec => {
+      if (sec.id === id) {
+        sec.classList.remove('hidden-section');
+        sec.classList.add('visible-section');
+        // Update URL without page reload
+        history.pushState({}, '', `#${id}`);
+      } else {
+        sec.classList.remove('visible-section');
+        sec.classList.add('hidden-section');
+      }
+    });
+    // Hide loading overlay
+    hideLoading();
+  }, 300);
+}
+
+// Loading overlay functions
+function showLoading() {
+  let overlay = document.getElementById('loading-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'loading-overlay';
+    overlay.className = 'loading-overlay';
+    overlay.innerHTML = '<div class="loading-spinner"></div>';
+    document.body.appendChild(overlay);
+  }
+  overlay.classList.add('show');
+}
+
+function hideLoading() {
+  const overlay = document.getElementById('loading-overlay');
+  if (overlay) {
+    overlay.classList.remove('show');
+  }
 }
 
 // Handle browser back/forward buttons
@@ -90,4 +117,22 @@ document.addEventListener('keydown', (event) => {
     dropdownMenu.setAttribute('aria-hidden', 'true');
     menuBtn.focus();
   }
+});
+
+// Back to top button functionality
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
