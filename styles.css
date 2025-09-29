@@ -1,35 +1,36 @@
 :root {
-  /* New Harmonious Color Palette */
-  --fern: #768E78;           /* FERN - Dark green for backgrounds */
-  --pistachio: #C6C09C;      /* PISTACHIO - Light green for accents */
-  --fennel: #EBDEC0;         /* FENNEL - Cream background */
+  /* Harmonious Color Palette - Better Implementation */
+  --fern: #768E78;           /* FERN - Dark green for text and accents */
+  --pistachio: #C6C09C;      /* PISTACHIO - Soft green for backgrounds */
+  --fennel: #EBDEC0;         /* FENNEL - Cream for main background */
   --peony: #E79897;          /* PEONY - Soft pink for highlights */
-  --peach: #FCAC83;          /* PEACH - Primary accent */
-  --honey: #FCC88A;          /* HONEY - Secondary accent */
+  --peach: #FCAC83;          /* PEACH - Warm accent */
+  --honey: #FCC88A;          /* HONEY - Light accent */
   
-  /* Semantic Color Assignments */
-  --bg-light: var(--fennel);
-  --bg-dark: var(--fern);
-  --accent: var(--peach);
-  --accent-secondary: var(--honey);
-  --accent-tertiary: var(--peony);
-  --text-dark: #2C2C2C;
-  --text-light: #F5F5F0;
-  --card-bg: rgba(255, 255, 255, 0.9);
+  /* Better Semantic Color Assignments */
+  --bg-light: #FEFCF8;       /* Very light cream */
+  --bg-dark: var(--pistachio); /* Soft green instead of dark */
+  --accent: var(--fern);      /* Dark green for text and primary elements */
+  --accent-secondary: var(--peach); /* Peach for highlights */
+  --accent-tertiary: var(--peony);  /* Pink for special elements */
+  --text-dark: var(--fern);   /* Dark green for text */
+  --text-light: #FEFCF8;      /* Light cream for text on dark */
+  --card-bg: rgba(255, 255, 255, 0.95);
   --border-radius: 1rem;
   
-  /* Gradients */
-  --gradient-bg: linear-gradient(135deg, var(--fern) 0%, #2C2C2C 100%);
-  --gradient-accent: linear-gradient(135deg, var(--peach) 0%, var(--honey) 100%);
-  --gradient-soft: linear-gradient(135deg, var(--fennel) 0%, var(--pistachio) 100%);
-  --gradient-warm: linear-gradient(135deg, var(--peach) 0%, var(--peony) 100%);
+  /* Better Gradients */
+  --gradient-bg: linear-gradient(135deg, var(--pistachio) 0%, var(--fennel) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--fern) 0%, var(--peach) 100%);
+  --gradient-soft: linear-gradient(135deg, var(--fennel) 0%, #FEFCF8 100%);
+  --gradient-warm: linear-gradient(135deg, var(--peach) 0%, var(--honey) 100%);
+  --gradient-footer: linear-gradient(135deg, var(--fern) 0%, var(--pistachio) 100%);
   
   /* Legacy variables for compatibility */
-  --toasty: var(--peach);
-  --expresso-foam: var(--fern);
-  --mocha-latte: var(--pistachio);
-  --cold-brew: #2C2C2C;
-  --expresso-noir: #2C2C2C;
+  --toasty: var(--fern);
+  --expresso-foam: var(--pistachio);
+  --mocha-latte: var(--fennel);
+  --cold-brew: var(--fern);
+  --expresso-noir: var(--fern);
   --menu-bg: var(--fennel);
   --menu-shadow: 0 8px 32px rgba(118, 142, 120, 0.15);
 }
@@ -327,17 +328,35 @@ h1, h2, h3, .logo {
 .hero-content h1 { 
   font-size: 3rem; 
   margin-bottom: 0.5rem;
-  color: var(--accent); /* Visible fallback color */
-  background: linear-gradient(45deg, var(--peach), var(--honey), var(--peach), var(--honey), var(--peach));
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: nameGradient 3s ease-in-out infinite, nameGlow 1.5s ease-in-out infinite alternate;
-  text-shadow: 0 0 30px rgba(252, 172, 131, 0.6);
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(118, 142, 120, 0.1);
   display: inline-block;
   position: relative;
-  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.hero-content h1:hover {
+  color: var(--peach);
+  text-shadow: 0 4px 8px rgba(118, 142, 120, 0.2);
+  transform: translateY(-1px);
+}
+
+.hero-content h1::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--peach);
+  transition: width 0.3s ease;
+}
+
+.hero-content h1:hover::after {
+  width: 100%;
 }
 
 /* Fallback for browsers that don't support background-clip: text */
@@ -350,31 +369,6 @@ h1, h2, h3, .logo {
   }
 }
 
-@keyframes nameGradient {
-  0% { 
-    background-position: 0% 50%; 
-    transform: scale(1);
-  }
-  50% { 
-    background-position: 100% 50%; 
-    transform: scale(1.05);
-  }
-  100% { 
-    background-position: 0% 50%; 
-    transform: scale(1);
-  }
-}
-
-@keyframes nameGlow {
-  0% { 
-    text-shadow: 0 0 20px rgba(252, 172, 131, 0.8), 0 0 40px rgba(252, 200, 138, 0.4);
-    filter: brightness(1);
-  }
-  100% { 
-    text-shadow: 0 0 40px rgba(252, 172, 131, 1), 0 0 60px rgba(252, 200, 138, 0.6), 0 0 80px rgba(231, 152, 151, 0.3);
-    filter: brightness(1.2);
-  }
-}
 .hero-subtitle { 
   font-size: 1.2rem; 
   margin-bottom: 2rem; 
@@ -395,27 +389,27 @@ section {
   position: relative;
 }
 section:nth-child(even) { 
-  background: linear-gradient(135deg, rgba(198, 192, 156, 0.15) 0%, rgba(252, 172, 131, 0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(198, 192, 156, 0.08) 0%, rgba(252, 172, 131, 0.05) 100%) !important;
 }
 section:nth-child(odd) {
-  background: linear-gradient(135deg, rgba(235, 222, 192, 0.3) 0%, rgba(198, 192, 156, 0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(254, 252, 248, 0.5) 0%, rgba(235, 222, 192, 0.1) 100%) !important;
 }
 
 /* Specific section gradients */
 #about {
-  background: linear-gradient(135deg, rgba(235, 222, 192, 0.3) 0%, rgba(198, 192, 156, 0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(254, 252, 248, 0.5) 0%, rgba(235, 222, 192, 0.1) 100%) !important;
 }
 #projects {
-  background: linear-gradient(135deg, rgba(198, 192, 156, 0.15) 0%, rgba(252, 172, 131, 0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(198, 192, 156, 0.08) 0%, rgba(252, 172, 131, 0.05) 100%) !important;
 }
 #experience {
-  background: linear-gradient(135deg, rgba(235, 222, 192, 0.3) 0%, rgba(231, 152, 151, 0.08) 100%) !important;
+  background: linear-gradient(135deg, rgba(254, 252, 248, 0.5) 0%, rgba(231, 152, 151, 0.05) 100%) !important;
 }
 #certifications {
-  background: linear-gradient(135deg, rgba(198, 192, 156, 0.15) 0%, rgba(252, 200, 138, 0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(198, 192, 156, 0.08) 0%, rgba(252, 200, 138, 0.05) 100%) !important;
 }
 #education {
-  background: linear-gradient(135deg, rgba(235, 222, 192, 0.3) 0%, rgba(198, 192, 156, 0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(254, 252, 248, 0.5) 0%, rgba(235, 222, 192, 0.1) 100%) !important;
 }
 .container { 
   max-width: 1200px; 
@@ -1203,14 +1197,14 @@ footer {
 .btn-primary {
   background: var(--gradient-accent);
   color: white !important;
-  box-shadow: 0 4px 15px rgba(252, 172, 131, 0.3);
+  box-shadow: 0 4px 15px rgba(118, 142, 120, 0.3);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(252, 172, 131, 0.4);
-  border-color: var(--fern);
+  box-shadow: 0 8px 25px rgba(118, 142, 120, 0.4);
+  border-color: var(--peach);
 }
 
 .btn-secondary {
@@ -1222,7 +1216,7 @@ footer {
 
 .btn-secondary:hover {
   background: white;
-  color: var(--peach);
+  color: var(--fern);
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
@@ -1234,7 +1228,7 @@ footer {
   right: 2rem;
   width: 50px;
   height: 50px;
-  background: var(--gradient-accent);
+  background: var(--gradient-footer);
   color: white;
   border: none;
   border-radius: 50%;
@@ -1243,14 +1237,14 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(252, 172, 131, 0.3);
+  box-shadow: 0 4px 15px rgba(118, 142, 120, 0.3);
   transition: all 0.3s ease;
 }
 
 .back-to-top:hover {
   transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 8px 25px rgba(252, 172, 131, 0.4);
-  background: var(--gradient-warm);
+  box-shadow: 0 8px 25px rgba(118, 142, 120, 0.4);
+  background: var(--gradient-accent);
 }
 
 .back-to-top.show {
