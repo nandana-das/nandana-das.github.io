@@ -252,65 +252,16 @@ h1, h2, h3, .logo {
     display: flex !important;
   }
   .dropdown-menu {
-    display: none !important;
-    position: absolute !important;
-    top: 100% !important;
-    right: 0 !important;
-    background: #fff8f1 !important;
-    border-radius: 1.5rem !important;
-    box-shadow: 0 8px 32px rgba(217, 168, 131, 0.13) !important;
-    padding: 1.2rem 1.5rem !important;
-    min-width: 200px !important;
-    z-index: 1200 !important;
-    margin-top: 0.5rem !important;
-    min-height: 200px !important;
-  }
-  .dropdown-menu.open {
-    display: block !important;
-  }
-  .dropdown-menu ul {
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    width: 100% !important;
-  }
-  .dropdown-menu li {
-    margin: 0.7rem 0 !important;
-    display: block !important;
-    width: 100% !important;
+    right: 0.5rem;
+    min-width: 150px;
+    padding: 1rem 0.5rem;
   }
   .dropdown-link {
-    display: block !important;
-    font-size: 1.08rem !important;
-    font-weight: 600 !important;
-    color: var(--mocha-latte) !important;
-    background: linear-gradient(90deg, #f7e3d2 60%, #ffe7d1 100%) !important;
-    border: none !important;
-    border-radius: 2rem !important;
-    padding: 0.6rem 1.5rem !important;
-    text-decoration: none !important;
-    transition: background 0.2s, color 0.2s, transform 0.15s !important;
-    letter-spacing: 1px !important;
-    outline: none !important;
-    border: 2px solid transparent !important;
-    box-shadow: 0 2px 8px rgba(217, 168, 131, 0.08) !important;
-    margin-top: 0.5rem !important;
-    width: 100% !important;
-    text-align: center !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    height: auto !important;
-    min-height: 40px !important;
-    line-height: 1.2 !important;
-  }
-  .dropdown-link:hover,
-  .dropdown-link.active {
-    background: linear-gradient(90deg, var(--toasty) 60%, var(--mocha-latte) 100%) !important;
-    color: #fff !important;
-    transform: scale(1.07) !important;
-    border: 2px solid var(--expresso-foam) !important;
-    box-shadow: 0 4px 18px rgba(217, 168, 131, 0.18) !important;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0;
   }
 }
 @keyframes menuFadeIn {
@@ -980,20 +931,9 @@ footer {
     height: 2px;
   }
   .dropdown-menu {
-    right: 0.5rem !important;
-    min-width: 140px !important;
-    padding: 0.8rem 0.5rem !important;
-    display: none !important;
-    position: absolute !important;
-    top: 100% !important;
-    background: #fff8f1 !important;
-    border-radius: 1.5rem !important;
-    box-shadow: 0 8px 32px rgba(217, 168, 131, 0.13) !important;
-    z-index: 1200 !important;
-    margin-top: 0.5rem !important;
-  }
-  .dropdown-menu.open {
-    display: block !important;
+    right: 0.5rem;
+    min-width: 140px;
+    padding: 0.8rem 0.5rem;
   }
   .dropdown-link {
     font-size: 0.9rem;
