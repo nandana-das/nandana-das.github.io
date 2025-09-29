@@ -578,28 +578,27 @@ p.section-subtitle {
 }
 .publication-card .pub-link {
   font-size: 1rem;
-  color: var(--mocha-latte);
-  background: linear-gradient(90deg, #f7e3d2 60%, #ffe7d1 100%);
+  color: var(--text-dark);
+  background: var(--bg-gray);
   padding: 0.6rem 1.5rem;
-  border-radius: 2rem;
+  border-radius: var(--border-radius);
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+  transition: all 0.2s ease;
   word-break: break-all;
-  box-shadow: 0 2px 8px rgba(217, 168, 131, 0.08);
-  border: 1px solid var(--toasty);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   margin-top: 0.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   outline: none;
-  border: 2px solid transparent;
   display: inline-block;
 }
 .publication-card .pub-link:hover {
-  background: linear-gradient(90deg, var(--toasty) 60%, var(--mocha-latte) 100%);
-  color: #fff;
-  border: 2px solid var(--expresso-foam);
-  box-shadow: 0 4px 18px rgba(217, 168, 131, 0.18);
-  transform: scale(1.07);
+  background: var(--gradient-primary);
+  color: white;
+  border: 1px solid var(--accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 @media (max-width: 900px) {
   .publications-row {
@@ -797,13 +796,15 @@ p.section-subtitle {
   font-size: 1.2rem;
 }
 .email-icon { 
-  background: var(--expresso-foam); 
+  background: var(--accent); 
+  color: white;
 }
 .linkedin-icon { 
   background: #0077b5; 
 }
 .github-icon { 
-  background: var(--cold-brew); 
+  background: var(--primary); 
+  color: white;
 }
 .languages { 
   margin-top: 2rem; 
