@@ -29,7 +29,7 @@
   --gradient-primary: linear-gradient(135deg, #5A6C7D 0%, #4A5A6B 100%);
   --gradient-secondary: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
   --gradient-bg: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
-  --gradient-footer: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  --gradient-footer: linear-gradient(135deg, #2C3E50 0%, #c8ddf2 100%);
   
   /* Legacy variables for compatibility */
   --toasty: var(--accent);
@@ -705,30 +705,29 @@ p.section-subtitle {
 .cert-card a:visited,
 .cert-card a:active,
 .cert-card a:focus {
-  background: linear-gradient(90deg, #f7e3d2 60%, #ffe7d1 100%);
-  color: var(--mocha-latte);
-  border-radius: 2rem;
+  background: var(--bg-gray);
+  color: var(--text-dark);
+  border-radius: var(--border-radius);
   font-weight: 600;
-  border: 1px solid var(--toasty);
-  box-shadow: 0 2px 8px rgba(217, 168, 131, 0.08);
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
   text-decoration: none;
   display: inline-block;
   padding: 0.6rem 1.5rem;
   font-size: 1.08rem;
   margin-top: 0.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   outline: none;
-  border: 2px solid transparent;
 }
 .cert-card a:hover,
 .cert-card a:focus,
 .cert-card a:active {
-  background: linear-gradient(90deg, var(--toasty) 60%, var(--mocha-latte) 100%);
-  color: #fff;
-  border: 2px solid var(--expresso-foam);
-  box-shadow: 0 4px 18px rgba(217, 168, 131, 0.18);
-  transform: scale(1.07);
+  background: var(--gradient-primary);
+  color: white;
+  border: 1px solid var(--accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 
 /* Contact Section */
