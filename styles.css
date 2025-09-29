@@ -298,24 +298,52 @@ h1, h2, h3, .logo {
 .hero-content h1 { 
   font-size: 3rem; 
   margin-bottom: 0.5rem;
-  animation: nameGlow 3s ease-in-out infinite alternate;
-  background: linear-gradient(45deg, #fff, var(--accent), #fff);
-  background-size: 200% 200%;
+  color: #fff; /* Fallback color */
+  background: linear-gradient(45deg, #fff, var(--accent), #fff, var(--accent), #fff);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: nameGradient 3s ease-in-out infinite;
+  animation: nameGradient 4s ease-in-out infinite, nameGlow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(217, 168, 131, 0.3);
+  display: inline-block;
+  position: relative;
 }
 
-@keyframes nameGlow {
-  0% { text-shadow: 0 0 20px rgba(217, 168, 131, 0.5); }
-  100% { text-shadow: 0 0 30px rgba(217, 168, 131, 0.8), 0 0 40px rgba(217, 168, 131, 0.3); }
+/* Fallback for browsers that don't support background-clip: text */
+@supports not (background-clip: text) {
+  .hero-content h1 {
+    color: var(--accent);
+    background: none;
+    -webkit-text-fill-color: initial;
+    text-shadow: 0 0 20px rgba(217, 168, 131, 0.5);
+  }
 }
 
 @keyframes nameGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { 
+    background-position: 0% 50%; 
+    transform: scale(1);
+  }
+  50% { 
+    background-position: 100% 50%; 
+    transform: scale(1.02);
+  }
+  100% { 
+    background-position: 0% 50%; 
+    transform: scale(1);
+  }
+}
+
+@keyframes nameGlow {
+  0% { 
+    text-shadow: 0 0 20px rgba(217, 168, 131, 0.5);
+    filter: brightness(1);
+  }
+  100% { 
+    text-shadow: 0 0 30px rgba(217, 168, 131, 0.8), 0 0 40px rgba(217, 168, 131, 0.4);
+    filter: brightness(1.1);
+  }
 }
 .hero-subtitle { 
   font-size: 1.2rem; 
@@ -335,10 +363,27 @@ section {
   position: relative;
 }
 section:nth-child(even) { 
-  background: linear-gradient(135deg, rgba(165,161,126,0.05) 0%, rgba(217,168,131,0.08) 100%);
+  background: linear-gradient(135deg, rgba(165,161,126,0.05) 0%, rgba(217,168,131,0.08) 100%) !important;
 }
 section:nth-child(odd) {
-  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%) !important;
+}
+
+/* Specific section gradients */
+#about {
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%) !important;
+}
+#projects {
+  background: linear-gradient(135deg, rgba(165,161,126,0.05) 0%, rgba(217,168,131,0.08) 100%) !important;
+}
+#experience {
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%) !important;
+}
+#certifications {
+  background: linear-gradient(135deg, rgba(165,161,126,0.05) 0%, rgba(217,168,131,0.08) 100%) !important;
+}
+#education {
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%) !important;
 }
 .container { 
   max-width: 1200px; 
