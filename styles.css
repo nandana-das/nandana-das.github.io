@@ -308,15 +308,16 @@ h1, h2, h3, .logo {
   font-size: 3rem; 
   margin-bottom: 0.5rem;
   color: var(--accent); /* Visible fallback color */
-  background: linear-gradient(45deg, var(--accent), #fff, var(--accent), #fff, var(--accent));
-  background-size: 300% 300%;
+  background: linear-gradient(45deg, #ff6b35, #fff, #ff6b35, #fff, #ff6b35);
+  background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: nameGradient 4s ease-in-out infinite, nameGlow 2s ease-in-out infinite alternate;
-  text-shadow: 0 0 20px rgba(217, 168, 131, 0.3);
+  animation: nameGradient 3s ease-in-out infinite, nameGlow 1.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
   display: inline-block;
   position: relative;
+  font-weight: bold;
 }
 
 /* Fallback for browsers that don't support background-clip: text */
@@ -336,7 +337,7 @@ h1, h2, h3, .logo {
   }
   50% { 
     background-position: 100% 50%; 
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
   100% { 
     background-position: 0% 50%; 
@@ -346,12 +347,12 @@ h1, h2, h3, .logo {
 
 @keyframes nameGlow {
   0% { 
-    text-shadow: 0 0 20px rgba(217, 168, 131, 0.5);
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.8), 0 0 40px rgba(255, 107, 53, 0.4);
     filter: brightness(1);
   }
   100% { 
-    text-shadow: 0 0 30px rgba(217, 168, 131, 0.8), 0 0 40px rgba(217, 168, 131, 0.4);
-    filter: brightness(1.1);
+    text-shadow: 0 0 40px rgba(255, 107, 53, 1), 0 0 60px rgba(255, 107, 53, 0.6), 0 0 80px rgba(255, 107, 53, 0.3);
+    filter: brightness(1.2);
   }
 }
 .hero-subtitle { 
@@ -374,27 +375,27 @@ section {
   position: relative;
 }
 section:nth-child(even) { 
-  background: linear-gradient(135deg, rgba(165,161,126,0.05) 0%, rgba(217,168,131,0.08) 100%) !important;
+  background: linear-gradient(135deg, rgba(165,161,126,0.15) 0%, rgba(217,168,131,0.25) 100%) !important;
 }
 section:nth-child(odd) {
-  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%) !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(217,168,131,0.1) 100%) !important;
 }
 
 /* Specific section gradients */
 #about {
-  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%) !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(217,168,131,0.1) 100%) !important;
 }
 #projects {
-  background: linear-gradient(135deg, rgba(165,161,126,0.05) 0%, rgba(217,168,131,0.08) 100%) !important;
+  background: linear-gradient(135deg, rgba(165,161,126,0.15) 0%, rgba(217,168,131,0.25) 100%) !important;
 }
 #experience {
-  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%) !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(217,168,131,0.1) 100%) !important;
 }
 #certifications {
-  background: linear-gradient(135deg, rgba(165,161,126,0.05) 0%, rgba(217,168,131,0.08) 100%) !important;
+  background: linear-gradient(135deg, rgba(165,161,126,0.15) 0%, rgba(217,168,131,0.25) 100%) !important;
 }
 #education {
-  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(217,168,131,0.03) 100%) !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(217,168,131,0.1) 100%) !important;
 }
 .container { 
   max-width: 1200px; 
@@ -718,8 +719,18 @@ p.section-subtitle {
 #contact h3,
 #contact p,
 #contact span,
-#contact div {
+#contact div,
+#contact a,
+#contact .contact-content,
+#contact .contact-info,
+#contact .contact-item,
+#contact .contact-item h3,
+#contact .contact-item p,
+#contact .contact-item a,
+#contact .languages,
+#contact .language-tag {
   color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
 }
 #contact::before {
   content: '';
@@ -1171,8 +1182,9 @@ footer {
 
 .btn-primary {
   background: linear-gradient(90deg, var(--accent) 60%, var(--mocha-latte) 100%);
-  color: white;
+  color: white !important;
   box-shadow: 0 4px 15px rgba(217, 168, 131, 0.3);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
@@ -1183,8 +1195,9 @@ footer {
 
 .btn-secondary {
   background: transparent;
-  color: white;
+  color: white !important;
   border: 2px solid white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .btn-secondary:hover {
