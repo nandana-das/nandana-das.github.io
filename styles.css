@@ -866,6 +866,8 @@ footer {
   }
   .container {
     padding: 0 0.8rem;
+    max-width: 100% !important;
+    overflow-x: visible !important;
   }
   .project-card,
   .exp-card,
@@ -970,6 +972,37 @@ footer {
   .project-link {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
+  }
+  
+  /* Mobile certification card fixes */
+  .cert-card {
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .cert-card strong {
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    display: block !important;
+    width: 100% !important;
+  }
+  .cert-card .sub {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+    word-wrap: break-word !important;
+  }
+  .cert-card a {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 1.2rem !important;
+    margin-top: 1rem !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   .footer-links {
     gap: 1rem;
