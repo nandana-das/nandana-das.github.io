@@ -137,7 +137,7 @@ h1, h2, h3, .logo {
   text-overflow: ellipsis;
 }
 .menu-btn {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -150,6 +150,13 @@ h1, h2, h3, .logo {
   z-index: 1100;
   box-shadow: 0 2px 12px rgba(217, 168, 131, 0.18);
   transition: all 0.3s ease;
+}
+
+/* Ensure menu button is visible on all screen sizes */
+@media (min-width: 901px) {
+  .menu-btn {
+    display: flex !important;
+  }
 }
 
 @media (max-width: 900px) {
