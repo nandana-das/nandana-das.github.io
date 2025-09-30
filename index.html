@@ -10,7 +10,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="w-full bg-transparent shadow-none relative z-50 py-2" role="navigation" aria-label="Main navigation">
+  <!-- Mobile Header -->
+  <div class="md:hidden bg-white/95 backdrop-blur-md border-b border-border py-4 px-4 sticky top-0 z-50">
+    <h1 class="text-xl font-bold text-accent text-center">Nandana Narayan Das</h1>
+  </div>
+
+  <!-- Desktop Navigation -->
+  <nav class="w-full bg-transparent shadow-none relative z-50 py-2 hidden md:block" role="navigation" aria-label="Main navigation">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 relative">
       <span class="font-inter text-lg sm:text-xl md:text-2xl font-bold text-accent tracking-widest">Nandana Narayan Das</span>
       <button class="flex flex-col justify-center items-center w-11 h-11 bg-accent border-none rounded-full cursor-pointer z-50 shadow-lg transition-all duration-300 hover:bg-bg-gray hover:scale-110 hover:shadow-xl" id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="dropdown-menu">
@@ -57,7 +63,7 @@
     </div>
   </section>
 
-  <section id="about" class="hidden-section py-16 px-8 bg-bg-light">
+  <section id="about" class="py-16 px-8 bg-bg-light md:hidden-section">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">About Me</h2>
       <p class="text-center max-w-4xl mx-auto mb-12 text-text-dark">A dedicated AI/ML researcher and developer with a strong foundation in computer science and a passion for creating intelligent solutions that make a real-world impact.</p>
@@ -78,7 +84,7 @@
     </div>
   </section>
 
-  <section id="projects" class="hidden-section py-16 px-8 bg-bg-gray">
+  <section id="projects" class="py-16 px-8 bg-bg-gray md:hidden-section">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">Featured Projects</h2>
       <p class="text-center max-w-4xl mx-auto mb-12 text-text-dark">Showcasing innovative AI/ML solutions that demonstrate my expertise in developing intelligent systems for real-world applications.</p>
@@ -164,7 +170,7 @@
     </div>
   </section>
 
-  <section id="experience" class="hidden-section py-16 px-8 bg-bg-light">
+  <section id="experience" class="py-16 px-8 bg-bg-light md:hidden-section">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">Experience & Skills</h2>
       <div class="grid grid-cols-1 gap-8">
@@ -222,7 +228,7 @@
     </div>
   </section>
 
-  <section id="certifications" class="hidden-section py-16 px-8 bg-bg-gray">
+  <section id="certifications" class="py-16 px-8 bg-bg-gray md:hidden-section">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">Certifications</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -260,7 +266,7 @@
     </div>
   </section>
 
-  <section id="education" class="hidden-section py-16 px-8 bg-bg-light">
+  <section id="education" class="py-16 px-8 bg-bg-light md:hidden-section">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">Education</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -284,7 +290,7 @@
     </div>
   </section>
 
-  <section id="contact" class="hidden-section py-16 px-8 bg-bg-light text-text-dark relative">
+  <section id="contact" class="py-16 px-8 bg-bg-light text-text-dark relative md:hidden-section">
     <div class="absolute top-0 left-0 right-0 bottom-0 opacity-30">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" class="w-full h-full">
         <circle cx="100" cy="100" r="2" fill="rgba(255,255,255,0.1)"/>

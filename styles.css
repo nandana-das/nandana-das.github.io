@@ -17,6 +17,16 @@
   animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) forwards;
 }
 
+/* Mobile: Show all sections as scrollable single page */
+@media (max-width: 767px) {
+  .md\:hidden-section {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
 /* Menu Animations */
 .menu-btn.open span:nth-child(1) { 
   transform: translateY(7px) rotate(45deg);

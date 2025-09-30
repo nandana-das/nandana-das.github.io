@@ -26,6 +26,17 @@ if (menuBtn && dropdownMenu) {
 // SPA Section navigation logic
 const sections = document.querySelectorAll('section');
 function showSection(id) {
+  // Check if we're on mobile (screen width < 768px)
+  if (window.innerWidth < 768) {
+    // On mobile, just scroll to the section
+    const targetSection = document.getElementById(id);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    return;
+  }
+  
+  // Desktop SPA behavior
   // Show loading overlay
   showLoading();
   
@@ -98,6 +109,13 @@ dropdownLinks.forEach(link => {
 window.addEventListener('DOMContentLoaded', () => {
   // Add a small delay to ensure smooth loading
   setTimeout(() => {
+    // On mobile, just scroll to the top (all sections are visible)
+    if (window.innerWidth < 768) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    
+    // Desktop SPA behavior
     const hash = window.location.hash.replace('#', '');
     if (hash && document.getElementById(hash)) {
       showSection(hash);
@@ -105,6 +123,25 @@ window.addEventListener('DOMContentLoaded', () => {
       showSection('hero');
     }
   }, 100);
+});
+
+// Handle window resize to switch between mobile and desktop modes
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 768) {
+    // Switch to mobile mode - show all sections
+    sections.forEach(section => {
+      section.classList.remove('hidden-section');
+      section.classList.add('visible-section');
+    });
+  } else {
+    // Switch to desktop mode - restore SPA behavior
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+      showSection(hash);
+    } else {
+      showSection('hero');
+    }
+  }
 });
 
 // Fix: Close dropdown menu when clicking outside (for better mobile UX)
