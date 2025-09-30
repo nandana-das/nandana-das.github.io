@@ -29,7 +29,7 @@
   --gradient-primary: linear-gradient(135deg, #5A6C7D 0%, #4A5A6B 100%);
   --gradient-secondary: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
   --gradient-bg: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
-  --gradient-footer: #6892bc;
+  --gradient-footer: #4585c6;
   
   /* Legacy variables for compatibility */
   --toasty: var(--accent);
