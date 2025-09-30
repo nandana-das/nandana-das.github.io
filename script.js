@@ -73,8 +73,14 @@ dropdownLinks.forEach(link => {
     e.preventDefault();
     const targetId = link.getAttribute('href').replace('#', '');
     showSection(targetId);
+    
+    // Close menu and update states
     dropdownMenu.classList.add('hidden');
     menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    
+    // Update active link
     dropdownLinks.forEach(l => l.classList.remove('active'));
     link.classList.add('active');
   });
