@@ -1,7 +1,7 @@
 // Only toggle the dropdown menu
 const menuBtn = document.getElementById('menu-btn');
 const dropdownMenu = document.getElementById('dropdown-menu');
-const dropdownLinks = document.querySelectorAll('.dropdown-link');
+const dropdownLinks = document.querySelectorAll('#dropdown-menu a[href^="#"]');
 
 if (menuBtn && dropdownMenu) {
   menuBtn.addEventListener('click', () => {
