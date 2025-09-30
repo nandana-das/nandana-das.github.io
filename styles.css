@@ -11,7 +11,7 @@
   /* Background Colors */
   --bg-light: #FFFFFF;       /* Pure white background */
   --bg-gray: #F8F9FA;        /* Light gray for sections */
-  --bg-dark: #2C3E50;        /* Dark background for footer */
+  --bg-dark: #7091b1;        /* Dark background for footer */
   
   /* Text Colors */
   --text-dark: #2C3E50;      /* Dark text for readability */
@@ -29,7 +29,7 @@
   --gradient-primary: linear-gradient(135deg, #5A6C7D 0%, #4A5A6B 100%);
   --gradient-secondary: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
   --gradient-bg: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
-  --gradient-footer: linear-gradient(135deg, #2C3E50 0%, #c8ddf2 100%);
+  --gradient-footer: #2C3E50;
   
   /* Legacy variables for compatibility */
   --toasty: var(--accent);
