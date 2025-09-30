@@ -1,0 +1,28 @@
+{
+  "name": "nandana-das-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website built with Tailwind CSS and vanilla JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "tailwindcss",
+    "javascript",
+    "responsive",
+    "spa",
+    "ai",
+    "machine-learning"
+  ],
+  "author": "Nandana Narayan Das",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nandana-das/nandana-das.github.io.git"
+  },
+  "homepage": "https://nandana-das.github.io",
+  "devDependencies": {},
+  "dependencies": {}
+}
