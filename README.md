@@ -1,15 +1,16 @@
 # Nandana Narayan Das - Portfolio
 
-A modern, responsive portfolio website built with Tailwind CSS and vanilla JavaScript, featuring a single-page application (SPA) design.
+A modern, responsive portfolio website built with Tailwind CSS and vanilla JavaScript, featuring a dark theme and single-page application (SPA) design.
 
 ## 🚀 Features
 
-- **Modern Design**: Clean, professional layout with smooth animations
-- **Responsive**: Mobile-first design that works on all devices
-- **Single Page Application**: Smooth navigation between sections
+- **Dark Theme**: Professional dark color scheme with excellent contrast
+- **Responsive Design**: Mobile-first approach with single-page scroll on mobile
+- **Single Page Application**: Smooth navigation between sections on desktop
 - **Interactive Elements**: Hover effects, transitions, and loading animations
 - **Accessibility**: Proper ARIA labels and keyboard navigation
 - **Fast Loading**: Optimized with Tailwind CSS CDN
+- **Unified Design**: Consistent blue accent colors throughout
 
 ## 🛠️ Tech Stack
 
@@ -35,26 +36,30 @@ nandana-das.github.io/
 
 ## 🎨 Design System
 
-### Colors
-- **Primary**: #2C3E50 (Dark blue-gray)
-- **Secondary**: #34495E (Medium blue-gray)
-- **Accent**: #5A6C7D (Muted blue-gray)
-- **Background Light**: #FFFFFF (Pure white)
-- **Background Gray**: #F8F9FA (Light gray)
+### Dark Theme Colors
+- **Primary**: #FFFFFF (White text)
+- **Secondary**: #E2E8F0 (Light gray text)
+- **Background Dark**: #020617 (Very dark blue)
+- **Background Light**: #0F172A (Dark slate)
+- **Background Gray**: #1E293B (Medium dark gray)
+- **Border**: #334155 (Dark border)
+- **Accent Colors**: Blue, Purple, Emerald, Orange, Cyan, Pink
 
 ### Typography
 - **Font Family**: Inter (Google Fonts)
 - **Weights**: 400, 600, 700
+- **Text Color**: White for optimal contrast on dark backgrounds
 
 ## 📱 Sections
 
-1. **Hero**: Introduction and call-to-action
-2. **About**: Academic and professional background
-3. **Projects**: Featured AI/ML projects and publications
-4. **Experience**: Work experience and technical skills
-5. **Certifications**: Professional certifications
-6. **Education**: Academic qualifications
-7. **Contact**: Contact information and social links
+1. **Hero**: Introduction with dark gradient background and call-to-action
+2. **About**: Academic and professional background with unified blue accent colors
+3. **Projects**: Featured AI/ML projects with purple accent theme
+4. **Publications**: Research paper with IEEE publication details
+5. **Experience**: Work experience and technical skills with emerald accent theme
+6. **Certifications**: Professional certifications with orange accent theme
+7. **Education**: Academic qualifications with cyan accent theme
+8. **Contact**: Contact information and social links with pink accent theme
 
 ## 🚀 Getting Started
 
@@ -84,11 +89,14 @@ nandana-das.github.io/
 
 ### Key Features
 
-- **SPA Navigation**: Sections are hidden/shown based on menu selection
+- **Dark Theme**: Professional dark color scheme with white text for optimal readability
+- **SPA Navigation**: Sections are hidden/shown based on menu selection on desktop
+- **Mobile Responsive**: Single-page scrollable layout on mobile devices
 - **Menu Auto-Close**: Menu closes automatically when navigating
 - **Loading Animations**: Smooth transitions between sections
-- **Responsive Design**: Mobile-first approach with Tailwind utilities
+- **Unified Design**: Consistent blue accent colors for About section, other sections use their respective accent colors
 - **Accessibility**: Proper ARIA labels and keyboard support
+- **Global Text Override**: CSS ensures all text is white for maximum visibility
 
 ## 📄 License
 
@@ -107,7 +115,6 @@ This portfolio showcases my work as an M.Tech AI & DS student with expertise in:
 - Computer Vision & NLP
 - Python, Java, and C programming
 - Research and publications in AI
-
 ---
 
 **Built with ❤️ using Tailwind CSS and vanilla JavaScript**
