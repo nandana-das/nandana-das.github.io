@@ -5,13 +5,21 @@ const dropdownLinks = document.querySelectorAll('.dropdown-link');
 
 if (menuBtn && dropdownMenu) {
   menuBtn.addEventListener('click', () => {
-    const isOpen = menuBtn.classList.contains('open');
-    menuBtn.classList.toggle('open');
-    dropdownMenu.classList.toggle('hidden');
+    const isOpen = !dropdownMenu.classList.contains('hidden');
     
-    // Update ARIA attributes
-    menuBtn.setAttribute('aria-expanded', !isOpen);
-    dropdownMenu.setAttribute('aria-hidden', isOpen);
+    if (isOpen) {
+      // Close menu
+      dropdownMenu.classList.add('hidden');
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      dropdownMenu.setAttribute('aria-hidden', 'true');
+    } else {
+      // Open menu
+      dropdownMenu.classList.remove('hidden');
+      menuBtn.classList.add('open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      dropdownMenu.setAttribute('aria-hidden', 'false');
+    }
   });
 }
 
