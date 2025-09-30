@@ -5,121 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Nandana Narayan Das | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2C3E50',
+            secondary: '#34495E',
+            accent: '#5A6C7D',
+            'accent-hover': '#4A5A6B',
+            success: '#27AE60',
+            warning: '#F39C12',
+            danger: '#E74C3C',
+            'bg-light': '#FFFFFF',
+            'bg-gray': '#F8F9FA',
+            'bg-dark': '#4585c6',
+            'text-dark': '#2C3E50',
+            'text-medium': '#5D6D7E',
+            'text-light': '#FFFFFF',
+            'text-muted': '#95A5A6',
+            border: '#E5E7EB',
+            'border-hover': '#D1D5DB',
+          },
+          fontFamily: {
+            'inter': ['Inter', 'Arial', 'sans-serif'],
+          },
+          boxShadow: {
+            'custom': '0 4px 24px rgba(217, 168, 131, 0.08)',
+            'custom-hover': '0 10px 30px rgba(217, 168, 131, 0.18)',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body>
-  <nav class="simple-nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-content">
-      <span class="nav-logo">Nandana Narayan Das</span>
-      <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="dropdown-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+  <nav class="w-full bg-transparent shadow-none relative z-50 py-2" role="navigation" aria-label="Main navigation">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-8 relative">
+      <span class="font-inter text-2xl font-bold text-accent tracking-widest whitespace-nowrap overflow-hidden text-ellipsis">Nandana Narayan Das</span>
+      <button class="flex flex-col justify-center items-center w-11 h-11 bg-accent border-none rounded-full cursor-pointer z-50 shadow-lg transition-all duration-300 hover:bg-bg-gray hover:scale-110 hover:shadow-xl" id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="dropdown-menu">
+        <span class="block w-7 h-1 my-1 bg-white rounded-sm transition-transform duration-300"></span>
+        <span class="block w-7 h-1 my-1 bg-white rounded-sm transition-opacity duration-300"></span>
+        <span class="block w-7 h-1 my-1 bg-white rounded-sm transition-transform duration-300"></span>
       </button>
-      <div id="dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="menu-btn">
+      <div id="dropdown-menu" class="hidden absolute top-full right-0 bg-bg-light rounded-lg shadow-custom p-5 min-w-48 z-50 mt-2 border border-border" role="menu" aria-labelledby="menu-btn">
         <ul role="menubar">
-          <li role="none"><a href="#about" class="dropdown-link" role="menuitem">About</a></li>
-          <li role="none"><a href="#projects" class="dropdown-link" role="menuitem">Projects</a></li>
-          <li role="none"><a href="#experience" class="dropdown-link" role="menuitem">Experience</a></li>
-          <li role="none"><a href="#certifications" class="dropdown-link" role="menuitem">Certifications</a></li>
-          <li role="none"><a href="#education" class="dropdown-link" role="menuitem">Education</a></li>
-          <li role="none"><a href="#contact" class="dropdown-link" role="menuitem">Contact</a></li>
+          <li role="none" class="my-3"><a href="#about" class="inline-block text-lg font-semibold text-text-dark bg-bg-gray border border-border rounded-lg px-6 py-2 no-underline transition-all duration-200 tracking-wide shadow-custom mt-2 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:border-accent" role="menuitem">About</a></li>
+          <li role="none" class="my-3"><a href="#projects" class="inline-block text-lg font-semibold text-text-dark bg-bg-gray border border-border rounded-lg px-6 py-2 no-underline transition-all duration-200 tracking-wide shadow-custom mt-2 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:border-accent" role="menuitem">Projects</a></li>
+          <li role="none" class="my-3"><a href="#experience" class="inline-block text-lg font-semibold text-text-dark bg-bg-gray border border-border rounded-lg px-6 py-2 no-underline transition-all duration-200 tracking-wide shadow-custom mt-2 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:border-accent" role="menuitem">Experience</a></li>
+          <li role="none" class="my-3"><a href="#certifications" class="inline-block text-lg font-semibold text-text-dark bg-bg-gray border border-border rounded-lg px-6 py-2 no-underline transition-all duration-200 tracking-wide shadow-custom mt-2 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:border-accent" role="menuitem">Certifications</a></li>
+          <li role="none" class="my-3"><a href="#education" class="inline-block text-lg font-semibold text-text-dark bg-bg-gray border border-border rounded-lg px-6 py-2 no-underline transition-all duration-200 tracking-wide shadow-custom mt-2 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:border-accent" role="menuitem">Education</a></li>
+          <li role="none" class="my-3"><a href="#contact" class="inline-block text-lg font-semibold text-text-dark bg-bg-gray border border-border rounded-lg px-6 py-2 no-underline transition-all duration-200 tracking-wide shadow-custom mt-2 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg hover:border-accent" role="menuitem">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section id="hero" class="visible-section">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Nandana Narayan Das</h1>
-        <p class="hero-subtitle">M.Tech AI & DS Student | Research Enthusiast</p>
-        <div class="hero-tagline">
+  <section id="hero" class="bg-gradient-to-br from-bg-gray to-bg-light text-white py-32 px-8 text-center relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-72 h-72 opacity-60">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-full h-full">
+        <path d="M20 20h160v160H20z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        <circle cx="40" cy="40" r="2" fill="rgba(255,255,255,0.3)"/>
+        <circle cx="80" cy="60" r="2" fill="rgba(255,255,255,0.3)"/>
+        <circle cx="120" cy="40" r="2" fill="rgba(255,255,255,0.3)"/>
+        <circle cx="160" cy="80" r="2" fill="rgba(255,255,255,0.3)"/>
+        <path d="M40 40L80 60L120 40L160 80" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center">
+        <h1 class="text-5xl mb-2 text-primary font-bold tracking-tight text-shadow-sm inline-block relative transition-all duration-300 cursor-default hover:text-accent hover:text-shadow-md hover:-translate-y-1 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Nandana Narayan Das</h1>
+        <p class="text-xl mb-8 opacity-90 text-text-medium">M.Tech AI & DS Student | Research Enthusiast</p>
+        <div class="bg-blue-100/10 backdrop-blur-md px-8 py-4 rounded-full inline-block mt-4 text-text-medium border border-blue-200/20">
           <small>Pursuing advanced AI and Data Science at Alliance University, Bangalore</small>
         </div>
-        <div class="hero-buttons">
-          <a href="resume.pdf" class="btn-primary" download>Download Resume</a>
-          <a href="#contact" class="btn-secondary">Get In Touch</a>
+        <div class="flex gap-4 justify-center mt-8 flex-wrap">
+          <a href="resume.pdf" class="px-8 py-3 rounded-full no-underline font-semibold text-base transition-all duration-300 inline-block border-2 border-transparent bg-gradient-to-r from-accent to-accent-hover text-white shadow-lg hover:-translate-y-1 hover:scale-105 hover:shadow-xl hover:border-accent-hover" download>Download Resume</a>
+          <a href="#contact" class="px-8 py-3 rounded-full no-underline font-semibold text-base transition-all duration-300 inline-block border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white hover:-translate-y-1 hover:scale-105 hover:shadow-xl" download>Get In Touch</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="hidden-section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-subtitle">A dedicated AI/ML researcher and developer with a strong foundation in computer science and a passion for creating intelligent solutions that make a real-world impact.</p>
-      <div class="about-content">
-        <div class="card">
-          <h3>Academic & Research Excellence</h3>
-          <p>I'm currently pursuing my M.Tech in Artificial Intelligence and Data Science at Alliance University, Bangalore, building upon my solid B.Tech foundation in Computer Science Engineering (AI) with a CGPA of 7.18. My research journey has been marked by significant achievements, including a published paper on "Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging" in IEEE Xplore, which I presented at ICTEST 2025.</p>
+  <section id="about" class="py-16 px-8 bg-bg-light">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl text-center mb-4 text-accent font-bold">About Me</h2>
+      <p class="text-center max-w-4xl mx-auto mb-12 text-text-dark">A dedicated AI/ML researcher and developer with a strong foundation in computer science and a passion for creating intelligent solutions that make a real-world impact.</p>
+      <div class="flex flex-wrap gap-8">
+        <div class="bg-white/95 rounded-lg p-6 flex-1 min-w-80 transition-transform duration-300 hover:-translate-y-1 hover:scale-105 shadow-custom border-2 border-orange-100 hover:shadow-custom-hover hover:border-accent">
+          <h3 class="text-xl font-bold mb-4 text-accent">Academic & Research Excellence</h3>
+          <p class="text-text-dark leading-relaxed">I'm currently pursuing my M.Tech in Artificial Intelligence and Data Science at Alliance University, Bangalore, building upon my solid B.Tech foundation in Computer Science Engineering (AI) with a CGPA of 7.18. My research journey has been marked by significant achievements, including a published paper on "Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging" in IEEE Xplore, which I presented at ICTEST 2025.</p>
         </div>
-        <div class="card">
-          <h3>Technical Expertise & Leadership</h3>
-          <p>With hands-on experience in Python, Java, and C, I specialize in TensorFlow, PyTorch, and deep learning frameworks. My technical skills span across computer vision, NLP, and data science. Beyond technical work, I've demonstrated leadership as a Mentor at CSI SB ASIET, Social Media Team Lead, and Editor at Saakshin, showcasing my ability to guide others and drive community engagement.</p>
+        <div class="bg-white/95 rounded-lg p-6 flex-1 min-w-80 transition-transform duration-300 hover:-translate-y-1 hover:scale-105 shadow-custom border-2 border-orange-100 hover:shadow-custom-hover hover:border-accent">
+          <h3 class="text-xl font-bold mb-4 text-accent">Technical Expertise & Leadership</h3>
+          <p class="text-text-dark leading-relaxed">With hands-on experience in Python, Java, and C, I specialize in TensorFlow, PyTorch, and deep learning frameworks. My technical skills span across computer vision, NLP, and data science. Beyond technical work, I've demonstrated leadership as a Mentor at CSI SB ASIET, Social Media Team Lead, and Editor at Saakshin, showcasing my ability to guide others and drive community engagement.</p>
         </div>
-        <div class="card">
-          <h3>Industry Experience & Impact</h3>
-          <p>My professional journey includes a Backend Servicing Internship at Covacsis Technologies, where I developed Spring Boot applications and RESTful APIs. I've created diverse projects ranging from AI-based disease detection using CNNs to customer churn prediction models and air quality prediction systems. My work demonstrates a commitment to applying cutting-edge AI technologies to solve real-world problems across healthcare, business analytics, and environmental monitoring.</p>
+        <div class="bg-white/95 rounded-lg p-6 flex-1 min-w-80 transition-transform duration-300 hover:-translate-y-1 hover:scale-105 shadow-custom border-2 border-orange-100 hover:shadow-custom-hover hover:border-accent">
+          <h3 class="text-xl font-bold mb-4 text-accent">Industry Experience & Impact</h3>
+          <p class="text-text-dark leading-relaxed">My professional journey includes a Backend Servicing Internship at Covacsis Technologies, where I developed Spring Boot applications and RESTful APIs. I've created diverse projects ranging from AI-based disease detection using CNNs to customer churn prediction models and air quality prediction systems. My work demonstrates a commitment to applying cutting-edge AI technologies to solve real-world problems across healthcare, business analytics, and environmental monitoring.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="hidden-section">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-subtitle">Showcasing innovative AI/ML solutions that demonstrate my expertise in developing intelligent systems for real-world applications.</p>
-      <div class="grid grid-3">
-        <div class="project-card">
-          <h3>Disease Detection Using Tongue Imaging</h3>
-          <p>Developed an AI-based diagnostic tool using CNNs for non-invasive disease detection. Integrated Explainable AI to align diagnostics with Traditional Chinese Medicine (TCM).</p>
-          <div class="project-tags"><span>Computer Vision</span><span>TensorFlow</span></div>
-          <a href="https://github.com/nandana-das/Body-Constitution-Analysis-andDisease-Detection-using-Tongue-Images-based-on-TCM" target="_blank" class="project-link">View on GitHub</a>
+  <section id="projects" class="py-16 px-8 bg-bg-gray">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl text-center mb-4 text-accent font-bold">Featured Projects</h2>
+      <p class="text-center max-w-4xl mx-auto mb-12 text-text-dark">Showcasing innovative AI/ML solutions that demonstrate my expertise in developing intelligent systems for real-world applications.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white/95 rounded-lg p-6 flex flex-col gap-3 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-custom-hover hover:border-2 hover:border-accent">
+          <h3 class="text-xl font-bold mb-2 text-accent">Disease Detection Using Tongue Imaging</h3>
+          <p class="text-text-dark leading-relaxed">Developed an AI-based diagnostic tool using CNNs for non-invasive disease detection. Integrated Explainable AI to align diagnostics with Traditional Chinese Medicine (TCM).</p>
+          <div class="flex flex-wrap gap-2 mt-auto mb-4">
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Computer Vision</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">TensorFlow</span>
+          </div>
+          <a href="https://github.com/nandana-das/Body-Constitution-Analysis-andDisease-Detection-using-Tongue-Images-based-on-TCM" target="_blank" class="inline-block mt-4 px-4 py-2 bg-bg-gray text-text-dark no-underline rounded-lg font-semibold text-sm transition-all duration-300 border border-border shadow-sm hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg">View on GitHub</a>
         </div>
-        <div class="project-card">
-          <h3>Service Instance Management System</h3>
-          <p>Built a Spring Boot application for dynamic registration, heartbeat scheduling, and deregistration of service instances. Developed RESTful APIs with secure basic authentication.</p>
-          <div class="project-tags"><span>Spring Boot</span><span>REST API</span><span>Java</span></div>
-          <a href="https://github.com/nandana-das/eureka-heartbeat-client" target="_blank" class="project-link">View on GitHub</a>
+        <div class="bg-white/95 rounded-lg p-6 flex flex-col gap-3 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-custom-hover hover:border-2 hover:border-accent">
+          <h3 class="text-xl font-bold mb-2 text-accent">Service Instance Management System</h3>
+          <p class="text-text-dark leading-relaxed">Built a Spring Boot application for dynamic registration, heartbeat scheduling, and deregistration of service instances. Developed RESTful APIs with secure basic authentication.</p>
+          <div class="flex flex-wrap gap-2 mt-auto mb-4">
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Spring Boot</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">REST API</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Java</span>
+          </div>
+          <a href="https://github.com/nandana-das/eureka-heartbeat-client" target="_blank" class="inline-block mt-4 px-4 py-2 bg-bg-gray text-text-dark no-underline rounded-lg font-semibold text-sm transition-all duration-300 border border-border shadow-sm hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg">View on GitHub</a>
         </div>
-        <div class="project-card">
-          <h3>Video Summarization Tool</h3>
-          <p>Converted video input to text using speech recognition and NLP. Implemented text summarization algorithms to provide concise summaries using Python libraries.</p>
-          <div class="project-tags"><span>NLP</span><span>Speech Recognition</span><span>NLTK</span></div>
-          <a href="https://github.com/nandana-das/video_summariser" target="_blank" class="project-link">View on GitHub</a>
+        <div class="bg-white/95 rounded-lg p-6 flex flex-col gap-3 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-custom-hover hover:border-2 hover:border-accent">
+          <h3 class="text-xl font-bold mb-2 text-accent">Video Summarization Tool</h3>
+          <p class="text-text-dark leading-relaxed">Converted video input to text using speech recognition and NLP. Implemented text summarization algorithms to provide concise summaries using Python libraries.</p>
+          <div class="flex flex-wrap gap-2 mt-auto mb-4">
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">NLP</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Speech Recognition</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">NLTK</span>
+          </div>
+          <a href="https://github.com/nandana-das/video_summariser" target="_blank" class="inline-block mt-4 px-4 py-2 bg-bg-gray text-text-dark no-underline rounded-lg font-semibold text-sm transition-all duration-300 border border-border shadow-sm hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg">View on GitHub</a>
         </div>
-        <div class="project-card">
-          <h3>Air Quality Prediction</h3>
-          <p>Developed a machine learning model to predict air quality levels using environmental data. Implemented data preprocessing, feature engineering, and multiple ML algorithms for accurate predictions.</p>
-          <div class="project-tags"><span>Machine Learning</span><span>Data Science</span><span>Python</span></div>
-          <a href="https://github.com/nandana-das/AirqualityPrediction" target="_blank" class="project-link">View on GitHub</a>
+        <div class="bg-white/95 rounded-lg p-6 flex flex-col gap-3 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-custom-hover hover:border-2 hover:border-accent">
+          <h3 class="text-xl font-bold mb-2 text-accent">Air Quality Prediction</h3>
+          <p class="text-text-dark leading-relaxed">Developed a machine learning model to predict air quality levels using environmental data. Implemented data preprocessing, feature engineering, and multiple ML algorithms for accurate predictions.</p>
+          <div class="flex flex-wrap gap-2 mt-auto mb-4">
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Machine Learning</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Data Science</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Python</span>
+          </div>
+          <a href="https://github.com/nandana-das/AirqualityPrediction" target="_blank" class="inline-block mt-4 px-4 py-2 bg-bg-gray text-text-dark no-underline rounded-lg font-semibold text-sm transition-all duration-300 border border-border shadow-sm hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg">View on GitHub</a>
         </div>
-        <div class="project-card">
-          <h3>Customer Churn Prediction</h3>
-          <p>Built a predictive model to identify customers likely to churn using historical data and behavioral patterns. Applied various classification algorithms and feature selection techniques.</p>
-          <div class="project-tags"><span>Classification</span><span>Data Analysis</span><span>Scikit-learn</span></div>
-          <a href="https://github.com/nandana-das/customer-churn-predction" target="_blank" class="project-link">View on GitHub</a>
+        <div class="bg-white/95 rounded-lg p-6 flex flex-col gap-3 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-custom-hover hover:border-2 hover:border-accent">
+          <h3 class="text-xl font-bold mb-2 text-accent">Customer Churn Prediction</h3>
+          <p class="text-text-dark leading-relaxed">Built a predictive model to identify customers likely to churn using historical data and behavioral patterns. Applied various classification algorithms and feature selection techniques.</p>
+          <div class="flex flex-wrap gap-2 mt-auto mb-4">
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Classification</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Data Analysis</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Scikit-learn</span>
+          </div>
+          <a href="https://github.com/nandana-das/customer-churn-predction" target="_blank" class="inline-block mt-4 px-4 py-2 bg-bg-gray text-text-dark no-underline rounded-lg font-semibold text-sm transition-all duration-300 border border-border shadow-sm hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg">View on GitHub</a>
         </div>
-        <div class="project-card">
-          <h3>Explore More Projects</h3>
-          <p>Discover additional AI/ML projects, research implementations, and open-source contributions on my GitHub profile. From data analysis tools to machine learning models, each project showcases different aspects of my technical expertise.</p>
-          <div class="project-tags"><span>GitHub</span><span>Open Source</span><span>Research</span></div>
-          <a href="https://github.com/nandana-das" target="_blank" class="project-link">View All Projects</a>
+        <div class="bg-white/95 rounded-lg p-6 flex flex-col gap-3 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-custom-hover hover:border-2 hover:border-accent">
+          <h3 class="text-xl font-bold mb-2 text-accent">Explore More Projects</h3>
+          <p class="text-text-dark leading-relaxed">Discover additional AI/ML projects, research implementations, and open-source contributions on my GitHub profile. From data analysis tools to machine learning models, each project showcases different aspects of my technical expertise.</p>
+          <div class="flex flex-wrap gap-2 mt-auto mb-4">
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">GitHub</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Open Source</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg text-sm font-semibold shadow-sm border border-border">Research</span>
+          </div>
+          <a href="https://github.com/nandana-das" target="_blank" class="inline-block mt-4 px-4 py-2 bg-bg-gray text-text-dark no-underline rounded-lg font-semibold text-sm transition-all duration-300 border border-border shadow-sm hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:-translate-y-0.5 hover:shadow-lg">View All Projects</a>
         </div>
       </div>
-      <div class="publications-row" style="margin-top:3rem;">
-        <div class="publication-card">
-          <h2 class="section-title" style="margin-bottom: 0.5rem;">Publications</h2>
-          <div class="pub-title">
+      <div class="flex justify-center items-stretch bg-white/95 backdrop-blur-sm rounded-lg my-12 shadow-custom border-2 border-orange-100 p-8">
+        <div class="flex-1 flex flex-col items-start max-w-4xl">
+          <h2 class="text-4xl text-center mb-2 text-accent font-bold">Publications</h2>
+          <div class="text-lg font-semibold mb-2 text-primary">
             Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging: A Deep Learning Approach for Non-Invasive Diagnostics
           </div>
-          <div class="pub-meta">
+          <div class="text-base text-secondary mb-3">
             Published in IEEE Xplore, presented at ICTEST 2025.
           </div>
           <a 
             href="https://ieeexplore.ieee.org/document/11042469" 
-            class="pub-link" 
+            class="text-base text-text-dark bg-bg-gray px-6 py-2 rounded-lg no-underline font-semibold transition-all duration-200 break-all shadow-sm border border-border mt-2 inline-block tracking-wide hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent hover:shadow-lg hover:-translate-y-0.5" 
             target="_blank"
           >
             View on IEEE
@@ -129,169 +195,191 @@
     </div>
   </section>
 
-  <section id="experience" class="hidden-section">
-    <div class="container">
-      <h2 class="section-title">Experience & Skills</h2>
-      <div class="grid">
-        <div class="exp-card">
-          <h4>Backend Servicing Intern</h4>
-          <div class="sub">Covacsis Technologies (Remote) | June 2024 – July 2024</div>
-          <ul>
-            <li>Collaborated on backend development using Java, Pinot, and Spring Boot framework</li>
-            <li>Designed features for managing service instances with high availability</li>
-            <li>Ensured consistent performance through robust backend architecture</li>
+  <section id="experience" class="py-16 px-8 bg-bg-light">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl text-center mb-4 text-accent font-bold">Experience & Skills</h2>
+      <div class="grid grid-cols-1 gap-8">
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:translate-x-2 shadow-custom border-2 border-orange-100">
+          <h4 class="text-xl font-bold mb-1 text-accent">Backend Servicing Intern</h4>
+          <div class="text-sm text-accent mb-3">Covacsis Technologies (Remote) | June 2024 – July 2024</div>
+          <ul class="list-none pl-5">
+            <li class="relative mb-2 before:content-['✓'] before:absolute before:-left-5 before:text-accent">Collaborated on backend development using Java, Pinot, and Spring Boot framework</li>
+            <li class="relative mb-2 before:content-['✓'] before:absolute before:-left-5 before:text-accent">Designed features for managing service instances with high availability</li>
+            <li class="relative mb-2 before:content-['✓'] before:absolute before:-left-5 before:text-accent">Ensured consistent performance through robust backend architecture</li>
           </ul>
         </div>
       </div>
-      <h3 style="margin-top:2.5rem;">Positions Held</h3>
-      <div class="grid">
-        <div class="exp-card">
-          <h4>Mentor</h4>
-          <div class="sub">CSI SB ASIET (2024-25)</div>
-          <p>Mentoring students in computer science and AI technologies, fostering learning and innovation.</p>
+      <h3 class="text-2xl font-bold mt-10 mb-6 text-accent">Positions Held</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:translate-x-2 shadow-custom border-2 border-orange-100">
+          <h4 class="text-xl font-bold mb-1 text-accent">Mentor</h4>
+          <div class="text-sm text-accent mb-3">CSI SB ASIET (2024-25)</div>
+          <p class="text-text-dark">Mentoring students in computer science and AI technologies, fostering learning and innovation.</p>
         </div>
-        <div class="exp-card">
-          <h4>Social Media Team Lead</h4>
-          <div class="sub">CSI SB ASIET (2023-24)</div>
-          <p>Led social media strategy and content creation to enhance community engagement.</p>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:translate-x-2 shadow-custom border-2 border-orange-100">
+          <h4 class="text-xl font-bold mb-1 text-accent">Social Media Team Lead</h4>
+          <div class="text-sm text-accent mb-3">CSI SB ASIET (2023-24)</div>
+          <p class="text-text-dark">Led social media strategy and content creation to enhance community engagement.</p>
         </div>
-        <div class="exp-card">
-          <h4>Editor</h4>
-          <div class="sub">Saakshin (2022-24)</div>
-          <p>Editorial responsibilities including content creation, review, and publication management.</p>
-        </div>
-      </div>
-      <h3 style="margin-top:2.5rem;">Technical Skills</h3>
-      <div class="about-content">
-        <div class="card">
-          <p><strong>Programming Languages</strong></p>
-          <div class="skills-list"><div>Python</div><div>Java</div><div>C</div></div>
-          <p><strong>AI/ML Technologies</strong></p>
-          <div class="skills-list"><div>TensorFlow</div><div>PyTorch</div><div>scikit-learn</div><div>Pandas</div><div>NumPy</div><div>NLTK</div><div>Deep Learning</div><div>NLP</div><div>Computer Vision</div></div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:translate-x-2 shadow-custom border-2 border-orange-100">
+          <h4 class="text-xl font-bold mb-1 text-accent">Editor</h4>
+          <div class="text-sm text-accent mb-3">Saakshin (2022-24)</div>
+          <p class="text-text-dark">Editorial responsibilities including content creation, review, and publication management.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="certifications" class="hidden-section">
-    <div class="container">
-      <h2 class="section-title">Certifications</h2>
-      <div class="grid">
-        <div class="cert-card">
-          <strong>Artificial Intelligence Foundation Digital Credential</strong>
-          <div class="sub">IBM</div>
-          <a href="https://www.credly.com/badges/8cc05afc-9b8b-46b7-a26f-04c243d404da/linked_in?t=sqsi62" target="_blank">View Certificate</a>
-        </div>
-        <div class="cert-card">
-          <strong>Career Essentials in Generative AI</strong>
-          <div class="sub">Microsoft & LinkedIn (LinkedIn Learning)</div>
-          <a href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2" target="_blank">View Certificate</a>
-        </div>
-        <div class="cert-card">
-          <strong>Career Essentials in GitHub Professional Certificate</strong>
-          <div class="sub">LinkedIn Learning</div>
-          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d" target="_blank">View Certificate</a>
-        </div>
-        <div class="cert-card">
-          <strong>Data Science Professional Certificate</strong>
-          <div class="sub">KNIME (LinkedIn Learning)</div>
-          <a href="https://www.linkedin.com/learning/certificates/589d0ec89ecbe07a2e8961cb48dc0790156acc70fe9a0132cfacab3cb3776abb" target="_blank">View Certificate</a>
-        </div>
-        <div class="cert-card">
-          <strong>Java Object-Oriented Programming</strong>
-          <div class="sub">LinkedIn Learning</div>
-          <a href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177?trk=share_certificate" target="_blank">View Certificate</a>
-        </div>
-        <div class="cert-card">
-          <strong>Artificial Intelligence Foundation Certification</strong>
-          <div class="sub">Infosys Springboard</div>
-          <a href="AI foundation certification infosys.png" target="_blank">View Certificate</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="hidden-section">
-    <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="grid">
-        <div class="edu-card">
-          <h4>M.Tech in Artificial Intelligence and Data Science</h4>
-          <div class="sub">Alliance University, Bangalore | Expected Graduation: 2027</div>
-        </div>
-        <div class="edu-card">
-          <h4>B.Tech in Computer Science and Engineering (Artificial Intelligence)</h4>
-          <div class="sub">Adi Shankara Institute of Engineering and Technology | CGPA: 7.18 (2025)</div>
-          <div style="margin-bottom: 0.5rem;"><strong>Relevant Courses:</strong></div>
-          <div class="courses">
-            <span>Data Structures and Algorithms</span>
-            <span>Object-Oriented Programming using Java</span>
-            <span>Introduction to Artificial Intelligence</span>
-            <span>Introduction to Machine Learning</span>
-            <span>Robotic Intelligent Systems</span>
-            <span>Mathematics for Artificial Intelligence</span>
-            <span>IoT and Applications</span>
-            <span>Natural Language Processing</span>
-            <span>Foundations of Deep Learning</span>
-            <span>Robotic Process Automation</span>
-            <span>Soft Computing</span>
+      <h3 class="text-2xl font-bold mt-10 mb-6 text-accent">Technical Skills</h3>
+      <div class="flex flex-wrap gap-8">
+        <div class="bg-white/95 rounded-lg p-6 flex-1 min-w-80 transition-transform duration-300 hover:-translate-y-1 hover:scale-105 shadow-custom border-2 border-orange-100 hover:shadow-custom-hover hover:border-accent">
+          <p class="font-bold mb-3 text-accent">Programming Languages</p>
+          <div class="flex flex-wrap gap-3 mb-6">
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Python</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Java</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">C</div>
+          </div>
+          <p class="font-bold mb-3 text-accent">AI/ML Technologies</p>
+          <div class="flex flex-wrap gap-3">
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">TensorFlow</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">PyTorch</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">scikit-learn</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Pandas</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">NumPy</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">NLTK</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Deep Learning</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">NLP</div>
+            <div class="bg-bg-gray text-text-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Computer Vision</div>
           </div>
         </div>
-        <div class="edu-card">
-          <h4>Class XII (ISC)</h4>
-          <div class="sub">St. Aloysius Convent ISC School | Percentage: 87.2% (2021)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="py-16 px-8 bg-bg-gray">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl text-center mb-4 text-accent font-bold">Certifications</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <strong class="text-lg font-bold text-primary block mb-2 leading-tight">Artificial Intelligence Foundation Digital Credential</strong>
+          <div class="text-sm text-accent mb-3">IBM</div>
+          <a href="https://www.credly.com/badges/8cc05afc-9b8b-46b7-a26f-04c243d404da/linked_in?t=sqsi62" target="_blank" class="bg-bg-gray text-text-dark rounded-lg font-semibold border border-border shadow-sm transition-all duration-200 no-underline inline-block px-6 py-2 text-base mt-2 tracking-wide hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent hover:shadow-lg hover:-translate-y-0.5">View Certificate</a>
         </div>
-        <div class="edu-card">
-          <h4>Class X (ICSE)</h4>
-          <div class="sub">St. Aloysius Convent ISC School | Percentage: 87.167% (2019)</div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <strong class="text-lg font-bold text-primary block mb-2 leading-tight">Career Essentials in Generative AI</strong>
+          <div class="text-sm text-accent mb-3">Microsoft & LinkedIn (LinkedIn Learning)</div>
+          <a href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2" target="_blank" class="bg-bg-gray text-text-dark rounded-lg font-semibold border border-border shadow-sm transition-all duration-200 no-underline inline-block px-6 py-2 text-base mt-2 tracking-wide hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent hover:shadow-lg hover:-translate-y-0.5">View Certificate</a>
+        </div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <strong class="text-lg font-bold text-primary block mb-2 leading-tight">Career Essentials in GitHub Professional Certificate</strong>
+          <div class="text-sm text-accent mb-3">LinkedIn Learning</div>
+          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d" target="_blank" class="bg-bg-gray text-text-dark rounded-lg font-semibold border border-border shadow-sm transition-all duration-200 no-underline inline-block px-6 py-2 text-base mt-2 tracking-wide hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent hover:shadow-lg hover:-translate-y-0.5">View Certificate</a>
+        </div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <strong class="text-lg font-bold text-primary block mb-2 leading-tight">Data Science Professional Certificate</strong>
+          <div class="text-sm text-accent mb-3">KNIME (LinkedIn Learning)</div>
+          <a href="https://www.linkedin.com/learning/certificates/589d0ec89ecbe07a2e8961cb48dc0790156acc70fe9a0132cfacab3cb3776abb" target="_blank" class="bg-bg-gray text-text-dark rounded-lg font-semibold border border-border shadow-sm transition-all duration-200 no-underline inline-block px-6 py-2 text-base mt-2 tracking-wide hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent hover:shadow-lg hover:-translate-y-0.5">View Certificate</a>
+        </div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <strong class="text-lg font-bold text-primary block mb-2 leading-tight">Java Object-Oriented Programming</strong>
+          <div class="text-sm text-accent mb-3">LinkedIn Learning</div>
+          <a href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177?trk=share_certificate" target="_blank" class="bg-bg-gray text-text-dark rounded-lg font-semibold border border-border shadow-sm transition-all duration-200 no-underline inline-block px-6 py-2 text-base mt-2 tracking-wide hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent hover:shadow-lg hover:-translate-y-0.5">View Certificate</a>
+        </div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <strong class="text-lg font-bold text-primary block mb-2 leading-tight">Artificial Intelligence Foundation Certification</strong>
+          <div class="text-sm text-accent mb-3">Infosys Springboard</div>
+          <a href="AI foundation certification infosys.png" target="_blank" class="bg-bg-gray text-text-dark rounded-lg font-semibold border border-border shadow-sm transition-all duration-200 no-underline inline-block px-6 py-2 text-base mt-2 tracking-wide hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent hover:shadow-lg hover:-translate-y-0.5">View Certificate</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="hidden-section">
-    <div class="container">
-      <div class="contact-content">
-        <h2 class="section-title">Let's Connect</h2>
-        <p class="section-subtitle">Ready to collaborate on exciting AI/ML projects or discuss opportunities? I'd love to hear from you!</p>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Get In Touch</h3>
-            <div class="contact-item">
-              <div class="contact-icon linkedin-icon">
-                <!-- LinkedIn SVG -->
+  <section id="education" class="py-16 px-8 bg-bg-light">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl text-center mb-4 text-accent font-bold">Education</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <h4 class="text-xl font-bold mb-2 text-accent">M.Tech in Artificial Intelligence and Data Science</h4>
+          <div class="text-sm text-accent mb-3">Alliance University, Bangalore | Expected Graduation: 2027</div>
+        </div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <h4 class="text-xl font-bold mb-2 text-accent">B.Tech in Computer Science and Engineering (Artificial Intelligence)</h4>
+          <div class="text-sm text-accent mb-3">Adi Shankara Institute of Engineering and Technology | CGPA: 7.18 (2025)</div>
+          <div class="mb-2"><strong class="text-accent">Relevant Courses:</strong></div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Data Structures and Algorithms</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Object-Oriented Programming using Java</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Introduction to Artificial Intelligence</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Introduction to Machine Learning</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Robotic Intelligent Systems</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Mathematics for Artificial Intelligence</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">IoT and Applications</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Natural Language Processing</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Foundations of Deep Learning</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Robotic Process Automation</span>
+            <span class="bg-bg-gray text-text-dark px-3 py-1 rounded-lg font-semibold text-sm shadow-sm border border-border flex items-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-accent hover:to-accent-hover hover:text-white hover:border-accent">Soft Computing</span>
+          </div>
+        </div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <h4 class="text-xl font-bold mb-2 text-accent">Class XII (ISC)</h4>
+          <div class="text-sm text-accent mb-3">St. Aloysius Convent ISC School | Percentage: 87.2% (2021)</div>
+        </div>
+        <div class="bg-white/95 rounded-lg p-4 mb-6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-custom-hover hover:border-2 hover:border-accent shadow-custom border-2 border-orange-100">
+          <h4 class="text-xl font-bold mb-2 text-accent">Class X (ICSE)</h4>
+          <div class="text-sm text-accent mb-3">St. Aloysius Convent ISC School | Percentage: 87.167% (2019)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 px-8 bg-bg-light text-text-dark relative">
+    <div class="absolute top-0 left-0 right-0 bottom-0 opacity-30">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" class="w-full h-full">
+        <circle cx="100" cy="100" r="2" fill="rgba(255,255,255,0.1)"/>
+        <circle cx="200" cy="150" r="2" fill="rgba(255,255,255,0.1)"/>
+        <circle cx="300" cy="100" r="2" fill="rgba(255,255,255,0.1)"/>
+        <circle cx="150" cy="250" r="2" fill="rgba(255,255,255,0.1)"/>
+        <circle cx="250" cy="300" r="2" fill="rgba(255,255,255,0.1)"/>
+        <path d="M100 100L200 150M200 150L300 100M150 250L250 300" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center">
+        <h2 class="text-4xl text-center mb-4 text-accent font-bold">Let's Connect</h2>
+        <p class="text-center max-w-4xl mx-auto mb-12 text-text-dark">Ready to collaborate on exciting AI/ML projects or discuss opportunities? I'd love to hear from you!</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div class="bg-bg-gray border border-border rounded-lg p-8 shadow-custom">
+            <h3 class="text-2xl font-bold mb-6 text-accent">Get In Touch</h3>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center text-white text-xl bg-accent">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </div>
               <div>
-                <div style="font-weight: 500;">LinkedIn</div>
-                <div>linkedin.com/in/nandana-narayan-das</div>
+                <div class="font-semibold text-text-dark">LinkedIn</div>
+                <div class="text-text-dark">linkedin.com/in/nandana-narayan-das</div>
               </div>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon github-icon">
-                <!-- GitHub SVG -->
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center text-white text-xl bg-primary">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
               </div>
               <div>
-                <div style="font-weight: 500;">GitHub</div>
-                <div>github.com/nandana-das</div>
+                <div class="font-semibold text-text-dark">GitHub</div>
+                <div class="text-text-dark">github.com/nandana-das</div>
               </div>
             </div>
-            <div class="languages">
-              <h4>Languages</h4>
-              <div class="language-tags">
-                <span class="language-tag">Malayalam (Native)</span>
-                <span class="language-tag">English (Fluent)</span>
+            <div class="mt-8">
+              <h4 class="text-lg font-bold mb-4 text-accent">Languages</h4>
+              <div class="flex flex-col gap-2">
+                <span class="bg-bg-gray px-4 py-2 rounded-lg text-sm text-text-dark border border-border">Malayalam (Native)</span>
+                <span class="bg-bg-gray px-4 py-2 rounded-lg text-sm text-text-dark border border-border">English (Fluent)</span>
               </div>
             </div>
           </div>
-          <div class="innovation-card">
-            <h3>Ready to Innovate Together?</h3>
-            <p>Let's build the future with AI and machine learning technologies.</p>
+          <div class="bg-white/10 backdrop-blur-md rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4 text-accent">Ready to Innovate Together?</h3>
+            <p class="text-text-dark">Let's build the future with AI and machine learning technologies.</p>
           </div>
         </div>
       </div>
@@ -299,32 +387,30 @@
   </section>
 
   <!-- Back to Top Button -->
-  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-accent to-accent-hover text-white border-none rounded-full cursor-pointer hidden items-center justify-center z-50 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:bg-gradient-to-r hover:from-secondary hover:to-primary" aria-label="Back to top">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
       <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
     </svg>
   </button>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <h3>Nandana Narayan Das</h3>
-        <p class="footer-subtitle">M.Tech AI & DS Student | Research Enthusiast</p>
-        <div class="footer-links">
-          <a href="https://linkedin.com/in/nandana-narayan-das" class="footer-link footer-linkedin" target="_blank" rel="noopener">
-            <!-- LinkedIn SVG -->
+  <footer class="bg-bg-dark text-text-dark text-center py-12 px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center">
+        <h3 class="text-3xl mb-2 text-text-dark font-bold">Nandana Narayan Das</h3>
+        <p class="mb-8 opacity-80 text-text-dark">M.Tech AI & DS Student | Research Enthusiast</p>
+        <div class="flex justify-center gap-8 mb-8">
+          <a href="https://linkedin.com/in/nandana-narayan-das" class="w-12 h-12 rounded-full flex items-center justify-center no-underline text-xl transition-transform duration-300 hover:scale-110 bg-secondary text-white" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
           </a>
-          <a href="https://github.com/nandana-das" class="footer-link footer-github" target="_blank" rel="noopener">
-            <!-- GitHub SVG -->
+          <a href="https://github.com/nandana-das" class="w-12 h-12 rounded-full flex items-center justify-center no-underline text-xl transition-transform duration-300 hover:scale-110 bg-primary text-white" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
           </a>
         </div>
-        <div class="footer-bottom">
+        <div class="border-t border-black/10 pt-4 text-sm opacity-70 text-text-dark">
           <p>© 2024 Nandana Narayan Das. All rights reserved.</p>
           <p>Built with passion for innovation and excellence in AI/ML</p>
         </div>
