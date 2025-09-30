@@ -7,7 +7,7 @@ if (menuBtn && dropdownMenu) {
   menuBtn.addEventListener('click', () => {
     const isOpen = menuBtn.classList.contains('open');
     menuBtn.classList.toggle('open');
-    dropdownMenu.classList.toggle('open');
+    dropdownMenu.classList.toggle('hidden');
     
     // Update ARIA attributes
     menuBtn.setAttribute('aria-expanded', !isOpen);
@@ -73,7 +73,7 @@ dropdownLinks.forEach(link => {
     e.preventDefault();
     const targetId = link.getAttribute('href').replace('#', '');
     showSection(targetId);
-    dropdownMenu.classList.remove('open');
+    dropdownMenu.classList.add('hidden');
     menuBtn.classList.remove('open');
     dropdownLinks.forEach(l => l.classList.remove('active'));
     link.classList.add('active');
@@ -97,11 +97,11 @@ window.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', (event) => {
   // If menu is open and click is outside menuBtn and dropdownMenu, close it
   if (
-    dropdownMenu.classList.contains('open') &&
+    !dropdownMenu.classList.contains('hidden') &&
     !menuBtn.contains(event.target) &&
     !dropdownMenu.contains(event.target)
   ) {
-    dropdownMenu.classList.remove('open');
+    dropdownMenu.classList.add('hidden');
     menuBtn.classList.remove('open');
     menuBtn.setAttribute('aria-expanded', 'false');
     dropdownMenu.setAttribute('aria-hidden', 'true');
@@ -110,8 +110,8 @@ document.addEventListener('click', (event) => {
 
 // Add keyboard navigation support
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && dropdownMenu.classList.contains('open')) {
-    dropdownMenu.classList.remove('open');
+  if (event.key === 'Escape' && !dropdownMenu.classList.contains('hidden')) {
+    dropdownMenu.classList.add('hidden');
     menuBtn.classList.remove('open');
     menuBtn.setAttribute('aria-expanded', 'false');
     dropdownMenu.setAttribute('aria-hidden', 'true');
@@ -124,9 +124,9 @@ const backToTopBtn = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 300) {
-    backToTopBtn.classList.add('show');
+    backToTopBtn.classList.remove('hidden');
   } else {
-    backToTopBtn.classList.remove('show');
+    backToTopBtn.classList.add('hidden');
   }
 });
 

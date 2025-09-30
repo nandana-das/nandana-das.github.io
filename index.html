@@ -39,6 +39,81 @@
       }
     }
   </script>
+  <style>
+    /* SPA Section Management */
+    .hidden-section {
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+    
+    .visible-section {
+      display: block !important;
+      opacity: 1 !important;
+      pointer-events: auto;
+      transform: translateY(0);
+      animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) forwards;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Menu Animation */
+    @keyframes menuFadeIn {
+      from { opacity: 0; transform: translateY(-10px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    
+    .menu-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg);}
+    .menu-btn.open span:nth-child(2) { opacity: 0;}
+    .menu-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg);}
+    
+    /* Loading Animation */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .loading-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid #5A6C7D;
+      border-top: 4px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
   <nav class="w-full bg-transparent shadow-none relative z-50 py-2" role="navigation" aria-label="Main navigation">
@@ -88,7 +163,7 @@
     </div>
   </section>
 
-  <section id="about" class="py-16 px-8 bg-bg-light">
+  <section id="about" class="hidden-section py-16 px-8 bg-bg-light">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">About Me</h2>
       <p class="text-center max-w-4xl mx-auto mb-12 text-text-dark">A dedicated AI/ML researcher and developer with a strong foundation in computer science and a passion for creating intelligent solutions that make a real-world impact.</p>
@@ -109,7 +184,7 @@
     </div>
   </section>
 
-  <section id="projects" class="py-16 px-8 bg-bg-gray">
+  <section id="projects" class="hidden-section py-16 px-8 bg-bg-gray">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">Featured Projects</h2>
       <p class="text-center max-w-4xl mx-auto mb-12 text-text-dark">Showcasing innovative AI/ML solutions that demonstrate my expertise in developing intelligent systems for real-world applications.</p>
@@ -195,7 +270,7 @@
     </div>
   </section>
 
-  <section id="experience" class="py-16 px-8 bg-bg-light">
+  <section id="experience" class="hidden-section py-16 px-8 bg-bg-light">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">Experience & Skills</h2>
       <div class="grid grid-cols-1 gap-8">
@@ -253,7 +328,7 @@
     </div>
   </section>
 
-  <section id="certifications" class="py-16 px-8 bg-bg-gray">
+  <section id="certifications" class="hidden-section py-16 px-8 bg-bg-gray">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">Certifications</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -291,7 +366,7 @@
     </div>
   </section>
 
-  <section id="education" class="py-16 px-8 bg-bg-light">
+  <section id="education" class="hidden-section py-16 px-8 bg-bg-light">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl text-center mb-4 text-accent font-bold">Education</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -329,7 +404,7 @@
     </div>
   </section>
 
-  <section id="contact" class="py-16 px-8 bg-bg-light text-text-dark relative">
+  <section id="contact" class="hidden-section py-16 px-8 bg-bg-light text-text-dark relative">
     <div class="absolute top-0 left-0 right-0 bottom-0 opacity-30">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" class="w-full h-full">
         <circle cx="100" cy="100" r="2" fill="rgba(255,255,255,0.1)"/>
