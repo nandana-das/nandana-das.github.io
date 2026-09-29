@@ -191,6 +191,82 @@
       transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
     }
 
+    /* Project Action Buttons & Metrics */
+    .project-results {
+      background: #FFF9D2;
+      border: 1.5px dashed #4A3326;
+      border-radius: 12px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #4A3326;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      margin-top: 2px;
+    }
+    .project-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 6px;
+    }
+    .project-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 999px;
+      border: 1.5px solid #4A3326;
+      text-decoration: none;
+      color: #4A3326;
+      background: #FFFFFF;
+      box-shadow: 0 2px 0 #4A3326;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .project-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 0 #4A3326;
+      background: #FFD86B;
+      color: #4A3326;
+    }
+    .project-btn.primary {
+      background: #4A3326;
+      color: #FFF7D6;
+    }
+    .project-btn.primary:hover {
+      background: #D9541E;
+      color: #FFFFFF;
+    }
+    .project-group {
+      margin-bottom: 28px;
+    }
+    .project-group-title {
+      font-family: 'Baloo 2', cursive;
+      font-weight: 800;
+      font-size: 21px;
+      line-height: 1.2;
+      color: #4A3326;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFBEA;
+      border: 2px solid #4A3326;
+      border-radius: 999px;
+      padding: 4px 18px;
+      box-shadow: 0 3px 0 #4A3326;
+      margin-bottom: 14px;
+    }
+    .project-group-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 10px;
@@ -483,7 +559,7 @@
       
       <div style="flex:1 1 480px;min-width:0">
         <div style="display:inline-flex;align-items:center;gap:8px;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;font-weight:700;font-size:14px;animation:drop .8s cubic-bezier(.34,1.6,.5,1) both">
-          ☁ M.Tech AI & Data Science · Alliance University
+          ☁ M.Tech AI & Data Science (8.9 CGPA) · Alliance University
         </div>
         <h1 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(50px,7.5vw,96px);line-height:.95;letter-spacing:-.02em;margin:22px 0 18px;text-wrap:balance;animation:drop .9s .1s cubic-bezier(.34,1.6,.5,1) both">
           Hi, I'm <span style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">Nandana</span> <span style="color:#FF8FB8">♡</span>
@@ -491,9 +567,31 @@
         <p style="font-family:'Baloo 2', cursive;font-weight:700;font-size:clamp(20px,2.2vw,28px);margin:0 0 12px;line-height:1.2;color:#C2571B">
           AI/ML Researcher & Deep Learning Engineer
         </p>
-        <p style="font-size:18px;line-height:1.6;max-width:540px;margin:0 0 30px;font-weight:500;text-wrap:pretty">
+        <p style="font-size:18px;line-height:1.6;max-width:540px;margin:0 0 20px;font-weight:500;text-wrap:pretty">
           I build intelligent systems across computer vision, multimodal learning, explainable AI, and generative AI — from research prototypes and scientific data pipelines to deployable AI applications.
         </p>
+
+        <!-- Opportunity Focus Statement -->
+        <div style="background:#FFFBEA;border:2px solid #4A3326;border-radius:18px;padding:12px 18px;max-width:560px;margin:0 0 20px;box-shadow:0 3px 0 #4A3326;display:flex;align-items:flex-start;gap:12px">
+          <span style="font-size:20px;flex:none;line-height:1.2">🎯</span>
+          <p style="margin:0;font-size:14px;line-height:1.55;font-weight:600;color:#4A3326">
+            <strong>Currently exploring AI/ML engineering and applied research opportunities</strong> involving deep learning, computer vision, GenAI, and intelligent systems.
+          </p>
+        </div>
+
+        <!-- Research Interests -->
+        <div style="margin:0 0 26px;max-width:560px">
+          <div style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#C2571B;margin-bottom:8px">Research Interests</div>
+          <div style="display:flex;gap:7px;flex-wrap:wrap">
+            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Explainable AI</span>
+            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Multimodal Deep Learning</span>
+            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Computer Vision</span>
+            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Remote Sensing</span>
+            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Generative AI</span>
+            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Knowledge-Augmented RAG</span>
+          </div>
+        </div>
+
         <div class="hero-actions" style="display:flex;gap:14px;flex-wrap:wrap">
           <a href="#work" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:17px;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:13px 28px;box-shadow:0 4px 0 #4A3326;color:#4A3326">
             See my work →
@@ -539,8 +637,8 @@
         <div style="font-weight:700;font-size:15px;margin-top:4px">AI/ML & Systems Projects</div>
       </div>
       <div class="doodle-card stat-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
-        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">7.18</div>
-        <div style="font-weight:700;font-size:15px;margin-top:4px">B.Tech CGPA (CSE - AI)</div>
+        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">8.9</div>
+        <div style="font-weight:700;font-size:15px;margin-top:4px">M.Tech CGPA (Alliance Univ) · B.Tech 7.18</div>
       </div>
       <div class="doodle-card stat-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
         <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">07</div>
@@ -582,58 +680,108 @@
           <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Reproducibility & Deployment</div>
         </div>
       </div>
+
+      <!-- Compact Engineering & Systems Section (Item 7) -->
+      <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326;margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:18px">⚙️</span>
+            <span style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Engineering & Systems Core</span>
+          </div>
+          <p style="margin:2px 0 0;font-size:14px;color:#4A3326;font-weight:600">Production ML pipelines, backend services, and scalable deployment engineering:</p>
+        </div>
+        <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
+          <span class="pill-badge" style="background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Python</span>
+          <span class="pill-badge" style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">PyTorch</span>
+          <span class="pill-badge" style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">TensorFlow</span>
+          <span class="pill-badge" style="background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Java</span>
+          <span class="pill-badge" style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">FastAPI</span>
+          <span class="pill-badge" style="background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Spring Boot</span>
+          <span class="pill-badge" style="background:#FFD86B;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">REST APIs</span>
+          <span class="pill-badge" style="background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">SQL</span>
+          <span class="pill-badge" style="background:#FFD8B8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Git</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Research & Publications Section -->
+    <!-- Research & Publications Section (Item 2) -->
     <section id="work" style="background:#FFF1B8;border-top:2px solid #4A3326;position:relative">
       <span style="position:absolute;left:20px;top:22px;font-size:34px;color:#FFA63D;animation:bob 3.8s ease-in-out infinite;--r:-8deg">☼</span>
       <svg width="110" height="26" viewBox="0 0 110 26" style="position:absolute;right:36px;top:22px" fill="none"><path d="M3 13 Q16 0 29 13 T55 13 T81 13 T107 13" stroke="#FF8FB8" stroke-width="5" stroke-linecap="round"/></svg>
       <div id="publications" style="max-width:1180px;margin:0 auto;padding:72px 24px 64px">
-        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Research ✧</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:20px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+          <div>
+            <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0">Research & Publications ✧</h2>
+            <p style="margin:4px 0 0;font-weight:600;font-size:15px;color:#C2571B">Peer-reviewed publications in Explainable AI, computer vision, and scientific deep learning</p>
+          </div>
+          <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:8px 18px;box-shadow:0 3px 0 #4A3326;color:#4A3326">
+            Google Scholar Profile ↗
+          </a>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px">
           
-          <!-- Publication 1 -->
-          <article class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">IEEE Xplore</span>
-              <span style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">ICTEST 2025</span>
-              <span style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">Published</span>
+          <!-- Publication 1: Published -->
+          <article class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:13px;letter-spacing:0.04em">✓ PUBLISHED</span>
+              <div style="display:flex;gap:6px">
+                <span style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">IEEE Xplore</span>
+                <span style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">ICTEST 2025</span>
+              </div>
             </div>
-            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15;margin:0;text-wrap:pretty">
-              Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging: A Deep Learning Approach for Non-Invasive Diagnostics
+            
+            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2;margin:0;color:#4A3326">
+              Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging
             </h3>
-            <p style="margin:0;font-size:15px;line-height:1.6;font-weight:500;flex:1;text-wrap:pretty">
-              Automated diagnostic framework using CNNs and Explainable AI (XAI) feature attribution. Aligns visual biomarkers (color, coat thickness, texture) with Traditional Chinese Medicine (TCM) diagnostic principles to deliver clinician-interpretable insights.
-            </p>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
-              <a href="https://ieeexplore.ieee.org/document/11042469" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 16px;box-shadow:0 2px 0 #4A3326">
-                View on IEEE Xplore ↗
+
+            <!-- 3 Compact Facts: Problem → Method → Contribution -->
+            <div style="background:#FFFBEA;border:1.5px solid #4A3326;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5">
+              <div><strong style="color:#C2571B">Problem:</strong> Subjective clinician variability and lack of standardized visual diagnostics in non-invasive health screening.</div>
+              <div><strong style="color:#C2571B">Method:</strong> Deep CNN feature extraction coupled with Explainable AI (Grad-CAM & feature attribution) mapped to Traditional Chinese Medicine (TCM) criteria.</div>
+              <div><strong style="color:#C2571B">Contribution:</strong> Clinician-interpretable visual biomarker mapping (color, coating thickness, texture) with high diagnostic concordance.</div>
+            </div>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px">
+              <a href="https://ieeexplore.ieee.org/document/11042469" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 18px;box-shadow:0 2px 0 #4A3326">
+                IEEE Xplore Paper ↗
               </a>
               <a href="https://github.com/nandana-das/Tongue_disease_detection" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFD86B;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;box-shadow:0 2px 0 #4A3326">
                 Source Code ↗
               </a>
+              <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFFFFF;color:#4A3326;border:1.5px solid #4A3326;border-radius:999px;padding:7px 14px;box-shadow:0 2px 0 #4A3326">
+                Scholar ↗
+              </a>
             </div>
           </article>
 
-          <!-- Publication 2 -->
-          <article class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">Accepted ICTEST 2026</span>
-              <span style="background:#FFE27A;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">In Press</span>
-              <span style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">Remote Sensing</span>
+          <!-- Publication 2: Accepted / In Press -->
+          <article class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="background:#FFE27A;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:13px;letter-spacing:0.04em">⏳ ACCEPTED / IN PRESS</span>
+              <div style="display:flex;gap:6px">
+                <span style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">ICTEST 2026</span>
+                <span style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">Remote Sensing</span>
+              </div>
             </div>
-            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15;margin:0;text-wrap:pretty">
+
+            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2;margin:0;color:#4A3326">
               Physics-Informed Explainable Multimodal Deep Learning for Satellite-Based Air Pollution Source Attribution in Delhi NCR
             </h3>
-            <p style="margin:0;font-size:15px;line-height:1.6;font-weight:500;flex:1;text-wrap:pretty">
-              Combines multi-spectral satellite remote sensing with physics-informed neural architectures (PINNs) and meteorological time-series to attribute PM2.5/PM10 particulate matter to regional industrial, vehicular, and agricultural sources.
-            </p>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
-              <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 16px;box-shadow:0 2px 0 #4A3326">
+
+            <!-- 3 Compact Facts: Problem → Method → Contribution -->
+            <div style="background:#FFFBEA;border:1.5px solid #4A3326;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5">
+              <div><strong style="color:#C2571B">Problem:</strong> Disentangling regional aerosol pollution sources (industrial, vehicular, agricultural) in severe atmospheric conditions.</div>
+              <div><strong style="color:#C2571B">Method:</strong> Multimodal fusion of multispectral satellite remote sensing, ground sensor telemetry, and Physics-Informed Neural Networks (PINNs).</div>
+              <div><strong style="color:#C2571B">Contribution:</strong> Physics-constrained source attribution preserving aerosol transport physics with actionable spatial interpretability.</div>
+            </div>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px">
+              <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 18px;box-shadow:0 2px 0 #4A3326">
                 Google Scholar Profile ↗
               </a>
               <span style="display:inline-flex;align-items:center;background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;font-weight:700;font-size:13px;box-shadow:0 2px 0 #4A3326;color:#4A3326">
-                In Press (ICTEST 2026)
+                Accepted (ICTEST 2026 Proceedings)
               </span>
             </div>
           </article>
@@ -661,196 +809,310 @@
           </div>
         </div>
 
-        <div id="project-list" style="display:flex;flex-direction:column;gap:16px">
-          
-          <!-- P1: Lunar Boulder Detection -->
-          <a href="https://github.com/nandana-das/chandrayaan-2-ohrc-boulder-detection" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml vision-research">
-            <div class="project-num" style="background:#FFC9DE">01</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Planetary Computer Vision & Remote Sensing</div>
-                  <h3 class="project-title">Lunar Boulder Detection from Chandrayaan-2 OHRC Imagery</h3>
-                </div>
-                <span class="project-arrow">↗</span>
-              </div>
-              <p class="project-desc">Computer-vision pipeline for Chandrayaan-2 OHRC imagery, covering PDS4 preprocessing, 640×640 tiling, dataset preparation, and boulder detection using multiple object-detection models.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#FFC9DE">YOLO</span>
-                <span class="pill-badge" style="background:#FFC9DE">RT-DETR</span>
-                <span class="pill-badge" style="background:#FFC9DE">PyTorch</span>
-                <span class="pill-badge" style="background:#FFC9DE">Remote Sensing</span>
-              </div>
-            </div>
-          </a>
+        <div id="project-list" style="display:flex;flex-direction:column;gap:32px">
 
-          <!-- P2: Smart City Traffic Prediction & Decision Support -->
-          <a href="https://github.com/nandana-das/smart-city-traffic-prediction" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml systems-web">
-            <div class="project-num" style="background:#C4E4FF">02</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Urban AI & Traffic Forecasting</div>
-                  <h3 class="project-title">Smart City Traffic Prediction & Decision Support</h3>
-                </div>
-                <span class="project-arrow">↗</span>
-              </div>
-              <p class="project-desc">End-to-end traffic prediction system using live traffic data, temporal and weather features, sliding-window sequences, LSTM forecasting, and an interactive web interface.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#C4E4FF">LSTM</span>
-                <span class="pill-badge" style="background:#C4E4FF">FastAPI</span>
-                <span class="pill-badge" style="background:#C4E4FF">React</span>
-                <span class="pill-badge" style="background:#C4E4FF">TomTom API</span>
-              </div>
+          <!-- Group 1: Research & Deep Learning -->
+          <div class="project-group">
+            <div class="project-group-title">
+              <span>🔭</span> Research & Deep Learning
             </div>
-          </a>
+            <div class="project-group-list">
+              
+              <!-- P1: Lunar Boulder Detection -->
+              <div class="project-item doodle-card" data-category="ai-ml vision-research">
+                <div class="project-num" style="background:#FFC9DE">01</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Planetary Computer Vision & Remote Sensing</div>
+                      <h3 class="project-title">Lunar Boulder Detection from Chandrayaan-2 OHRC Imagery</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/chandrayaan-2-ohrc-boulder-detection" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">Computer-vision pipeline for Chandrayaan-2 OHRC imagery, covering PDS4 preprocessing, 640×640 tiling, dataset preparation, and boulder detection using multiple object-detection models.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> 640×640 OHRC tiling · 4 detector architectures · Regional inference analysis
+                  </div>
 
-          <!-- P3: ISRO Knowledge Graph RAG -->
-          <a href="https://github.com/nandana-das/isro-knowledge-graph-rag" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml vision-research">
-            <div class="project-num" style="background:#FFF0A8">03</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Knowledge Graph & Local RAG</div>
-                  <h3 class="project-title">ISRO Knowledge Graph RAG</h3>
-                </div>
-                <span class="project-arrow">↗</span>
-              </div>
-              <p class="project-desc">Knowledge Graph RAG system for querying ISRO mission documentation using entity extraction, graph retrieval, FAISS vector search, and local LLM inference.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#FFF0A8">Graph RAG</span>
-                <span class="pill-badge" style="background:#FFF0A8">FAISS</span>
-                <span class="pill-badge" style="background:#FFF0A8">spaCy</span>
-                <span class="pill-badge" style="background:#FFF0A8">Mistral-7B</span>
-              </div>
-            </div>
-          </a>
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/chandrayaan-2-ohrc-boulder-detection" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="project-btn">Research Context ↗</a>
+                  </div>
 
-          <!-- P4: Air Quality Prediction & Feature Optimization -->
-          <a href="https://github.com/nandana-das/air-quality-prediction-aco" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml">
-            <div class="project-num" style="background:#C6F0DA">04</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Environmental ML & Optimization</div>
-                  <h3 class="project-title">Air Quality Prediction & Feature Optimization</h3>
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#FFC9DE">YOLO</span>
+                    <span class="pill-badge" style="background:#FFC9DE">RT-DETR</span>
+                    <span class="pill-badge" style="background:#FFC9DE">PyTorch</span>
+                    <span class="pill-badge" style="background:#FFC9DE">Remote Sensing</span>
+                  </div>
                 </div>
-                <span class="project-arrow">↗</span>
               </div>
-              <p class="project-desc">Air-quality prediction pipeline using Ant Colony Optimization for feature selection, with convergence analysis and interpretable machine-learning outputs for AQI forecasting.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#C6F0DA">ACO</span>
-                <span class="pill-badge" style="background:#C6F0DA">Feature Selection</span>
-                <span class="pill-badge" style="background:#C6F0DA">ML</span>
-                <span class="pill-badge" style="background:#C6F0DA">AQI</span>
-              </div>
-            </div>
-          </a>
 
-          <!-- P5: RFMS-Fuzzy FCA Customer Segmentation -->
-          <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml">
-            <div class="project-num" style="background:#FFD86B">05</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Customer Analytics & Fuzzy FCA</div>
-                  <h3 class="project-title">RFMS-Fuzzy FCA Customer Segmentation</h3>
-                </div>
-                <span class="project-arrow">↗</span>
-              </div>
-              <p class="project-desc">Customer-segmentation framework combining RFMS metrics with Fuzzy Formal Concept Analysis, stability analysis, clustering, benchmarking, and cross-domain validation.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#FFD86B">Fuzzy FCA</span>
-                <span class="pill-badge" style="background:#FFD86B">RFMS</span>
-                <span class="pill-badge" style="background:#FFD86B">Clustering</span>
-                <span class="pill-badge" style="background:#FFD86B">Python</span>
-              </div>
-            </div>
-          </a>
+              <!-- P2: Smart City Traffic Prediction & Decision Support -->
+              <div class="project-item doodle-card" data-category="ai-ml systems-web">
+                <div class="project-num" style="background:#C4E4FF">02</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Urban AI & Traffic Forecasting</div>
+                      <h3 class="project-title">Smart City Traffic Prediction & Decision Support</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/smart-city-traffic-prediction" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">End-to-end traffic prediction system using live traffic data, temporal and weather features, sliding-window sequences, LSTM forecasting, and an interactive web interface.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> Live API ingest · Sliding-window LSTM · Interactive web dashboard
+                  </div>
 
-          <!-- P6: AI Study Buddy -->
-          <a href="https://github.com/nandana-das/ai-study-buddy" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml systems-web">
-            <div class="project-num" style="background:#FFD8B8">06</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Generative AI & Educational Assistant</div>
-                  <h3 class="project-title">AI Study Buddy</h3>
-                </div>
-                <span class="project-arrow">↗</span>
-              </div>
-              <p class="project-desc">Streamlit-based educational assistant using Google Gemini to explain concepts, generate examples, and create interactive quizzes from user-provided topics.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#FFD8B8">Gemini API</span>
-                <span class="pill-badge" style="background:#FFD8B8">Streamlit</span>
-                <span class="pill-badge" style="background:#FFD8B8">GenAI</span>
-                <span class="pill-badge" style="background:#FFD8B8">Python</span>
-              </div>
-            </div>
-          </a>
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/smart-city-traffic-prediction" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                  </div>
 
-          <!-- P7: AI Resume Agent -->
-          <a href="https://github.com/nandana-das/ai-resume-agent-langgraph" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml vision-research">
-            <div class="project-num" style="background:#FFC9DE">07</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Multi-Agent Generative AI</div>
-                  <h3 class="project-title">AI Resume Agent</h3>
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#C4E4FF">LSTM</span>
+                    <span class="pill-badge" style="background:#C4E4FF">FastAPI</span>
+                    <span class="pill-badge" style="background:#C4E4FF">React</span>
+                    <span class="pill-badge" style="background:#C4E4FF">TomTom API</span>
+                  </div>
                 </div>
-                <span class="project-arrow">↗</span>
               </div>
-              <p class="project-desc">Multi-agent LangGraph workflow that parses job descriptions, evaluates resumes, identifies skill gaps, and generates tailored resume content.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#FFC9DE">LangGraph</span>
-                <span class="pill-badge" style="background:#FFC9DE">LLMs</span>
-                <span class="pill-badge" style="background:#FFC9DE">NLP</span>
-                <span class="pill-badge" style="background:#FFC9DE">Multi-Agent</span>
-              </div>
-            </div>
-          </a>
 
-          <!-- P8: Video Meeting Summarizer -->
-          <a href="https://github.com/nandana-das/video-meeting-summarizer" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml vision-research">
-            <div class="project-num" style="background:#C4E4FF">08</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Speech-to-Text & NLP</div>
-                  <h3 class="project-title">Video Meeting Summarizer</h3>
-                </div>
-                <span class="project-arrow">↗</span>
-              </div>
-              <p class="project-desc">Automated speech-to-text and NLP pipeline that converts recorded lectures and meetings into concise summaries and key points.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#C4E4FF">Speech Recognition</span>
-                <span class="pill-badge" style="background:#C4E4FF">NLP</span>
-                <span class="pill-badge" style="background:#C4E4FF">NLTK</span>
-                <span class="pill-badge" style="background:#C4E4FF">Python</span>
-              </div>
-            </div>
-          </a>
+              <!-- P3: ISRO Knowledge Graph RAG -->
+              <div class="project-item doodle-card" data-category="ai-ml vision-research">
+                <div class="project-num" style="background:#FFF0A8">03</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Knowledge Graph & Local RAG</div>
+                      <h3 class="project-title">ISRO Knowledge Graph RAG</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/isro-knowledge-graph-rag" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">Knowledge Graph RAG system for querying ISRO mission documentation using entity extraction, graph retrieval, FAISS vector search, and local LLM inference.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> 4,557 chunks · 31K+ graph nodes · 95K+ edges
+                  </div>
 
-          <!-- P9: Interactive 3D Virtual Museum -->
-          <a href="https://github.com/nandana-das/interactive-3d-virtual-museum" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="systems-web">
-            <div class="project-num" style="background:#FFF0A8">09</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <div class="project-category">Interactive 3D Web Graphics</div>
-                  <h3 class="project-title">Interactive 3D Virtual Museum</h3>
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/isro-knowledge-graph-rag" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                  </div>
+
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#FFF0A8">Graph RAG</span>
+                    <span class="pill-badge" style="background:#FFF0A8">FAISS</span>
+                    <span class="pill-badge" style="background:#FFF0A8">spaCy</span>
+                    <span class="pill-badge" style="background:#FFF0A8">Mistral-7B</span>
+                  </div>
                 </div>
-                <span class="project-arrow">↗</span>
               </div>
-              <p class="project-desc">Browser-based 3D educational environment built with Three.js and WebGL, featuring interactive scenes, lighting, geometry, and camera controls.</p>
-              <div class="project-tags">
-                <span class="pill-badge" style="background:#FFF0A8">Three.js</span>
-                <span class="pill-badge" style="background:#FFF0A8">WebGL</span>
-                <span class="pill-badge" style="background:#FFF0A8">JavaScript</span>
-                <span class="pill-badge" style="background:#FFF0A8">3D</span>
+
+              <!-- P4: Air Quality Prediction & Feature Optimization -->
+              <div class="project-item doodle-card" data-category="ai-ml">
+                <div class="project-num" style="background:#C6F0DA">04</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Environmental ML & Optimization</div>
+                      <h3 class="project-title">Air Quality Prediction & Feature Optimization</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/air-quality-prediction-aco" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">Air-quality prediction pipeline using Ant Colony Optimization for feature selection, with convergence analysis and interpretable machine-learning outputs for AQI forecasting.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> Ant Colony Optimization · Multi-objective convergence · Feature subset interpretability
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/air-quality-prediction-aco" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                  </div>
+
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#C6F0DA">ACO</span>
+                    <span class="pill-badge" style="background:#C6F0DA">Feature Selection</span>
+                    <span class="pill-badge" style="background:#C6F0DA">ML</span>
+                    <span class="pill-badge" style="background:#C6F0DA">AQI</span>
+                  </div>
+                </div>
               </div>
+
+              <!-- P5: RFMS-Fuzzy FCA Customer Segmentation -->
+              <div class="project-item doodle-card" data-category="ai-ml">
+                <div class="project-num" style="background:#FFD86B">05</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Customer Analytics & Fuzzy FCA</div>
+                      <h3 class="project-title">RFMS-Fuzzy FCA Customer Segmentation</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">Customer-segmentation framework combining RFMS metrics with Fuzzy Formal Concept Analysis, stability analysis, clustering, benchmarking, and cross-domain validation.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> 93,357 customers · 45 F* levels · Cross-domain validation
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                  </div>
+
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#FFD86B">Fuzzy FCA</span>
+                    <span class="pill-badge" style="background:#FFD86B">RFMS</span>
+                    <span class="pill-badge" style="background:#FFD86B">Clustering</span>
+                    <span class="pill-badge" style="background:#FFD86B">Python</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
-          </a>
+          </div>
+
+          <!-- Group 2: Generative AI & Applications -->
+          <div class="project-group">
+            <div class="project-group-title">
+              <span>⚡</span> Generative AI & Applications
+            </div>
+            <div class="project-group-list">
+              
+              <!-- P6: AI Study Buddy -->
+              <div class="project-item doodle-card" data-category="ai-ml systems-web">
+                <div class="project-num" style="background:#FFD8B8">06</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Generative AI & Educational Assistant</div>
+                      <h3 class="project-title">AI Study Buddy</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/ai-study-buddy" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">Streamlit-based educational assistant using Google Gemini to explain concepts, generate examples, and create interactive quizzes from user-provided topics.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> Google Gemini integration · Dynamic quiz engine · Interactive Streamlit UI
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/ai-study-buddy" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://ai-study-beny.streamlit.app" target="_blank" rel="noopener noreferrer" class="project-btn">Live Demo ↗</a>
+                  </div>
+
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#FFD8B8">Gemini API</span>
+                    <span class="pill-badge" style="background:#FFD8B8">Streamlit</span>
+                    <span class="pill-badge" style="background:#FFD8B8">GenAI</span>
+                    <span class="pill-badge" style="background:#FFD8B8">Python</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- P7: AI Resume Agent -->
+              <div class="project-item doodle-card" data-category="ai-ml vision-research">
+                <div class="project-num" style="background:#FFC9DE">07</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Multi-Agent Generative AI</div>
+                      <h3 class="project-title">AI Resume Agent</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/ai-resume-agent-langgraph" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">Multi-agent LangGraph workflow that parses job descriptions, evaluates resumes, identifies skill gaps, and generates tailored resume content.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> Multi-agent LangGraph orchestration · Automated JD parsing · Skill gap scoring
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/ai-resume-agent-langgraph" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://resumeforgeagent.streamlit.app" target="_blank" rel="noopener noreferrer" class="project-btn">Live Demo ↗</a>
+                  </div>
+
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#FFC9DE">LangGraph</span>
+                    <span class="pill-badge" style="background:#FFC9DE">LLMs</span>
+                    <span class="pill-badge" style="background:#FFC9DE">NLP</span>
+                    <span class="pill-badge" style="background:#FFC9DE">Multi-Agent</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- P8: Video Meeting Summarizer -->
+              <div class="project-item doodle-card" data-category="ai-ml vision-research">
+                <div class="project-num" style="background:#C4E4FF">08</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Speech-to-Text & NLP</div>
+                      <h3 class="project-title">Video Meeting Summarizer</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/video-meeting-summarizer" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">Automated speech-to-text and NLP pipeline that converts recorded lectures and meetings into concise summaries and key points.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> Speech-to-text pipeline · Extractive NLP summarization · Action item generation
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/video-meeting-summarizer" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                  </div>
+
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#C4E4FF">Speech Recognition</span>
+                    <span class="pill-badge" style="background:#C4E4FF">NLP</span>
+                    <span class="pill-badge" style="background:#C4E4FF">NLTK</span>
+                    <span class="pill-badge" style="background:#C4E4FF">Python</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Group 3: Interactive Systems -->
+          <div class="project-group">
+            <div class="project-group-title">
+              <span>🌐</span> Interactive Systems
+            </div>
+            <div class="project-group-list">
+              
+              <!-- P9: Interactive 3D Virtual Museum -->
+              <div class="project-item doodle-card" data-category="systems-web">
+                <div class="project-num" style="background:#FFF0A8">09</div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <div>
+                      <div class="project-category">Interactive 3D Web Graphics</div>
+                      <h3 class="project-title">Interactive 3D Virtual Museum</h3>
+                    </div>
+                    <a href="https://github.com/nandana-das/interactive-3d-virtual-museum" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                  </div>
+                  <p class="project-desc">Browser-based 3D educational environment built with Three.js and WebGL, featuring interactive scenes, lighting, geometry, and camera controls.</p>
+                  
+                  <div class="project-results">
+                    <span>📊 Selected Results:</span> WebGL & Three.js rendering · 3D spatial navigation · Interactive lighting & geometry
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://github.com/nandana-das/interactive-3d-virtual-museum" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                  </div>
+
+                  <div class="project-tags">
+                    <span class="pill-badge" style="background:#FFF0A8">Three.js</span>
+                    <span class="pill-badge" style="background:#FFF0A8">WebGL</span>
+                    <span class="pill-badge" style="background:#FFF0A8">JavaScript</span>
+                    <span class="pill-badge" style="background:#FFF0A8">3D</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
 
         </div>
         <a href="https://github.com/nandana-das?tab=repositories" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:24px;font-weight:700;font-size:15px">
@@ -1021,104 +1283,110 @@
       </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- Certifications Section (Item 6) -->
     <section id="certifications" style="max-width:1180px;margin:0 auto;padding:72px 24px 40px">
-      <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">
-        Certifications <span style="color:#FF8FB8">♡</span>
-      </h2>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+        <div>
+          <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0">
+            Certifications <span style="color:#FF8FB8">♡</span>
+          </h2>
+          <p style="margin:4px 0 0;font-weight:600;font-size:15px;color:#C2571B">Industry-verified credentials in AI systems, Java engineering, and data science</p>
+        </div>
+      </div>
+
+      <!-- Top 4 Featured Certifications -->
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px">
         
-        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
           <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">Oracle</span>
           <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Oracle Certified Java Foundations Associate</div>
           <span style="font-weight:700;font-size:14px;color:#059669">✓ Verified Credential</span>
         </div>
 
-        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
           <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">IBM</span>
           <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Artificial Intelligence Foundation Digital Credential</div>
           <a href="https://www.credly.com/badges/8cc05afc-9b8b-46b7-a26f-04c243d404da/linked_in?t=sqsi62" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify on Credly ↗</a>
         </div>
 
-        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">Microsoft & LinkedIn</span>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Career Essentials in Generative AI</div>
-          <a href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
-        </div>
-
-        <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">GitHub</span>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Career Essentials in GitHub Certificate</div>
-          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
-        </div>
-
-        <div class="doodle-card" style="background:#FFD86B;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+        <div class="doodle-card" style="background:#FFD86B;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
           <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">KNIME</span>
           <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Data Science Professional Certificate</div>
           <a href="https://www.linkedin.com/learning/certificates/589d0ec89ecbe07a2e8961cb48dc0790156acc70fe9a0132cfacab3cb3776abb" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
         </div>
 
-        <div class="doodle-card" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">LinkedIn Learning</span>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Java Object-Oriented Programming</div>
-          <a href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
-        </div>
-
-        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">Infosys Springboard</span>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Artificial Intelligence Foundation Certification</div>
-          <a href="AI foundation certification infosys.png" target="_blank" style="font-weight:700;font-size:14px">View Certificate Image ↗</a>
+        <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">GitHub</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Career Essentials in GitHub Certificate</div>
+          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
         </div>
 
       </div>
+
+      <!-- Compact Additional Credentials Strip -->
+      <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:22px;padding:16px 22px;box-shadow:0 3px 0 #4A3326;margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <span style="font-weight:800;font-size:14px;color:#C2571B">Additional Credentials:</span>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:600">
+          <span>Microsoft & LinkedIn Generative AI · <a href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2" target="_blank" rel="noopener noreferrer" style="font-weight:700">Verify ↗</a></span>
+          <span>•</span>
+          <span>LinkedIn Java OOP · <a href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177" target="_blank" rel="noopener noreferrer" style="font-weight:700">Verify ↗</a></span>
+          <span>•</span>
+          <span>Infosys AI Foundation · <a href="AI foundation certification infosys.png" target="_blank" style="font-weight:700">View Image ↗</a></span>
+        </div>
+      </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- Education Section (Item 1) -->
     <section id="education" style="max-width:1180px;margin:0 auto;padding:32px 24px 72px">
       <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Education ☁</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
         
-        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+        <!-- Postgraduate: M.Tech with 8.9 CGPA -->
+        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
           <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
             <span>Postgraduate</span>
             <span>2025 – 2027</span>
           </div>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15">M.Tech in Artificial Intelligence & Data Science</div>
-          <div style="font-weight:700;font-size:14px;color:#D9541E">Alliance School of Advanced Computing, Alliance University — Bangalore</div>
-          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">Advanced specialization in LLMs, LangGraph, Knowledge Graph RAG, Computer Vision (YOLO/RT-DETR), and Explainable AI (SHAP/Grad-CAM).</p>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">M.Tech in Artificial Intelligence & Data Science</div>
+          <div style="font-weight:700;font-size:14px;color:#D9541E">Alliance University · Bangalore</div>
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:15px;color:#059669">8.9 CGPA (Current)</span>
+          <p style="margin:0;font-size:14px;line-height:1.55;font-weight:500">Advanced specialization in LLMs, LangGraph, Knowledge Graph RAG, Computer Vision (YOLO/RT-DETR), and Explainable AI (SHAP/Grad-CAM).</p>
         </div>
 
-        <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+        <!-- Undergraduate: B.Tech with 7.18 CGPA -->
+        <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
           <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
             <span>Undergraduate</span>
             <span>2021 – 2025</span>
           </div>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15">B.Tech in Computer Science and Engineering (AI)</div>
-          <div style="font-weight:700;font-size:14px;color:#D9541E">Adi Shankara Institute of Engineering & Technology — Kalady</div>
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 12px;font-weight:700;font-size:14px">CGPA: 7.18</span>
-          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">Foundations in algorithm design, computer vision, data structures, and neural network development.</p>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">B.Tech in Computer Science and Engineering (AI)</div>
+          <div style="font-weight:700;font-size:14px;color:#D9541E">Adi Shankara Institute of Engineering & Technology (ASIET) · Kalady</div>
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:15px">7.18 CGPA</span>
+          <p style="margin:0;font-size:14px;line-height:1.55;font-weight:500">Foundations in algorithm design, computer vision, data structures, and neural network development.</p>
         </div>
 
-        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+        <!-- Higher Secondary -->
+        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
           <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
             <span>Higher Secondary (ISC)</span>
             <span>2021</span>
           </div>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15">Class XII</div>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">Class XII</div>
           <div style="font-weight:700;font-size:14px;color:#D9541E">St. Aloysius Convent ISC School</div>
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 12px;font-weight:700;font-size:14px">87.2%</span>
-          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">Science stream with focus on Physics, Chemistry, Mathematics, and Computer Science.</p>
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:14px">87.2%</span>
+          <p style="margin:0;font-size:14px;line-height:1.55;font-weight:500">Science stream with focus on Physics, Chemistry, Mathematics, and Computer Science.</p>
         </div>
 
-        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+        <!-- Secondary -->
+        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
           <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
             <span>Secondary (ICSE)</span>
             <span>2019</span>
           </div>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15">Class X</div>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">Class X</div>
           <div style="font-weight:700;font-size:14px;color:#D9541E">St. Aloysius Convent ISC School</div>
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 12px;font-weight:700;font-size:14px">87.17%</span>
-          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">Distinction across all disciplines with academic honors in science and mathematics.</p>
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:14px">87.17%</span>
+          <p style="margin:0;font-size:14px;line-height:1.55;font-weight:500">Distinction across all disciplines with academic honors in science and mathematics.</p>
         </div>
 
       </div>
@@ -1191,6 +1459,14 @@
           } else {
             item.style.display = 'none';
           }
+        });
+
+        // Hide empty project groups when filtering
+        document.querySelectorAll('.project-group').forEach(group => {
+          const visible = Array.from(group.querySelectorAll('.project-item')).filter(
+            el => el.style.display !== 'none'
+          );
+          group.style.display = visible.length > 0 ? 'block' : 'none';
         });
       });
     });
