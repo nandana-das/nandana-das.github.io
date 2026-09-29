@@ -28,15 +28,15 @@ The portfolio features a warm, playful **Sunlight Doodle / Neo-Brutalist** aesth
   - *Vision & Research*
   - *Systems & Web*
 - **Featured Projects**:
-  1. **Lunar Landslide & Boulder Detection**: Planetary CV pipeline on Chandrayaan-2 OHRC imagery with PDS4 parsing, 640×640 tiling, dark-tile filtering, YOLO-family detectors, and RT-DETR.
-  2. **Smart City Traffic AI — Bengaluru**: Real-time traffic forecasting and decision support with 5-minute sliding sequences, LSTM, FastAPI, React, Leaflet, and TomTom API.
-  3. **KG-RAG for ISRO Domain Question Answering**: Knowledge Graph RAG for ISRO documentation with spaCy relation extraction, NetworkX, FAISS, and local Mistral-7B via Ollama.
-  4. **Air Quality Prediction**: Interpretable AQI forecasting combining Ant Colony Optimization (ACO) for feature selection with machine-learning models.
-  5. **RFMS-Fuzzy FCA Customer Segmentation**: E-commerce customer segmentation on Olist data combining Recency, Frequency, Monetary, Satisfaction features, Fuzzy FCA, and alpha-cut clustering.
-  6. **AI Study Buddy**: Streamlit educational assistant powered by Google Gemini API for concept explanations, MCQ quizzes, and interactive Q&A.
-  7. **AI Resume Agent**: Multi-agent LangGraph workflow orchestrating JD parsing, resume evaluation, skill-gap analysis, and job-tailored resume generation.
-  8. **Video Meeting Summarizer**: Automated speech recognition and NLP pipeline for transcribing and summarizing recorded meetings and lectures.
-  9. **Virtual Museum**: Interactive browser-based 3D educational environment using Three.js and WebGL with custom geometry and lighting.
+  1. **Lunar Boulder Detection from Chandrayaan-2 OHRC Imagery**: Computer-vision pipeline for Chandrayaan-2 OHRC imagery, covering PDS4 preprocessing, 640×640 tiling, dataset preparation, and boulder detection using multiple object-detection models (`YOLO · RT-DETR · PyTorch · Remote Sensing`).
+  2. **Smart City Traffic Prediction & Decision Support**: End-to-end traffic prediction system using live traffic data, temporal and weather features, sliding-window sequences, LSTM forecasting, and an interactive web interface (`LSTM · FastAPI · React · TomTom API`).
+  3. **ISRO Knowledge Graph RAG**: Knowledge Graph RAG system for querying ISRO mission documentation using entity extraction, graph retrieval, FAISS vector search, and local LLM inference (`Graph RAG · FAISS · spaCy · Mistral-7B`).
+  4. **Air Quality Prediction & Feature Optimization**: Air-quality prediction pipeline using Ant Colony Optimization for feature selection, with convergence analysis and interpretable machine-learning outputs for AQI forecasting (`ACO · Feature Selection · ML · AQI`).
+  5. **RFMS-Fuzzy FCA Customer Segmentation**: Customer-segmentation framework combining RFMS metrics with Fuzzy Formal Concept Analysis, stability analysis, clustering, benchmarking, and cross-domain validation (`Fuzzy FCA · RFMS · Clustering · Python`).
+  6. **AI Study Buddy**: Streamlit-based educational assistant using Google Gemini to explain concepts, generate examples, and create interactive quizzes from user-provided topics (`Gemini API · Streamlit · GenAI · Python`).
+  7. **AI Resume Agent**: Multi-agent LangGraph workflow that parses job descriptions, evaluates resumes, identifies skill gaps, and generates tailored resume content (`LangGraph · LLMs · NLP · Multi-Agent`).
+  8. **Video Meeting Summarizer**: Automated speech-to-text and NLP pipeline that converts recorded lectures and meetings into concise summaries and key points (`Speech Recognition · NLP · NLTK · Python`).
+  9. **Interactive 3D Virtual Museum**: Browser-based 3D educational environment built with Three.js and WebGL, featuring interactive scenes, lighting, geometry, and camera controls (`Three.js · WebGL · JavaScript · 3D`).
 - **Experience & Leadership**:
   - *Backend Servicing Intern* at Covacsis Technologies (Java, Spring Boot, Apache Pinot, REST APIs).
   - *Student Mentor* & *Social Media Team Lead* at CSI SB ASIET; *Editor* at Saakshin.
