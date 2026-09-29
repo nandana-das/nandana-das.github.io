@@ -18,7 +18,7 @@ The portfolio features a warm, playful **Sunlight Doodle / Neo-Brutalist** aesth
 ## 🌟 Key Features & Sections
 
 - **Hero & Profile**: Illustrated avatar portrait, current affiliation at Alliance University, quick navigation, and instant resume download.
-- **Impact Metrics**: Quick stats highlighting 2 scientific publications, 9+ projects, B.Tech academic track record (7.18 CGPA), and 7 verified certifications.
+- **Impact Metrics**: Quick stats highlighting 2 research works (1 published, 1 accepted/in press), 9+ projects, B.Tech academic track record (7.18 CGPA), and 7 verified certifications.
 - **Scientific Research & Publications**:
   - *Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging* — Published in **IEEE Xplore** ([10.1109/ICTEST65242.2025.11042469](https://ieeexplore.ieee.org/document/11042469)).
   - *Physics-Informed Explainable Multimodal Deep Learning for Satellite-Based Air Pollution Source Attribution in Delhi NCR* — Accepted at **ICTEST 2026** (In Press).
@@ -28,15 +28,15 @@ The portfolio features a warm, playful **Sunlight Doodle / Neo-Brutalist** aesth
   - *Vision & Research*
   - *Systems & Web*
 - **Featured Projects**:
-  1. **Lunar Landslide & Boulder Detection**: Chandrayaan-2 OHRC hazard detection with YOLOv5 & Faster R-CNN baselines.
-  2. **Smart City Traffic AI (Bengaluru)**: Real-time TomTom API traffic forecasting using LSTM and Fuzzy Cognitive Maps.
-  3. **KG-RAG ISRO**: Aerospace documentation Q&A via Knowledge Graph RAG and FAISS vector retrieval.
-  4. **Air Quality Prediction**: AQI forecasting using Ant Colony Optimization (ACO) and Decision Trees.
-  5. **RFMS Fuzzy FCA Customer Segmentation**: Marketplace frequency clustering combining Fuzzy FCA and RFMS metrics.
-  6. **AI Study Buddy**: Streamlit educational assistant powered by Google Gemini API.
-  7. **AI Resume Agent**: 4-agent LangGraph workflow tailored for job description gap analysis.
-  8. **Video Meeting Summarizer**: SpeechRecognition and extractive NLTK lecture summarizer.
-  9. **Virtual Museum 3D**: Three.js & WebGL 3D educational browser experience.
+  1. **Lunar Landslide & Boulder Detection**: Planetary CV pipeline on Chandrayaan-2 OHRC imagery with PDS4 parsing, 640×640 tiling, dark-tile filtering, YOLO-family detectors, and RT-DETR.
+  2. **Smart City Traffic AI — Bengaluru**: Real-time traffic forecasting and decision support with 5-minute sliding sequences, LSTM, FastAPI, React, Leaflet, and TomTom API.
+  3. **KG-RAG for ISRO Domain Question Answering**: Knowledge Graph RAG for ISRO documentation with spaCy relation extraction, NetworkX, FAISS, and local Mistral-7B via Ollama.
+  4. **Air Quality Prediction**: Interpretable AQI forecasting combining Ant Colony Optimization (ACO) for feature selection with machine-learning models.
+  5. **RFMS-Fuzzy FCA Customer Segmentation**: E-commerce customer segmentation on Olist data combining Recency, Frequency, Monetary, Satisfaction features, Fuzzy FCA, and alpha-cut clustering.
+  6. **AI Study Buddy**: Streamlit educational assistant powered by Google Gemini API for concept explanations, MCQ quizzes, and interactive Q&A.
+  7. **AI Resume Agent**: Multi-agent LangGraph workflow orchestrating JD parsing, resume evaluation, skill-gap analysis, and job-tailored resume generation.
+  8. **Video Meeting Summarizer**: Automated speech recognition and NLP pipeline for transcribing and summarizing recorded meetings and lectures.
+  9. **Virtual Museum**: Interactive browser-based 3D educational environment using Three.js and WebGL with custom geometry and lighting.
 - **Experience & Leadership**:
   - *Backend Servicing Intern* at Covacsis Technologies (Java, Spring Boot, Apache Pinot, REST APIs).
   - *Student Mentor* & *Social Media Team Lead* at CSI SB ASIET; *Editor* at Saakshin.
