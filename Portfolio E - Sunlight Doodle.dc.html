@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Nandana Narayan Das — Sunlight Doodle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="./data.js"></script>
+<style>
+html,body{margin:0;background:#FFF7D6;color:#4A3326;font-family:Quicksand,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#4A3326;text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:#D9541E}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-10px) rotate(calc(var(--r,0deg) + 6deg))}}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.25) rotate(15deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drop{0%{transform:translateY(-30px) scale(.9);opacity:0}60%{transform:translateY(6px) scale(1.02);opacity:1}100%{transform:none;opacity:1}}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFF7D6;overflow-x:hidden;position:relative">
+  <nav style="position:sticky;top:10px;z-index:10;max-width:1180px;margin:10px auto 0;padding:0 16px">
+    <div style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:8px 8px 8px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;box-shadow:0 4px 0 #FFD86B">
+      <a href="#hero" style="font-family:'Baloo 2';font-weight:800;font-size:22px;text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="color:#FF8FB8;display:inline-block;animation:twinkle 2.6s ease-in-out infinite">✿</span>nandana</a>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;font-weight:700;font-size:15px;margin-left:auto">
+        <a href="#about" style="text-decoration:none;white-space:nowrap">About</a><a href="#work" style="text-decoration:none;white-space:nowrap">Work</a><a href="#experience" style="text-decoration:none;white-space:nowrap">Experience</a><a href="#skills" style="text-decoration:none;white-space:nowrap">Skills</a><a href="#education" style="text-decoration:none;white-space:nowrap">Education</a><a href="#contact" style="text-decoration:none;white-space:nowrap">Contact</a>
+      </div>
+      <a href="https://nandana-das.github.io/Resume.pdf" style="text-decoration:none;font-weight:700;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:7px 18px;white-space:nowrap;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-3px) rotate(-3deg) scale(1.06)">Resume ↓</a>
+    </div>
+  </nav>
+
+  <header id="hero" style="max-width:1180px;margin:0 auto;padding:60px 24px 40px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;position:relative">
+    <span style="position:absolute;left:1%;top:26px;font-size:34px;color:#FFA63D;animation:bob 4s ease-in-out infinite;--r:-10deg">☼</span>
+    <span style="position:absolute;left:46%;top:48px;width:26px;height:26px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.4s ease-in-out infinite"></span>
+    <svg width="90" height="24" viewBox="0 0 90 24" style="position:absolute;left:8%;bottom:14px" fill="none"><path d="M3 12 Q14 0 25 12 T47 12 T69 12 T87 12" stroke="#FF9E5E" stroke-width="5" stroke-linecap="round"/></svg>
+    <div style="flex:1 1 480px;min-width:0">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;font-weight:700;font-size:14px;animation:drop .8s cubic-bezier(.34,1.6,.5,1) both">☁ M.Tech AI & Data Science · Alliance University</div>
+      <h1 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(52px,8vw,104px);line-height:.95;letter-spacing:-.02em;margin:22px 0 18px;text-wrap:balance;animation:drop .9s .1s cubic-bezier(.34,1.6,.5,1) both">Hi, I'm <span style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">Nandana</span> <span style="color:#FF8FB8">♡</span></h1>
+      <p style="font-family:'Baloo 2';font-weight:700;font-size:clamp(21px,2.3vw,28px);margin:0 0 12px;line-height:1.2">AI/ML researcher & deep learning engineer</p>
+      <p style="font-size:19px;line-height:1.6;max-width:540px;margin:0 0 30px;font-weight:500;text-wrap:pretty">Turning complex multi-modal data into intelligent, <b>explainable</b> solutions — from deep learning architectures to real-world deployment.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="#work" style="text-decoration:none;font-weight:700;font-size:17px;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:13px 26px;box-shadow:0 4px 0 #4A3326;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-5px) rotate(-2deg)">See my work →</a>
+        <a href="#contact" style="text-decoration:none;font-weight:700;font-size:17px;background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:13px 26px;box-shadow:0 4px 0 #4A3326;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-5px) rotate(2deg)">Say hello</a>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:26px;font-weight:700">
+        <a href="https://linkedin.com/in/nandana-narayan-das">LinkedIn</a><a href="https://github.com/nandana-das">GitHub</a><a href="https://ieeexplore.ieee.org/document/11042469">IEEE Author</a><a href="mailto:nandanadas007@gmail.com">Email</a>
+      </div>
+    </div>
+    <div style="flex:0 1 400px;min-width:280px;margin:0 auto;position:relative">
+      <div style="position:absolute;inset:-46px;border-radius:50%;background:repeating-conic-gradient(#FFDD66 0 9deg,transparent 9deg 22deg);animation:spin 50s linear infinite"></div><div style="position:absolute;inset:-14px;border-radius:50%;background:#FFD84D;border:2.5px solid #4A3326"></div>
+      <div style="position:relative;border:2.5px solid #4A3326;border-radius:44% 56% 50% 50% / 40% 40% 60% 60%;overflow:hidden;aspect-ratio:1/1.08;background:#CFE3F7;box-shadow:0 6px 0 #4A3326;transition:transform .5s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:rotate(-3deg) scale(1.03)">
+        <img src="assets/nandana.jpg" alt="Illustrated portrait of Nandana" style="width:100%;height:100%;object-fit:cover;object-position:50% 36%;display:block">
+      </div>
+      <div style="position:absolute;right:-16px;top:-8px;width:54px;height:54px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.8s ease-in-out infinite"></div>
+      <div style="position:absolute;left:-26px;bottom:18%;font-size:36px;color:#FF8FB8;animation:bob 3.6s ease-in-out infinite;--r:-8deg">♡</div>
+      <div style="position:absolute;right:-20px;bottom:6%;background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transform:rotate(5deg)">Bangalore · Kochi</div>
+      <div style="position:absolute;left:-24px;top:8%;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transform:rotate(-6deg)">XAI fan ☺</div>
+    </div>
+  </header>
+
+  <sc-if value="{{ showStats }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1180px;margin:0 auto;padding:16px 24px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div style="background:{{ s.bg }};border:2px solid #4A3326;border-radius:26px;padding:18px 22px;box-shadow:0 4px 0 #4A3326;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-6px) rotate(-2deg)">
+          <div style="font-family:'Baloo 2';font-weight:800;font-size:48px;line-height:1">{{ s.n }}</div>
+          <div style="font-weight:700;font-size:15px;margin-top:4px">{{ s.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <section id="about" style="max-width:1180px;margin:0 auto;padding:56px 24px;position:relative">
+    <span style="position:absolute;right:40px;top:30px;font-size:30px;color:#FFA63D;animation:bob 4.2s ease-in-out infinite;--r:8deg">✧</span>
+    <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(38px,5vw,60px);margin:0 0 26px">About me <span style="color:#FF8FB8">✿</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+      <sc-for list="{{ about }}" as="a" hint-placeholder-count="3">
+        <div style="background:{{ a.bg }};border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px;transition:transform .45s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-7px) rotate(-1deg)">
+          <div style="font-family:'Baloo 2';font-weight:800;font-size:15px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">{{ a.n }}</div>
+          <h3 style="font-family:'Baloo 2';font-weight:800;font-size:24px;margin:0;line-height:1.1">{{ a.t }}</h3>
+          <p style="margin:0;font-size:16px;line-height:1.6;flex:1;font-weight:500;text-wrap:pretty">{{ a.b }}</p>
+          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ {{ a.f }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="work" style="background:#FFF1B8;border-top:2px solid #4A3326;position:relative">
+    <span style="position:absolute;left:20px;top:22px;font-size:34px;color:#FFA63D;animation:bob 3.8s ease-in-out infinite;--r:-8deg">☼</span>
+    <svg width="110" height="26" viewBox="0 0 110 26" style="position:absolute;right:36px;top:22px" fill="none"><path d="M3 13 Q16 0 29 13 T55 13 T81 13 T107 13" stroke="#FF8FB8" stroke-width="5" stroke-linecap="round"/></svg>
+    <div id="publications" style="max-width:1180px;margin:0 auto;padding:72px 24px 64px">
+      <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Research ✧</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px">
+        <sc-for list="{{ pubs }}" as="p" hint-placeholder-count="2">
+          <article style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:12px;transition:transform .45s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-6px) rotate(-1deg)">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <sc-for list="{{ p.tags }}" as="t"><span style="background:{{ p.bg }};border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">{{ t }}</span></sc-for>
+            </div>
+            <h3 style="font-family:'Baloo 2';font-weight:800;font-size:22px;line-height:1.15;margin:0;text-wrap:pretty">{{ p.t }}</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;font-weight:500;flex:1;text-wrap:pretty">{{ p.b }}</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px">
+              <sc-for list="{{ p.links }}" as="l"><a href="{{ l.u }}" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 16px;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-3px) rotate(-3deg)">{{ l.l }} ↗</a></sc-for>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="background:#FFC94D;border-top:2px solid #4A3326;border-bottom:2px solid #4A3326;position:relative;overflow:hidden">
+    <div style="position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:repeating-conic-gradient(#FFD877 0 8deg,transparent 8deg 24deg);animation:spin 40s linear infinite"></div>
+    <span style="position:absolute;left:4%;bottom:26px;font-size:34px;color:#FF8FB8;animation:bob 3.6s ease-in-out infinite;--r:-8deg">♡</span>
+    <div style="max-width:1000px;margin:0 auto;padding:72px 24px;position:relative">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px">
+        <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1;margin:0">Projects <span style="color:#FFFFFF;-webkit-text-stroke:2px #4A3326">☼</span></h2>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <sc-for list="{{ cats }}" as="c" hint-placeholder-count="4">
+            <sc-if value="{{ c.on }}"><button onClick="{{ c.pick }}" style="font:700 14px Quicksand;color:#FFF7D6;background:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer;animation:drop .5s cubic-bezier(.34,1.9,.5,1) both">{{ c.l }}</button></sc-if>
+            <sc-if value="{{ c.off }}"><button onClick="{{ c.pick }}" style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-3px) rotate(-3deg)">{{ c.l }}</button></sc-if>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+          <a href="{{ p.u }}" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap;animation:drop .6s cubic-bezier(.34,1.7,.5,1) both;transition:transform .45s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateX(10px) rotate(-.6deg)">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:{{ p.bg }};border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2';font-weight:800;font-size:22px">{{ p.n }}</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">{{ p.k }}</div>
+              <h3 style="font-family:'Baloo 2';font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">{{ p.t }}</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">{{ p.b }}</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <sc-for list="{{ p.s }}" as="s"><span style="font-size:12px;font-weight:700;background:{{ p.bg }};border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">{{ s }}</span></sc-for>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+      <a href="https://github.com/nandana-das?tab=repositories" style="display:inline-block;margin-top:24px;font-weight:700">All repositories on GitHub →</a>
+    </div>
+  </section>
+
+  <section id="experience" style="max-width:1180px;margin:0 auto;padding:72px 24px;display:flex;flex-wrap:wrap;gap:32px;position:relative">
+    <div style="flex:1 1 420px;min-width:0">
+      <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 20px">Experience</h2>
+      <div style="background:#C4E4FF;border:2px solid #4A3326;border-radius:30px;padding:28px;box-shadow:0 5px 0 #4A3326;transition:transform .45s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-6px) rotate(-1deg)">
+        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline">
+          <h3 style="font-family:'Baloo 2';font-weight:800;font-size:26px;margin:0">{{ job.r }}</h3>
+          <span style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">{{ job.d }}</span>
+        </div>
+        <div style="font-weight:700;margin:6px 0 16px">{{ job.o }}</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ job.pts }}" as="pt" hint-placeholder-count="3"><div style="display:flex;gap:10px;font-size:16px;line-height:1.5;font-weight:500"><span style="color:#D9541E;font-weight:700">♡</span><span>{{ pt }}</span></div></sc-for>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:18px">
+          <sc-for list="{{ job.s }}" as="s"><span style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">{{ s }}</span></sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1 1 420px;min-width:0">
+      <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 20px">Leadership</h2>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <sc-for list="{{ lead }}" as="l" hint-placeholder-count="3">
+          <div style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start;transition:transform .45s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateX(6px) rotate(.8deg)">
+            <div style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:{{ l.bg }};border:2px solid #4A3326"></div>
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b style="font-family:'Baloo 2';font-weight:800;font-size:20px">{{ l.r }}</b><span style="font-weight:700;font-size:14px">{{ l.d }}</span></div>
+              <div style="font-weight:700;font-size:14px;margin:2px 0 6px;color:#D9541E">{{ l.o }}</div>
+              <div style="font-size:15px;line-height:1.5;font-weight:500">{{ l.b }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="background:#FFE9B8;border-top:2px solid #4A3326;border-bottom:2px solid #4A3326;position:relative">
+    <span style="position:absolute;right:30px;top:24px;width:34px;height:34px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.5s ease-in-out infinite"></span>
+    <div style="max-width:1180px;margin:0 auto;padding:72px 24px">
+      <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Toolbox ✧</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+        <sc-for list="{{ skills }}" as="g" hint-placeholder-count="6">
+          <div style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2';font-weight:800;font-size:20px;margin-bottom:12px">{{ g.g }}</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <sc-for list="{{ g.i }}" as="i"><span style="background:{{ g.bg }};border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px;cursor:default;transition:transform .4s cubic-bezier(.34,2,.5,1)" style-hover="transform:translateY(-5px) rotate(-5deg) scale(1.08)">{{ i }}</span></sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" style="max-width:1180px;margin:0 auto;padding:72px 24px 40px">
+    <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Certifications <span style="color:#FF8FB8">♡</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px">
+      <sc-for list="{{ certs }}" as="c" hint-placeholder-count="7">
+        <div style="background:{{ c.bg }};border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px;transition:transform .45s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-6px) rotate(-2deg)">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">{{ c.o }}</span>
+          <div style="font-family:'Baloo 2';font-weight:800;font-size:18px;line-height:1.2;flex:1">{{ c.t }}</div>
+          <sc-if value="{{ c.has }}"><a href="{{ c.u }}" style="font-weight:700;font-size:14px">Verify ↗</a></sc-if>
+          <sc-if value="{{ c.no }}"><span style="font-weight:700;font-size:14px">✓ Verified</span></sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="education" style="max-width:1180px;margin:0 auto;padding:32px 24px 72px">
+    <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Education ☁</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+      <sc-for list="{{ edu }}" as="e" hint-placeholder-count="4">
+        <div style="background:{{ e.bg }};border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px;transition:transform .45s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-7px) rotate(1.2deg)">
+          <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px"><span>{{ e.lv }}</span><span>{{ e.d }}</span></div>
+          <div style="font-family:'Baloo 2';font-weight:800;font-size:22px;line-height:1.15">{{ e.t }}</div>
+          <div style="font-weight:700;font-size:14px">{{ e.o }}</div>
+          <sc-if value="{{ e.hasG }}"><span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 12px;font-weight:700;font-size:14px">{{ e.g }}</span></sc-if>
+          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">{{ e.b }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="contact" style="background:#FFD86B;border-top:2px solid #4A3326;position:relative;overflow:hidden">
+    <span style="position:absolute;left:5%;bottom:70px;font-size:40px;color:#FF8FB8;animation:bob 3.4s ease-in-out infinite;--r:-10deg">♡</span>
+    <span style="position:absolute;right:6%;top:36px;font-size:36px;color:#FFA63D;animation:bob 4s ease-in-out infinite;--r:10deg">☼</span>
+    <div style="max-width:1180px;margin:0 auto;padding:76px 24px;display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+      <div style="flex:1 1 420px;min-width:0">
+        <h2 style="font-family:'Baloo 2';font-weight:800;font-size:clamp(46px,7vw,90px);line-height:.95;margin:0 0 18px">Let's make something <span style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">lovely</span>.</h2>
+        <p style="font-size:18px;line-height:1.6;max-width:520px;margin:0;font-weight:500">AI/ML research, Explainable AI, computer vision, engineering roles — or just hello. I'd love to hear from you.</p>
+        <p style="font-size:15px;font-weight:700;margin:16px 0 0">Bangalore / Kochi, India · English (fluent), Malayalam (native)</p>
+      </div>
+      <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:14px">
+        <div style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:10px 10px 10px 24px;box-shadow:0 4px 0 #4A3326;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <a href="mailto:nandanadas007@gmail.com" style="font-weight:700;font-size:17px;text-decoration:none">nandanadas007@gmail.com</a>
+          <button onClick="{{ copy1 }}" style="font:700 14px Quicksand;background:#FFC9DE;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;cursor:pointer">{{ c1 }}</button>
+        </div>
+        <div style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:10px 10px 10px 24px;box-shadow:0 4px 0 #4A3326;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <a href="mailto:nandana.narayan.das@gmail.com" style="font-weight:700;font-size:17px;text-decoration:none">nandana.narayan.das@gmail.com</a>
+          <button onClick="{{ copy2 }}" style="font:700 14px Quicksand;background:#C6F0DA;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;cursor:pointer">{{ c2 }}</button>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://linkedin.com/in/nandana-narayan-das" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-4px) rotate(-3deg)">LinkedIn</a>
+          <a href="https://github.com/nandana-das" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-4px) rotate(3deg)">GitHub</a>
+          <a href="https://nandana-das.github.io/Resume.pdf" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326;transition:transform .4s cubic-bezier(.34,1.9,.5,1)" style-hover="transform:translateY(-4px) rotate(-3deg)">Resume</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:0 auto;padding:18px 24px 26px;border-top:2px dashed #4A3326;font-size:14px;font-weight:700;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>© 2026 Nandana Narayan Das</span><span>Made with ♡ and a lot of tea</span></div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { cat: 'all', copied: '' };
+  pal = ['#FFC9DE', '#C4E4FF', '#FFF0A8', '#C6F0DA', '#FFD86B', '#FFD8B8'];
+  componentDidMount() { if (!window.PF) this.t = setInterval(() => { if (window.PF) { clearInterval(this.t); this.forceUpdate(); } }, 40); }
+  componentWillUnmount() { clearInterval(this.t); clearTimeout(this.ct); }
+  copy(e) { navigator.clipboard && navigator.clipboard.writeText(e); this.setState({ copied: e }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: '' }), 1600); }
+  renderVals() {
+    const P = window.PF || { stats: [], about: [], pubs: [], cats: [], projects: [], job: { pts: [], s: [] }, lead: [], skills: [], certs: [], edu: [] };
+    const pal = this.pal, cat = this.state.cat, c = (i) => pal[i % pal.length];
+    const e1 = 'nandanadas007@gmail.com', e2 = 'nandana.narayan.das@gmail.com';
+    return {
+      showStats: this.props.showStats ?? true,
+      stats: P.stats.map((s, i) => ({ ...s, bg: c(i) })),
+      about: P.about.map((a, i) => ({ ...a, bg: c(i * 2 + 1), n: '0' + (i + 1) })),
+      pubs: P.pubs.map((p, i) => ({ ...p, bg: c(i * 3) })),
+      cats: P.cats.map(k => ({ ...k, on: k.k === cat, off: k.k !== cat, pick: () => this.setState({ cat: k.k }) })),
+      projects: P.projects.filter(p => cat === 'all' || p.c === cat).map((p, i) => ({ ...p, bg: c(i), n: String(i + 1).padStart(2, '0') })),
+      job: P.job,
+      lead: P.lead.map((l, i) => ({ ...l, bg: c(i + 2) })),
+      skills: P.skills.map((s, i) => ({ ...s, bg: c(i) })),
+      certs: P.certs.map((x, i) => ({ ...x, has: !!x.u, no: !x.u, bg: c(i + 3) })),
+      edu: P.edu.map((x, i) => ({ ...x, hasG: !!x.g, bg: c(i + 4) })),
+      copy1: () => this.copy(e1), copy2: () => this.copy(e2),
+      c1: this.state.copied === e1 ? 'Copied!' : 'Copy', c2: this.state.copied === e2 ? 'Copied!' : 'Copy'
+    };
+  }
+}
+</script>
+</body>
+</html>

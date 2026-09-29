@@ -1,1101 +1,821 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nandana Narayan Das | AI & Data Science Researcher & Engineer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nandana Narayan Das — AI/ML Researcher & Engineer</title>
   <meta name="description" content="Portfolio of Nandana Narayan Das — M.Tech AI & Data Science Scholar at Alliance University, specializing in Explainable AI, Computer Vision, Deep Learning, and Intelligent Systems." />
-  <meta name="keywords" content="Nandana Narayan Das, AI, Machine Learning, Deep Learning, Explainable AI, Computer Vision, Portfolio, Alliance University, IEEE" />
-  <meta name="author" content="Nandana Narayan Das" />
-  
-  <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Nandana Narayan Das | Portfolio" />
-  <meta property="og:description" content="M.Tech AI & Data Science Scholar · AI/ML Researcher & Developer" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nandana-das.github.io/" />
-
-  <!-- Fonts & Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="tailwind.config.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      background: #FFF7D6;
+      color: #4A3326;
+      font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    a {
+      color: #4A3326;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease, transform 0.3s cubic-bezier(.34,1.9,.5,1);
+    }
+    a:hover {
+      color: #D9541E;
+    }
+
+    /* Keyframe Animations */
+    @keyframes bob {
+      0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+      50% { transform: translateY(-10px) rotate(calc(var(--r, 0deg) + 6deg)); }
+    }
+    @keyframes twinkle {
+      0%, 100% { transform: scale(1) rotate(0); }
+      50% { transform: scale(1.25) rotate(15deg); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes drop {
+      0% { transform: translateY(-30px) scale(.9); opacity: 0; }
+      60% { transform: translateY(6px) scale(1.02); opacity: 1; }
+      100% { transform: none; opacity: 1; }
+    }
+
+    /* Neo-Brutalist Interactive Micro-interactions */
+    .doodle-card {
+      transition: transform 0.4s cubic-bezier(.34, 1.9, .5, 1), box-shadow 0.4s ease;
+    }
+    .doodle-card:hover {
+      transform: translateY(-6px) rotate(-1deg);
+      box-shadow: 0 8px 0 #4A3326 !important;
+    }
+
+    .doodle-btn {
+      transition: transform 0.35s cubic-bezier(.34, 1.9, .5, 1), box-shadow 0.35s ease;
+      cursor: pointer;
+    }
+    .doodle-btn:hover {
+      transform: translateY(-4px) rotate(-2deg);
+      box-shadow: 0 6px 0 #4A3326 !important;
+    }
+    .doodle-btn:active {
+      transform: translateY(2px) rotate(0deg);
+      box-shadow: 0 1px 0 #4A3326 !important;
+    }
+
+    .pill-badge {
+      transition: transform 0.3s cubic-bezier(.34, 2, .5, 1);
+    }
+    .pill-badge:hover {
+      transform: translateY(-3px) scale(1.06);
+    }
+
+    /* Active Filter Button */
+    .filter-btn.active {
+      background: #4A3326 !important;
+      color: #FFF7D6 !important;
+      transform: scale(1.04);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FFF7D6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FFD86B;
+      border: 2px solid #4A3326;
+      border-radius: 999px;
+    }
+  </style>
 </head>
-<body class="bg-[#030712] text-slate-100 font-inter antialiased selection:bg-sky-500/30 selection:text-sky-300">
-
-  <!-- Desktop & Mobile Sticky Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-2 group">
-        <span class="w-2.5 h-2.5 rounded-full bg-sky-400 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_12px_rgba(56,189,248,0.8)]"></span>
-        <span class="text-xl font-bold tracking-tight text-white group-hover:text-sky-400 transition-colors">
-          Nandana <span class="text-sky-400 font-medium">Das</span>
-        </span>
-      </a>
-
-      <!-- Desktop Nav Menu -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300" aria-label="Main navigation">
-        <a href="#about" class="nav-link hover:text-sky-400 transition-colors">About</a>
-        <a href="#publications" class="nav-link hover:text-sky-400 transition-colors">Publications</a>
-        <a href="#projects" class="nav-link hover:text-sky-400 transition-colors">Projects</a>
-        <a href="#experience" class="nav-link hover:text-sky-400 transition-colors">Experience</a>
-        <a href="#skills" class="nav-link hover:text-sky-400 transition-colors">Skills</a>
-        <a href="#certifications" class="nav-link hover:text-sky-400 transition-colors">Certifications</a>
-        <a href="#education" class="nav-link hover:text-sky-400 transition-colors">Education</a>
-        <a href="#contact" class="nav-link hover:text-sky-400 transition-colors">Contact</a>
-      </nav>
-
-      <!-- Header CTAs -->
-      <div class="hidden sm:flex items-center gap-3">
-        <a href="Resume.pdf" download class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 hover:border-slate-500 transition-all duration-200 flex items-center gap-1.5 shadow-sm">
-          <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-          </svg>
-          Resume
+<body>
+  <div style="min-height:100vh;background:#FFF7D6;overflow-x:hidden;position:relative">
+    
+    <!-- Sticky Navigation -->
+    <nav style="position:sticky;top:12px;z-index:50;max-width:1180px;margin:12px auto 0;padding:0 16px">
+      <div style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:8px 12px 8px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;box-shadow:0 4px 0 #FFD86B">
+        <a href="#hero" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:23px;text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap">
+          <span style="color:#FF8FB8;display:inline-block;animation:twinkle 2.6s ease-in-out infinite">✿</span>nandana
         </a>
-        <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-lg bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white shadow-[0_0_15px_rgba(56,189,248,0.25)] transition-all duration-200">
-          Get in Touch
+        <div style="display:flex;gap:18px;flex-wrap:wrap;font-weight:700;font-size:15px;margin-left:auto;align-items:center">
+          <a href="#about" style="text-decoration:none;white-space:nowrap">About</a>
+          <a href="#work" style="text-decoration:none;white-space:nowrap">Research</a>
+          <a href="#projects" style="text-decoration:none;white-space:nowrap">Projects</a>
+          <a href="#experience" style="text-decoration:none;white-space:nowrap">Experience</a>
+          <a href="#skills" style="text-decoration:none;white-space:nowrap">Skills</a>
+          <a href="#certifications" style="text-decoration:none;white-space:nowrap">Certifications</a>
+          <a href="#education" style="text-decoration:none;white-space:nowrap">Education</a>
+          <a href="#contact" style="text-decoration:none;white-space:nowrap">Contact</a>
+        </div>
+        <a href="Resume.pdf" download class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:7px 18px;white-space:nowrap;box-shadow:0 3px 0 #4A3326;color:#4A3326">
+          Resume ↓
         </a>
       </div>
+    </nav>
 
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="menu-btn lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 focus:outline-none" aria-label="Toggle navigation">
-        <span class="block w-5 h-0.5 my-0.5 bg-slate-300 transition-all duration-300"></span>
-        <span class="block w-5 h-0.5 my-0.5 bg-slate-300 transition-all duration-300"></span>
-        <span class="block w-5 h-0.5 my-0.5 bg-slate-300 transition-all duration-300"></span>
-      </button>
+    <!-- Hero Header -->
+    <header id="hero" style="max-width:1180px;margin:0 auto;padding:60px 24px 40px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;position:relative">
+      <span style="position:absolute;left:1%;top:26px;font-size:34px;color:#FFA63D;animation:bob 4s ease-in-out infinite;--r:-10deg">☼</span>
+      <span style="position:absolute;left:46%;top:48px;width:26px;height:26px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.4s ease-in-out infinite"></span>
+      <svg width="90" height="24" viewBox="0 0 90 24" style="position:absolute;left:8%;bottom:14px" fill="none"><path d="M3 12 Q14 0 25 12 T47 12 T69 12 T87 12" stroke="#FF9E5E" stroke-width="5" stroke-linecap="round"/></svg>
+      
+      <div style="flex:1 1 480px;min-width:0">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;font-weight:700;font-size:14px;animation:drop .8s cubic-bezier(.34,1.6,.5,1) both">
+          ☁ M.Tech AI & Data Science · Alliance University
+        </div>
+        <h1 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(50px,7.5vw,96px);line-height:.95;letter-spacing:-.02em;margin:22px 0 18px;text-wrap:balance;animation:drop .9s .1s cubic-bezier(.34,1.6,.5,1) both">
+          Hi, I'm <span style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">Nandana</span> <span style="color:#FF8FB8">♡</span>
+        </h1>
+        <p style="font-family:'Baloo 2', cursive;font-weight:700;font-size:clamp(20px,2.2vw,28px);margin:0 0 12px;line-height:1.2;color:#C2571B">
+          AI/ML researcher & deep learning engineer
+        </p>
+        <p style="font-size:18px;line-height:1.6;max-width:540px;margin:0 0 30px;font-weight:500;text-wrap:pretty">
+          Turning complex multi-modal data into intelligent, <b>explainable</b> solutions — from deep learning architectures to real-world deployment.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="#work" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:17px;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:13px 28px;box-shadow:0 4px 0 #4A3326;color:#4A3326">
+            See my work →
+          </a>
+          <a href="#contact" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:17px;background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:13px 28px;box-shadow:0 4px 0 #4A3326;color:#4A3326">
+            Say hello
+          </a>
+        </div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;font-weight:700;font-size:15px">
+          <a href="https://linkedin.com/in/nandana-narayan-das" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/nandana-das" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://ieeexplore.ieee.org/document/11042469" target="_blank" rel="noopener noreferrer">IEEE Author ↗</a>
+          <a href="mailto:nandanadas007@gmail.com">Email ↗</a>
+        </div>
+      </div>
+
+      <!-- Illustrated Portrait Frame -->
+      <div style="flex:0 1 380px;min-width:280px;margin:0 auto;position:relative">
+        <div style="position:absolute;inset:-46px;border-radius:50%;background:repeating-conic-gradient(#FFDD66 0 9deg,transparent 9deg 22deg);animation:spin 50s linear infinite"></div>
+        <div style="position:absolute;inset:-14px;border-radius:50%;background:#FFD84D;border:2.5px solid #4A3326"></div>
+        <div style="position:relative;border:2.5px solid #4A3326;border-radius:44% 56% 50% 50% / 40% 40% 60% 60%;overflow:hidden;aspect-ratio:1/1.08;background:#CFE3F7;box-shadow:0 6px 0 #4A3326;transition:transform .5s cubic-bezier(.34,1.9,.5,1)" class="doodle-card">
+          <img src="assets/nandana.jpg" alt="Portrait of Nandana Narayan Das" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block">
+        </div>
+        <div style="position:absolute;right:-16px;top:-8px;width:54px;height:54px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.8s ease-in-out infinite"></div>
+        <div style="position:absolute;left:-26px;bottom:18%;font-size:36px;color:#FF8FB8;animation:bob 3.6s ease-in-out infinite;--r:-8deg">♡</div>
+        <div style="position:absolute;right:-20px;bottom:6%;background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transform:rotate(5deg);box-shadow:0 2px 0 #4A3326">
+          Bangalore · Kochi
+        </div>
+        <div style="position:absolute;left:-24px;top:8%;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transform:rotate(-6deg);box-shadow:0 2px 0 #4A3326">
+          XAI fan ☺
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div style="max-width:1180px;margin:0 auto;padding:16px 24px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px">
+      <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
+        <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">02</div>
+        <div style="font-weight:700;font-size:15px;margin-top:4px">Research Publications (IEEE & ICTEST)</div>
+      </div>
+      <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
+        <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">09+</div>
+        <div style="font-weight:700;font-size:15px;margin-top:4px">AI/ML & Systems Projects</div>
+      </div>
+      <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
+        <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">7.18</div>
+        <div style="font-weight:700;font-size:15px;margin-top:4px">B.Tech CGPA (CSE - AI)</div>
+      </div>
+      <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
+        <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">07</div>
+        <div style="font-weight:700;font-size:15px;margin-top:4px">Professional Certifications</div>
+      </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden glass-panel border-t border-slate-800 px-6 py-6 transition-all duration-300">
-      <div class="flex flex-col gap-4 text-base font-medium">
-        <a href="#about" class="mobile-nav-link text-slate-300 hover:text-sky-400 py-1">About</a>
-        <a href="#publications" class="mobile-nav-link text-slate-300 hover:text-sky-400 py-1">Publications</a>
-        <a href="#projects" class="mobile-nav-link text-slate-300 hover:text-sky-400 py-1">Projects</a>
-        <a href="#experience" class="mobile-nav-link text-slate-300 hover:text-sky-400 py-1">Experience & Leadership</a>
-        <a href="#skills" class="mobile-nav-link text-slate-300 hover:text-sky-400 py-1">Technical Skills</a>
-        <a href="#certifications" class="mobile-nav-link text-slate-300 hover:text-sky-400 py-1">Certifications</a>
-        <a href="#education" class="mobile-nav-link text-slate-300 hover:text-sky-400 py-1">Education</a>
-        <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-sky-400 py-1">Contact</a>
-        <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
-          <a href="Resume.pdf" download class="flex-1 text-center px-4 py-2.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-200 border border-slate-700">Download Resume</a>
-          <a href="#contact" class="flex-1 text-center px-4 py-2.5 text-xs font-semibold rounded-lg bg-sky-500 text-white">Get in Touch</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden">
-    <!-- Ambient Background Glows -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse-subtle"></div>
-    <div class="absolute top-1/3 left-1/4 w-[350px] h-[300px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none"></div>
-    <div class="absolute top-1/2 right-1/4 w-[400px] h-[300px] bg-purple-600/10 rounded-full blur-[110px] pointer-events-none"></div>
-
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <!-- Status Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-sky-500/30 text-xs font-medium text-sky-300 mb-8 shadow-sm">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        <span>M.Tech AI & Data Science Candidate · Alliance University, Bangalore</span>
-      </div>
-
-      <!-- Main Name & Title -->
-      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
-        Hi, I'm <span class="gradient-text-blue">Nandana Narayan Das</span>
-      </h1>
-
-      <p class="text-xl sm:text-2xl text-slate-300 font-medium max-w-3xl mx-auto mb-6 leading-relaxed">
-        AI/ML Researcher & Deep Learning Engineer
-      </p>
-
-      <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-        "Turning complex multi-modal data into intelligent, explainable solutions — from deep learning architectures to real-world deployment."
-      </p>
-
-      <!-- Action Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
-        <a href="#projects" class="px-7 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white shadow-[0_4px_25px_rgba(56,189,248,0.3)] transition-all duration-300 hover:-translate-y-0.5">
-          Explore Research & Projects →
-        </a>
-        <a href="Resume.pdf" download class="px-7 py-3.5 rounded-xl font-semibold text-sm bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700/80 hover:border-slate-500 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2">
-          <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-          </svg>
-          Download Resume
-        </a>
-        <a href="#contact" class="px-7 py-3.5 rounded-xl font-semibold text-sm bg-transparent hover:bg-slate-800/40 text-slate-300 border border-slate-800 hover:border-slate-600 transition-all duration-300 hover:-translate-y-0.5">
-          Contact Me
-        </a>
-      </div>
-
-      <!-- Quick Social Icons -->
-      <div class="flex items-center justify-center gap-6 text-slate-400 mb-16">
-        <a href="https://linkedin.com/in/nandana-narayan-das" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors flex items-center gap-1.5 text-xs font-medium" title="LinkedIn">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/nandana-das" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5 text-xs font-medium" title="GitHub">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a href="https://ieeexplore.ieee.org/document/11042469" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-xs font-medium" title="IEEE Xplore">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-          <span>IEEE Author</span>
-        </a>
-        <a href="mailto:nandanadas007@gmail.com" class="hover:text-rose-400 transition-colors flex items-center gap-1.5 text-xs font-medium" title="Email">
-          <svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <span>Email</span>
-        </a>
-      </div>
-
-      <!-- Quick Metrics Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-        <div class="glass-card rounded-2xl p-5 text-center">
-          <div class="text-3xl font-bold text-sky-400 mb-1">2</div>
-          <div class="text-xs text-slate-400 font-medium">Research Publications (IEEE & ICTEST)</div>
-        </div>
-        <div class="glass-card rounded-2xl p-5 text-center">
-          <div class="text-3xl font-bold text-indigo-400 mb-1">9+</div>
-          <div class="text-xs text-slate-400 font-medium">AI/ML & Systems Projects</div>
-        </div>
-        <div class="glass-card rounded-2xl p-5 text-center">
-          <div class="text-3xl font-bold text-purple-400 mb-1">7.18</div>
-          <div class="text-xs text-slate-400 font-medium">B.Tech CGPA (CSE - AI)</div>
-        </div>
-        <div class="glass-card rounded-2xl p-5 text-center">
-          <div class="text-3xl font-bold text-emerald-400 mb-1">6+</div>
-          <div class="text-xs text-slate-400 font-medium">Professional Certifications</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-24 relative border-t border-slate-900 bg-slate-950/40">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-sky-400 mb-2">Background & Focus</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white">About Me</p>
-        <div class="w-12 h-1 bg-gradient-to-r from-sky-400 to-indigo-500 mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-6">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Academic & Research Journey</h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Currently pursuing my <strong class="text-white">M.Tech in Artificial Intelligence & Data Science</strong> at Alliance University, Bangalore (2025–2027), following a B.Tech in CSE (Artificial Intelligence) from ASIET.
-            </p>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              My research bridges deep learning theory and non-invasive medical diagnostics, notably publishing an Explainable AI diagnostic framework in IEEE Xplore.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-sky-400 font-medium">
-            Focus: Explainable AI & Diagnostic Vision
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Technical Architecture</h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Proficient across Python, Java, C, and SQL with hands-on depth in PyTorch, TensorFlow, and Scikit-learn.
-            </p>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Experience extends from computer vision (YOLOv5, OpenCV) and NLP to resilient backend service engineering with Java and Spring Boot.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-indigo-400 font-medium">
-            Focus: Deep Learning & Scalable Services
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">Leadership & Industry</h3>
-            <p class="text-slate-300 text-sm leading-relaxed mb-4">
-              Interned as a <strong class="text-white">Backend Servicing Intern</strong> at Covacsis Technologies, building resilient microservices using Java, Spring Boot, and Apache Pinot.
-            </p>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Demonstrated student leadership as Mentor & Social Media Lead at CSI SB ASIET, and Editor at Saakshin.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-purple-400 font-medium">
-            Focus: Collaboration & Community Leadership
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research & Publications Section -->
-  <section id="publications" class="py-24 relative border-t border-slate-900">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-2">Peer-Reviewed Scientific Work</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white">Publications & Research</p>
-        <div class="w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="space-y-8">
-        <!-- Publication 1 -->
-        <div class="glass-card rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 relative overflow-hidden group">
-          <div class="absolute -right-12 -top-12 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all duration-300 pointer-events-none"></div>
-
-          <div class="flex flex-wrap items-center gap-3 mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">
-              IEEE Xplore
-            </span>
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">
-              ICTEST 2025
-            </span>
-            <span class="text-xs text-slate-400">Published & Presented</span>
-          </div>
-
-          <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
-            Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging: A Deep Learning Approach for Non-Invasive Diagnostics
-          </h3>
-
-          <p class="text-slate-300 text-sm leading-relaxed mb-6 max-w-4xl">
-            Designed an automated, non-invasive diagnostic framework using convolutional neural networks (CNNs) coupled with Explainable AI (XAI) feature attribution. Aligns visual tongue biomarkers (color, coat thickness, texture) with Traditional Chinese Medicine (TCM) diagnostic principles to deliver clinician-interpretable diagnostic insights.
+    <!-- About Section -->
+    <section id="about" style="max-width:1180px;margin:0 auto;padding:56px 24px;position:relative">
+      <span style="position:absolute;right:40px;top:30px;font-size:30px;color:#FFA63D;animation:bob 4.2s ease-in-out infinite;--r:8deg">✧</span>
+      <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(38px,5vw,60px);margin:0 0 26px">
+        About me <span style="color:#FF8FB8">✿</span>
+      </h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px">
+        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">01</div>
+          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Academic & Research Journey</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;flex:1;font-weight:500;text-wrap:pretty">
+            Currently pursuing M.Tech in AI & Data Science at Alliance University, Bangalore, following a B.Tech in CSE (Artificial Intelligence) from ASIET. Published Explainable AI diagnostics work in IEEE Xplore.
           </p>
-
-          <div class="flex flex-wrap items-center gap-3">
-            <a href="https://ieeexplore.ieee.org/document/11042469" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg text-xs font-semibold bg-purple-600 hover:bg-purple-500 text-white transition-all duration-200 flex items-center gap-2 shadow-sm">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-              View on IEEE Xplore
-            </a>
-            <a href="https://github.com/nandana-das/Tongue_disease_detection" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all duration-200 flex items-center gap-2">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              Source Code
-            </a>
-          </div>
+          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Explainable AI & Diagnostic Vision</div>
         </div>
 
-        <!-- Publication 2 -->
-        <div class="glass-card rounded-2xl p-8 border border-sky-500/30 hover:border-sky-400/60 relative overflow-hidden group">
-          <div class="absolute -right-12 -top-12 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition-all duration-300 pointer-events-none"></div>
-
-          <div class="flex flex-wrap items-center gap-3 mb-4">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30">
-              Accepted at ICTEST 2026
-            </span>
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-              In Press
-            </span>
-            <span class="text-xs text-slate-400">Environmental AI & Remote Sensing</span>
-          </div>
-
-          <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
-            Physics-Informed Explainable Multimodal Deep Learning for Satellite-Based Air Pollution Source Attribution in Delhi NCR
-          </h3>
-
-          <p class="text-slate-300 text-sm leading-relaxed mb-6 max-w-4xl">
-            Leverages multi-spectral satellite remote sensing data combined with physics-informed neural networks (PINNs) and atmospheric transport models to accurately attribute particulate matter (PM2.5 / PM10) to regional industrial, vehicular, and agricultural emission sources across Delhi NCR.
+        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">02</div>
+          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Technical Depth & AI Stack</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;flex:1;font-weight:500;text-wrap:pretty">
+            Hands-on depth in PyTorch, TensorFlow, Scikit-learn, LangGraph, and Knowledge Graph RAG. Experienced with computer vision (YOLO, RT-DETR, OpenCV) and scalable backend engineering using Java and Spring Boot.
           </p>
+          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Deep Learning & Resilient Systems</div>
+        </div>
 
-          <div class="flex flex-wrap items-center gap-3">
-            <a href="https://github.com/nandana-das/igp-emissions-attribution" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white transition-all duration-200 flex items-center gap-2 shadow-sm">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              View Research Repository
-            </a>
-          </div>
+        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">03</div>
+          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Industry & Community Impact</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;flex:1;font-weight:500;text-wrap:pretty">
+            Interned as Backend Servicing Intern at Covacsis Technologies (Java, Spring Boot, Pinot). Proven leadership as Student Mentor & Social Media Lead at CSI SB ASIET, and Editor at Saakshin.
+          </p>
+          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Collaboration & Leadership</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Featured Projects Section -->
-  <section id="projects" class="py-24 relative border-t border-slate-900 bg-slate-950/40">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-sky-400 mb-2">Portfolio Showcase</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white">Featured Projects</p>
-        <div class="w-12 h-1 bg-gradient-to-r from-sky-400 to-indigo-500 mx-auto mt-4 rounded-full"></div>
+    <!-- Research & Publications Section -->
+    <section id="work" style="background:#FFF1B8;border-top:2px solid #4A3326;position:relative">
+      <span style="position:absolute;left:20px;top:22px;font-size:34px;color:#FFA63D;animation:bob 3.8s ease-in-out infinite;--r:-8deg">☼</span>
+      <svg width="110" height="26" viewBox="0 0 110 26" style="position:absolute;right:36px;top:22px" fill="none"><path d="M3 13 Q16 0 29 13 T55 13 T81 13 T107 13" stroke="#FF8FB8" stroke-width="5" stroke-linecap="round"/></svg>
+      <div id="publications" style="max-width:1180px;margin:0 auto;padding:72px 24px 64px">
+        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Research ✧</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:20px">
+          
+          <!-- Publication 1 -->
+          <article class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">IEEE Xplore</span>
+              <span style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">ICTEST 2025</span>
+              <span style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">Published</span>
+            </div>
+            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15;margin:0;text-wrap:pretty">
+              Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging: A Deep Learning Approach for Non-Invasive Diagnostics
+            </h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;font-weight:500;flex:1;text-wrap:pretty">
+              Automated diagnostic framework using CNNs and Explainable AI (XAI) feature attribution. Aligns visual biomarkers (color, coat thickness, texture) with Traditional Chinese Medicine (TCM) diagnostic principles to deliver clinician-interpretable insights.
+            </p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+              <a href="https://ieeexplore.ieee.org/document/11042469" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 16px;box-shadow:0 2px 0 #4A3326">
+                View on IEEE Xplore ↗
+              </a>
+              <a href="https://github.com/nandana-das/Tongue_disease_detection" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFD86B;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;box-shadow:0 2px 0 #4A3326">
+                Source Code ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Publication 2 -->
+          <article class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">Accepted ICTEST 2026</span>
+              <span style="background:#FFE27A;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">In Press</span>
+              <span style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">Remote Sensing</span>
+            </div>
+            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15;margin:0;text-wrap:pretty">
+              Physics-Informed Explainable Multimodal Deep Learning for Satellite-Based Air Pollution Source Attribution in Delhi NCR
+            </h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;font-weight:500;flex:1;text-wrap:pretty">
+              Combines multi-spectral satellite remote sensing with physics-informed neural architectures (PINNs) and meteorological time-series to attribute PM2.5/PM10 particulate matter to regional industrial, vehicular, and agricultural sources.
+            </p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+              <a href="https://github.com/nandana-das/igp-emissions-attribution" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 16px;box-shadow:0 2px 0 #4A3326">
+                View Research Repo ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <!-- Filter Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
-        <button class="filter-btn active px-4 py-2 text-xs font-semibold rounded-lg bg-slate-900 text-slate-300 border border-slate-800 transition-all duration-200" data-filter="all">
-          All Projects
-        </button>
-        <button class="filter-btn px-4 py-2 text-xs font-semibold rounded-lg bg-slate-900 text-slate-300 border border-slate-800 transition-all duration-200" data-filter="ai-ml">
-          AI & Machine Learning
-        </button>
-        <button class="filter-btn px-4 py-2 text-xs font-semibold rounded-lg bg-slate-900 text-slate-300 border border-slate-800 transition-all duration-200" data-filter="vision-research">
-          Computer Vision & Research
-        </button>
-        <button class="filter-btn px-4 py-2 text-xs font-semibold rounded-lg bg-slate-900 text-slate-300 border border-slate-800 transition-all duration-200" data-filter="systems-web">
-          Systems & Web
-        </button>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Project 1: Lunar Landslide -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="ai-ml vision-research">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-300 border border-purple-500/20">Computer Vision</span>
-              <a href="https://github.com/nandana-das/lunar-landslide-boulder-detection" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">Lunar Landslide & Boulder Detection</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Domain-adaptive transfer learning for planetary hazard detection using <strong class="text-white">Chandrayaan-2 OHRC</strong> high-resolution imagery with YOLOv5 & Faster R-CNN baselines and an interactive React dashboard.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">PyTorch</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">YOLOv5</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">React</span>
-            </div>
-            <a href="https://github.com/nandana-das/lunar-landslide-boulder-detection" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
+    <!-- Projects Section -->
+    <section id="projects" style="background:#FFC94D;border-top:2px solid #4A3326;border-bottom:2px solid #4A3326;position:relative;overflow:hidden">
+      <div style="position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:repeating-conic-gradient(#FFD877 0 8deg,transparent 8deg 24deg);animation:spin 40s linear infinite"></div>
+      <span style="position:absolute;left:4%;bottom:26px;font-size:34px;color:#FF8FB8;animation:bob 3.6s ease-in-out infinite;--r:-8deg">♡</span>
+      
+      <div style="max-width:1050px;margin:0 auto;padding:72px 24px;position:relative">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px">
+          <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1;margin:0">
+            Projects <span style="color:#FFFFFF;-webkit-text-stroke:2px #4A3326">☼</span>
+          </h2>
+          <!-- Filter Tabs -->
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="filter-btn active" data-filter="all" style="font:700 14px Quicksand;color:#FFF7D6;background:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">All</button>
+            <button class="filter-btn" data-filter="ai-ml" style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">AI & ML</button>
+            <button class="filter-btn" data-filter="vision-research" style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">Vision & Research</button>
+            <button class="filter-btn" data-filter="systems-web" style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">Systems & Web</button>
           </div>
         </div>
 
-        <!-- Project 2: Smart City Traffic AI -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="ai-ml systems-web">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-300 border border-sky-500/20">AI Forecasting</span>
-              <a href="https://github.com/nandana-das/smart-city-traffic-ai-bengaluru" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
+        <div id="project-list" style="display:flex;flex-direction:column;gap:14px">
+          
+          <!-- P1: Lunar Landslide -->
+          <a href="https://github.com/nandana-das/lunar-landslide-boulder-detection" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml vision-research" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#FFC9DE;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">01</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">Planetary CV & Hazard Detection</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">Lunar Landslide & Boulder Detection</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Domain-adaptive transfer learning for planetary hazard detection using Chandrayaan-2 OHRC imagery, with YOLOv5 & Faster R-CNN baselines and an interactive React dashboard.</p>
             </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">Smart City Traffic AI (Bengaluru)</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Full-stack AI system for urban traffic forecasting utilizing live TomTom telemetry data, LSTM congestion prediction models, and Fuzzy Cognitive Maps for interpretable decision support.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">LSTM</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Fuzzy Logic</span>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">PyTorch</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">YOLOv5</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">React</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
             </div>
-            <a href="https://github.com/nandana-das/smart-city-traffic-ai-bengaluru" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
-          </div>
+          </a>
+
+          <!-- P2: Smart City Traffic AI -->
+          <a href="https://github.com/nandana-das/smart-city-traffic-ai-bengaluru" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml systems-web" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#C4E4FF;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">02</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">Urban AI Forecasting</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">Smart City Traffic AI (Bengaluru)</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Full-stack traffic forecasting system with live TomTom API data, LSTM congestion prediction, Fuzzy Cognitive Maps for explainability, and a Flask service backend.</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">LSTM</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Fuzzy Logic</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Flask</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+
+          <!-- P3: KG-RAG ISRO -->
+          <a href="https://github.com/nandana-das/KG-RAG-ISRO" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml vision-research" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#FFF0A8;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">03</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">Aerospace LLM & Graph RAG</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">KG-RAG ISRO</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Knowledge Graph-augmented RAG system for ISRO mission documentation Q&A, combining graph retrieval, FAISS vector search, spaCy entity extraction, and local LLM inference.</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Graph RAG</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">FAISS</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">LangChain</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+
+          <!-- P4: Air Quality Prediction -->
+          <a href="https://github.com/nandana-das/AirqualityPrediction" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#C6F0DA;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">04</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">Environmental Forecasting & Optimization</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">Air Quality Prediction</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Multi-city AQI forecasting using Ant Colony Optimization (ACO) and interpretable Decision Trees tailored for environmental policymaking.</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">ACO</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Decision Trees</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Python</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+
+          <!-- P5: RFMS Fuzzy FCA Segmentation -->
+          <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#FFD86B;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">05</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">Customer Analytics & Fuzzy Clustering</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">RFMS Fuzzy FCA Segmentation</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Novel customer segmentation tackling marketplace frequency sparsity using Fuzzy Formal Concept Analysis & RFMS metrics, benchmarked against K-Means and Hierarchical clustering.</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFD86B;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Fuzzy FCA</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFD86B;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Clustering</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFD86B;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Python</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+
+          <!-- P6: AI Study Buddy -->
+          <a href="https://github.com/nandana-das/AI-Study-Buddy" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml systems-web" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#FFD8B8;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">06</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">GenAI & Interactive Assistant</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">AI Study Buddy</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Interactive Streamlit educational assistant powered by Google Gemini API providing instant conceptual breakdowns, real-world analogies, and dynamic 5-question quizzes.</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFD8B8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Gemini API</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFD8B8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Streamlit</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFD8B8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Python</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+
+          <!-- P7: AI Resume Agent -->
+          <a href="https://github.com/nandana-das/resume-agent" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml vision-research" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#FFC9DE;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">07</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">Multi-Agent LangGraph Pipeline</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">AI Resume Agent</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Four-agent LangGraph workflow (JD parser, resume evaluator, gap analyst, resume writer) executing on a shared state graph to generate tailored resumes from job descriptions.</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">LangGraph</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Groq</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">NLP</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+
+          <!-- P8: Video Meeting Summarizer -->
+          <a href="https://github.com/nandana-das/video_summariser" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="ai-ml vision-research" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#C4E4FF;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">08</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">Speech-to-Text & Extractive NLP</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">Video Meeting Summarizer</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Automated video-to-text transcription and extractive summarization engine converting recorded lectures and conference presentations into concise key points.</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">SpeechRecognition</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">NLTK</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Python</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+
+          <!-- P9: Virtual Museum 3D -->
+          <a href="https://github.com/nandana-das/virtual_museum_project" target="_blank" rel="noopener noreferrer" class="project-item doodle-card" data-category="systems-web" style="text-decoration:none;color:#4A3326;background:#FFFBEA;border:2px solid #4A3326;border-radius:999px 40px 40px 999px;padding:14px 26px 14px 14px;box-shadow:0 4px 0 #4A3326;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#FFF0A8;border:2px solid #4A3326;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2', cursive;font-weight:800;font-size:22px">09</div>
+            <div style="flex:1 1 320px;min-width:0">
+              <div style="font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C2571B">Interactive 3D Web Graphics</div>
+              <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;line-height:1.1;margin:2px 0 4px">Virtual Museum 3D</h3>
+              <p style="margin:0;font-size:15px;line-height:1.5;font-weight:500;text-wrap:pretty">Interactive 3D educational virtual museum experience rendered smoothly in the browser with realistic lighting, spatial geometry, and camera controls.</p>
+            </div>
+            <div style="flex:0 1 auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">Three.js</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">WebGL</span>
+              <span class="pill-badge" style="font-size:12px;font-weight:700;background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px">JavaScript</span>
+              <span style="width:38px;height:38px;border-radius:50%;background:#4A3326;color:#FFF7D6;display:flex;align-items:center;justify-content:center;font-weight:800;margin-left:6px">↗</span>
+            </div>
+          </a>
+
         </div>
-
-        <!-- Project 3: KG-RAG ISRO -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="ai-ml vision-research">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">RAG & Graphs</span>
-              <a href="https://github.com/nandana-das/KG-RAG-ISRO" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">KG-RAG ISRO</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Knowledge Graph augmented Retrieval-Augmented Generation (Graph RAG) architecture developed for aerospace mission documentation exploration, synthesizing structured ontology with LLMs.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Graph RAG</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Knowledge Graphs</span>
-            </div>
-            <a href="https://github.com/nandana-das/KG-RAG-ISRO" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 4: Air Quality Prediction -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="ai-ml">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Environmental ML</span>
-              <a href="https://github.com/nandana-das/AirqualityPrediction" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">Air Quality Prediction</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Multi-city AQI forecasting using Ant Colony Optimization (ACO) and interpretable Decision Trees with policy-focused feature selection and meteorological data processing.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Scikit-Learn</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Optimization</span>
-            </div>
-            <a href="https://github.com/nandana-das/AirqualityPrediction" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 5: RFMS Fuzzy FCA Segmentation -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="ai-ml">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20">Data Science</span>
-              <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">RFMS Fuzzy FCA Segmentation</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Novel customer segmentation tackling marketplace frequency sparsity using Fuzzy Formal Concept Analysis & RFMS metrics, benchmarked against K-Means and Hierarchical clustering.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Fuzzy Logic</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Clustering</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
-            </div>
-            <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 6: AI Study Buddy -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="ai-ml systems-web">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-rose-500/10 text-rose-300 border border-rose-500/20">GenAI & LLM</span>
-              <a href="https://github.com/nandana-das/AI-Study-Buddy" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">AI Study Buddy</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Interactive Streamlit educational assistant powered by Google Gemini API providing instant conceptual breakdowns, real-world analogies, and dynamic 5-question quizzes.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Streamlit</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Gemini API</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
-            </div>
-            <a href="https://github.com/nandana-das/AI-Study-Buddy" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 7: Resume Agent -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="ai-ml vision-research">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">NLP Pipeline</span>
-              <a href="https://github.com/nandana-das/resume-agent" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">Resume Agent</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Intelligent resume-to-job matching pipeline analyzing skill gaps, keyword presence, and automated profile optimization suggestions using NLP algorithms.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">NLP</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Text Analytics</span>
-            </div>
-            <a href="https://github.com/nandana-das/resume-agent" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 8: Video Meeting Summarizer -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="ai-ml vision-research">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-300 border border-teal-500/20">Speech & NLP</span>
-              <a href="https://github.com/nandana-das/video_summariser" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">Video Meeting Summarizer</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Automated video-to-text transcription and extractive summarization engine converting recorded lectures and conference presentations into concise key points.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">SpeechRecognition</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">NLTK</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
-            </div>
-            <a href="https://github.com/nandana-das/video_summariser" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 9: Virtual Museum -->
-        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between" data-category="systems-web">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">3D Graphics & Web</span>
-              <a href="https://github.com/nandana-das/virtual_museum_project" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub Repo">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2 hover:text-sky-400 transition-colors">Virtual Museum 3D</h4>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Interactive 3D educational virtual museum experience rendered smoothly in the browser with realistic lighting, spatial geometry, and camera controls.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Three.js</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">WebGL</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">JavaScript</span>
-            </div>
-            <a href="https://github.com/nandana-das/virtual_museum_project" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-              View Repository →
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- GitHub Link Banner -->
-      <div class="mt-14 text-center">
-        <a href="https://github.com/nandana-das?tab=repositories" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold glass-panel border border-slate-700 hover:border-sky-500/50 text-slate-200 hover:text-white transition-all duration-200">
-          <svg class="w-4 h-4 fill-current text-sky-400" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          Explore All Repositories on GitHub →
+        <a href="https://github.com/nandana-das?tab=repositories" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:24px;font-weight:700;font-size:15px">
+          All repositories on GitHub →
         </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience & Leadership Section -->
-  <section id="experience" class="py-24 relative border-t border-slate-900">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Professional Path</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white">Experience & Leadership</p>
-        <div class="w-12 h-1 bg-gradient-to-r from-emerald-400 to-sky-500 mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <!-- Work Experience (7 cols) -->
-        <div class="lg:col-span-7 space-y-6">
-          <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-            Industry Experience
-          </h3>
-
-          <div class="glass-card rounded-2xl p-7 border-emerald-500/20">
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-              <h4 class="text-lg font-bold text-white">Backend Servicing Intern</h4>
-              <span class="text-xs font-medium px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
-                June 2024 – July 2024
-              </span>
+    <!-- Experience & Leadership Section -->
+    <section id="experience" style="max-width:1180px;margin:0 auto;padding:72px 24px;display:flex;flex-wrap:wrap;gap:32px;position:relative">
+      
+      <!-- Work Experience -->
+      <div style="flex:1 1 420px;min-width:0">
+        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 20px">Experience</h2>
+        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:30px;padding:28px;box-shadow:0 5px 0 #4A3326">
+          <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline">
+            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:26px;margin:0">Backend Servicing Intern</h3>
+            <span style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">June 2024 – July 2024</span>
+          </div>
+          <div style="font-weight:700;margin:6px 0 16px;color:#D9541E">Covacsis Technologies · Remote</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;font-weight:500">
+              <span style="color:#D9541E;font-weight:700">♡</span>
+              <span>Engineered backend service lifecycle components using <strong style="font-weight:700">Java, Apache Pinot, and Spring Boot</strong> framework.</span>
             </div>
-            <div class="text-sm text-sky-400 font-medium mb-4">Covacsis Technologies · Remote</div>
-            
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <span>Engineered backend service lifecycle components using <strong class="text-white">Java, Apache Pinot, and Spring Boot</strong> framework.</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <span>Implemented dynamic service registration, heartbeat scheduling mechanisms, and deregistration ensuring high microservice availability.</span>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <span>Built secure RESTful endpoints with basic authentication and resilient heartbeat monitoring.</span>
-              </li>
-            </ul>
-
-            <div class="mt-5 pt-4 border-t border-slate-800 flex flex-wrap gap-1.5">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Spring Boot</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Java</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">Apache Pinot</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">REST APIs</span>
+            <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;font-weight:500">
+              <span style="color:#D9541E;font-weight:700">♡</span>
+              <span>Implemented dynamic service registration, heartbeat scheduling mechanisms, and deregistration ensuring high microservice availability.</span>
+            </div>
+            <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;font-weight:500">
+              <span style="color:#D9541E;font-weight:700">♡</span>
+              <span>Built secure RESTful endpoints with basic authentication and resilient heartbeat monitoring.</span>
             </div>
           </div>
-        </div>
-
-        <!-- Leadership Positions (5 cols) -->
-        <div class="lg:col-span-5 space-y-6">
-          <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
-            Positions of Responsibility
-          </h3>
-
-          <div class="glass-card rounded-2xl p-5 border-slate-800">
-            <div class="flex items-center justify-between mb-1">
-              <h4 class="text-sm font-bold text-white">Student Mentor</h4>
-              <span class="text-[11px] text-slate-400">2024 – 2025</span>
-            </div>
-            <div class="text-xs text-sky-400 mb-2">CSI SB ASIET</div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Mentored junior engineering undergraduates in core computer science, algorithm design, and AI fundamentals.
-            </p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-5 border-slate-800">
-            <div class="flex items-center justify-between mb-1">
-              <h4 class="text-sm font-bold text-white">Social Media Team Lead</h4>
-              <span class="text-[11px] text-slate-400">2023 – 2024</span>
-            </div>
-            <div class="text-xs text-indigo-400 mb-2">CSI SB ASIET</div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Led the chapter's social media outreach strategy, digital branding, technical event promotions, and community engagement.
-            </p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-5 border-slate-800">
-            <div class="flex items-center justify-between mb-1">
-              <h4 class="text-sm font-bold text-white">Editor</h4>
-              <span class="text-[11px] text-slate-400">2022 – 2024</span>
-            </div>
-            <div class="text-xs text-purple-400 mb-2">Saakshin</div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Supervised editorial reviews, technical writing verification, and publication workflows for student magazine releases.
-            </p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:18px">
+            <span class="pill-badge" style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Java</span>
+            <span class="pill-badge" style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Spring Boot</span>
+            <span class="pill-badge" style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Apache Pinot</span>
+            <span class="pill-badge" style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">REST APIs</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Technical Skills Section -->
-  <section id="skills" class="py-24 relative border-t border-slate-900 bg-slate-950/40">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-sky-400 mb-2">Core Competencies</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white">Technical Skills</p>
-        <div class="w-12 h-1 bg-gradient-to-r from-sky-400 to-indigo-500 mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Skill Block 1: LLM & GenAI -->
-        <div class="glass-card rounded-2xl p-6">
-          <div class="text-sky-400 font-bold text-sm mb-4 uppercase tracking-wider flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
-            LLM & GenAI
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">LangChain</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">LangGraph</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">RAG</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Knowledge Graph RAG</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">FAISS</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Prompt Engineering</span>
-          </div>
-        </div>
-
-        <!-- Skill Block 2: Computer Vision -->
-        <div class="glass-card rounded-2xl p-6">
-          <div class="text-purple-400 font-bold text-sm mb-4 uppercase tracking-wider flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
-            Computer Vision
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">OpenCV</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">YOLO</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">RT-DETR</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">CNNs</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Object Detection</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Image Classification</span>
-          </div>
-        </div>
-
-        <!-- Skill Block 3: ML / DL & Explainable AI -->
-        <div class="glass-card rounded-2xl p-6">
-          <div class="text-emerald-400 font-bold text-sm mb-4 uppercase tracking-wider flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            ML / DL & Explainable AI (XAI)
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">PyTorch</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">TensorFlow</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Scikit-Learn</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">SHAP</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Grad-CAM</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">LIME</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Transformers</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">LSTMs</span>
-          </div>
-        </div>
-
-        <!-- Skill Block 4: Data & Analytics -->
-        <div class="glass-card rounded-2xl p-6">
-          <div class="text-amber-400 font-bold text-sm mb-4 uppercase tracking-wider flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-            Data & Analytics
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Pandas</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">NumPy</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">SQL</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Power BI</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">ETL & EDA</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Matplotlib</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">spaCy</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">NLTK</span>
-          </div>
-        </div>
-
-        <!-- Skill Block 5: Languages & Tools -->
-        <div class="glass-card rounded-2xl p-6">
-          <div class="text-indigo-400 font-bold text-sm mb-4 uppercase tracking-wider flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
-            Languages & Tools
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Python</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Java</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">C</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Git / GitHub</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Jupyter Notebook</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Google Colab</span>
-          </div>
-        </div>
-
-        <!-- Skill Block 6: Frameworks & Deployment -->
-        <div class="glass-card rounded-2xl p-6">
-          <div class="text-rose-400 font-bold text-sm mb-4 uppercase tracking-wider flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-rose-400"></span>
-            Backend & Deployment
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Spring Boot</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">RESTful APIs</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Streamlit</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Flask</span>
-            <span class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 text-slate-200 border border-slate-700">Apache Pinot</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications Section -->
-  <section id="certifications" class="py-24 relative border-t border-slate-900">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Verified Digital Credentials</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white">Certifications</p>
-        <div class="w-12 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Cert 0: Oracle -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-amber-500/30">
-          <div>
-            <div class="text-xs text-amber-400 font-semibold mb-2">Oracle Certified</div>
-            <h4 class="text-base font-bold text-white mb-2 leading-snug">Oracle Certified Java Foundations Associate</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">Official Java certification validating core object-oriented programming, data structures, algorithms, and JVM foundations.</p>
-          </div>
-          <span class="text-xs font-semibold text-emerald-400 inline-flex items-center gap-1">
-            ✓ Verified Credential
-          </span>
-        </div>
-
-        <!-- Cert 1 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800">
-          <div>
-            <div class="text-xs text-amber-400 font-semibold mb-2">IBM · Credly</div>
-            <h4 class="text-base font-bold text-white mb-2 leading-snug">Artificial Intelligence Foundation Digital Credential</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">Foundational principles in machine learning, cognitive systems, and data pipelines.</p>
-          </div>
-          <a href="https://www.credly.com/badges/8cc05afc-9b8b-46b7-a26f-04c243d404da/linked_in?t=sqsi62" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-            Verify on Credly →
-          </a>
-        </div>
-
-        <!-- Cert 2 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800">
-          <div>
-            <div class="text-xs text-sky-400 font-semibold mb-2">Microsoft & LinkedIn</div>
-            <h4 class="text-base font-bold text-white mb-2 leading-snug">Career Essentials in Generative AI</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">Core architectures of generative models, LLM prompting, ethical AI, and practical applications.</p>
-          </div>
-          <a href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-            Verify Certificate →
-          </a>
-        </div>
-
-        <!-- Cert 3 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800">
-          <div>
-            <div class="text-xs text-emerald-400 font-semibold mb-2">GitHub · LinkedIn Learning</div>
-            <h4 class="text-base font-bold text-white mb-2 leading-snug">Career Essentials in GitHub Professional Certificate</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">Advanced Git version control, GitHub workflows, CI/CD foundations, and repository collaboration.</p>
-          </div>
-          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-            Verify Certificate →
-          </a>
-        </div>
-
-        <!-- Cert 4 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800">
-          <div>
-            <div class="text-xs text-indigo-400 font-semibold mb-2">KNIME · LinkedIn Learning</div>
-            <h4 class="text-base font-bold text-white mb-2 leading-snug">Data Science Professional Certificate</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">Data preprocessing, exploratory data analysis, visual workflow construction, and predictive modeling.</p>
-          </div>
-          <a href="https://www.linkedin.com/learning/certificates/589d0ec89ecbe07a2e8961cb48dc0790156acc70fe9a0132cfacab3cb3776abb" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-            Verify Certificate →
-          </a>
-        </div>
-
-        <!-- Cert 5 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800">
-          <div>
-            <div class="text-xs text-purple-400 font-semibold mb-2">LinkedIn Learning</div>
-            <h4 class="text-base font-bold text-white mb-2 leading-snug">Java Object-Oriented Programming</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">Object-oriented architecture, design patterns, polymorphism, encapsulation, and multithreading in Java.</p>
-          </div>
-          <a href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-            Verify Certificate →
-          </a>
-        </div>
-
-        <!-- Cert 6 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800">
-          <div>
-            <div class="text-xs text-teal-400 font-semibold mb-2">Infosys Springboard</div>
-            <h4 class="text-base font-bold text-white mb-2 leading-snug">Artificial Intelligence Foundation Certification</h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">Core AI computational principles, neural network foundations, and ethical intelligence development.</p>
-          </div>
-          <a href="AI foundation certification infosys.png" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 inline-flex items-center gap-1">
-            View Certificate Image →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="py-24 relative border-t border-slate-900 bg-slate-950/40">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-2">Academic Credentials</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white">Education</p>
-        <div class="w-12 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Degree 1 -->
-        <div class="glass-card rounded-2xl p-6 border-cyan-500/20">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">Postgraduate</span>
-            <span class="text-xs text-slate-400">2025 – 2027</span>
-          </div>
-          <h4 class="text-lg font-bold text-white mb-1">M.Tech in Artificial Intelligence & Data Science</h4>
-          <div class="text-sm text-cyan-400 mb-3">Alliance School of Advanced Computing, Alliance University — Bangalore, Karnataka</div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Advanced specialization in LLMs, LangGraph, Knowledge Graph RAG, Computer Vision (YOLO/RT-DETR), and Explainable AI (SHAP/Grad-CAM).
-          </p>
-        </div>
-
-        <!-- Degree 2 -->
-        <div class="glass-card rounded-2xl p-6 border-slate-800">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-300 border border-sky-500/30">Undergraduate</span>
-            <span class="text-xs text-slate-400">2021 – 2025</span>
-          </div>
-          <h4 class="text-lg font-bold text-white mb-1">B.Tech in Computer Science and Engineering (AI)</h4>
-          <div class="text-sm text-sky-400 mb-3">Adi Shankara Institute of Engineering and Technology — Kalady, Kerala · <strong class="text-white">CGPA: 7.18</strong></div>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Rigorous foundations in data structures, computer vision, algorithms, software architecture, and neural networks.
-          </p>
-        </div>
-
-        <!-- Degree 3 -->
-        <div class="glass-card rounded-2xl p-6 border-slate-800">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">Higher Secondary</span>
-            <span class="text-xs text-slate-400">2021</span>
-          </div>
-          <h4 class="text-base font-bold text-white mb-1">Class XII (ISC)</h4>
-          <div class="text-sm text-slate-400 mb-2">St. Aloysius Convent ISC School · <strong class="text-white">87.2%</strong></div>
-          <p class="text-xs text-slate-300">Physics, Chemistry, Mathematics, and Computer Science stream.</p>
-        </div>
-
-        <!-- Degree 4 -->
-        <div class="glass-card rounded-2xl p-6 border-slate-800">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">Secondary</span>
-            <span class="text-xs text-slate-400">2019</span>
-          </div>
-          <h4 class="text-base font-bold text-white mb-1">Class X (ICSE)</h4>
-          <div class="text-sm text-slate-400 mb-2">St. Aloysius Convent ISC School · <strong class="text-white">87.17%</strong></div>
-          <p class="text-xs text-slate-300">All-round academic excellence with distinction in sciences and mathematics.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-24 relative border-t border-slate-900">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-pink-400 mb-2">Get In Touch</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-white">Let's Connect & Collaborate</p>
-        <div class="w-12 h-1 bg-gradient-to-r from-pink-400 to-rose-500 mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <!-- Contact Information (7 cols) -->
-        <div class="lg:col-span-7 glass-card rounded-2xl p-8 border-pink-500/20">
-          <h3 class="text-2xl font-bold text-white mb-3">Open for Opportunities</h3>
-          <p class="text-slate-300 text-sm leading-relaxed mb-8">
-            Whether you want to collaborate on AI/ML research, explore Explainable AI or Computer Vision initiatives, discuss engineering roles, or just say hello — I'd love to hear from you!
-          </p>
-
-          <div class="space-y-4">
-            <!-- Email Box 1 -->
-            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-4 flex-wrap">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400">Primary Email</div>
-                  <a href="mailto:nandanadas007@gmail.com" class="text-sm font-semibold text-white hover:text-sky-400 transition-colors">nandanadas007@gmail.com</a>
-                </div>
+      <!-- Leadership -->
+      <div style="flex:1 1 420px;min-width:0">
+        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 20px">Leadership</h2>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
+            <div style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#FFC9DE;border:2px solid #4A3326"></div>
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <b style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Student Mentor</b>
+                <span style="font-weight:700;font-size:14px">2024 – 2025</span>
               </div>
-              <button class="copy-email-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors" data-email="nandanadas007@gmail.com">
-                Copy
-              </button>
+              <div style="font-weight:700;font-size:14px;margin:2px 0 6px;color:#D9541E">CSI SB ASIET</div>
+              <div style="font-size:14px;line-height:1.5;font-weight:500">Mentored junior engineering undergraduates in core computer science, algorithm design, and AI fundamentals.</div>
             </div>
+          </div>
 
-            <!-- Email Box 2 -->
-            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-4 flex-wrap">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400">Academic / Alt Email</div>
-                  <a href="mailto:nandana.narayan.das@gmail.com" class="text-sm font-semibold text-white hover:text-sky-400 transition-colors">nandana.narayan.das@gmail.com</a>
-                </div>
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
+            <div style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#C6F0DA;border:2px solid #4A3326"></div>
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <b style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Social Media Team Lead</b>
+                <span style="font-weight:700;font-size:14px">2023 – 2024</span>
               </div>
-              <button class="copy-email-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors" data-email="nandana.narayan.das@gmail.com">
-                Copy
-              </button>
-            </div>
-
-            <!-- Social Links -->
-            <div class="grid grid-cols-2 gap-4 pt-2">
-              <a href="https://linkedin.com/in/nandana-narayan-das" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition-all duration-200 flex items-center gap-3">
-                <div class="w-9 h-9 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400">LinkedIn</div>
-                  <div class="text-xs font-semibold text-white">nandana-narayan-das</div>
-                </div>
-              </a>
-
-              <a href="https://github.com/nandana-das" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-500 transition-all duration-200 flex items-center gap-3">
-                <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </div>
-                <div>
-                  <div class="text-xs text-slate-400">GitHub</div>
-                  <div class="text-xs font-semibold text-white">nandana-das</div>
-                </div>
-              </a>
+              <div style="font-weight:700;font-size:14px;margin:2px 0 6px;color:#D9541E">CSI SB ASIET</div>
+              <div style="font-size:14px;line-height:1.5;font-weight:500">Led the chapter's social media outreach strategy, digital branding, technical event promotions, and community engagement.</div>
             </div>
           </div>
+
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
+            <div style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#FFE27A;border:2px solid #4A3326"></div>
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <b style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Editor</b>
+                <span style="font-weight:700;font-size:14px">2022 – 2024</span>
+              </div>
+              <div style="font-weight:700;font-size:14px;margin:2px 0 6px;color:#D9541E">Saakshin</div>
+              <div style="font-size:14px;line-height:1.5;font-weight:500">Supervised editorial reviews, technical writing verification, and publication workflows for student magazine releases.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Toolbox / Skills Section -->
+    <section id="skills" style="background:#FFE9B8;border-top:2px solid #4A3326;border-bottom:2px solid #4A3326;position:relative">
+      <span style="position:absolute;right:30px;top:24px;width:34px;height:34px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.5s ease-in-out infinite"></span>
+      <div style="max-width:1180px;margin:0 auto;padding:72px 24px">
+        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Toolbox ✧</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px">
+          
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">LLM & GenAI</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LangChain</span>
+              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LangGraph</span>
+              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RAG</span>
+              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Knowledge Graph RAG</span>
+              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">FAISS</span>
+              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Prompt Engineering</span>
+            </div>
+          </div>
+
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">Computer Vision</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">OpenCV</span>
+              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">YOLO</span>
+              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RT-DETR</span>
+              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">CNNs</span>
+              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Object Detection</span>
+              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Image Classification</span>
+            </div>
+          </div>
+
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">ML / DL & Explainable AI</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">PyTorch</span>
+              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">TensorFlow</span>
+              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Scikit-Learn</span>
+              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">SHAP</span>
+              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Grad-CAM</span>
+              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LIME</span>
+            </div>
+          </div>
+
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">Data & Analytics</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Pandas</span>
+              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">NumPy</span>
+              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">SQL</span>
+              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Power BI</span>
+              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Matplotlib</span>
+              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">spaCy</span>
+            </div>
+          </div>
+
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">Languages & Tools</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Python</span>
+              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Java</span>
+              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">C</span>
+              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Git & GitHub</span>
+              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Jupyter</span>
+              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Colab</span>
+            </div>
+          </div>
+
+          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">Backend & Frameworks</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Spring Boot</span>
+              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RESTful APIs</span>
+              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Streamlit</span>
+              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Flask</span>
+              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Apache Pinot</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" style="max-width:1180px;margin:0 auto;padding:72px 24px 40px">
+      <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">
+        Certifications <span style="color:#FF8FB8">♡</span>
+      </h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px">
+        
+        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">Oracle</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Oracle Certified Java Foundations Associate</div>
+          <span style="font-weight:700;font-size:14px;color:#059669">✓ Verified Credential</span>
         </div>
 
-        <!-- Quick Summary Box (5 cols) -->
-        <div class="lg:col-span-5 glass-card rounded-2xl p-8 border-slate-800 text-center">
-          <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white mx-auto mb-6 shadow-[0_0_30px_rgba(56,189,248,0.4)]">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
+        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">IBM</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Artificial Intelligence Foundation Digital Credential</div>
+          <a href="https://www.credly.com/badges/8cc05afc-9b8b-46b7-a26f-04c243d404da/linked_in?t=sqsi62" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify on Credly ↗</a>
+        </div>
+
+        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">Microsoft & LinkedIn</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Career Essentials in Generative AI</div>
+          <a href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
+        </div>
+
+        <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">GitHub</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Career Essentials in GitHub Certificate</div>
+          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
+        </div>
+
+        <div class="doodle-card" style="background:#FFD86B;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">KNIME</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Data Science Professional Certificate</div>
+          <a href="https://www.linkedin.com/learning/certificates/589d0ec89ecbe07a2e8961cb48dc0790156acc70fe9a0132cfacab3cb3776abb" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
+        </div>
+
+        <div class="doodle-card" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">LinkedIn Learning</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Java Object-Oriented Programming</div>
+          <a href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
+        </div>
+
+        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:24px;padding:18px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">Infosys Springboard</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Artificial Intelligence Foundation Certification</div>
+          <a href="AI foundation certification infosys.png" target="_blank" style="font-weight:700;font-size:14px">View Certificate Image ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" style="max-width:1180px;margin:0 auto;padding:32px 24px 72px">
+      <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Education ☁</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+        
+        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
+            <span>Postgraduate</span>
+            <span>2025 – 2027</span>
           </div>
-          <h3 class="text-xl font-bold text-white mb-2">Ready to Innovate</h3>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            Focused on building reliable, explainable machine learning systems that make genuine real-world impact.
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15">M.Tech in Artificial Intelligence & Data Science</div>
+          <div style="font-weight:700;font-size:14px;color:#D9541E">Alliance School of Advanced Computing, Alliance University — Bangalore</div>
+          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">Advanced specialization in LLMs, LangGraph, Knowledge Graph RAG, Computer Vision (YOLO/RT-DETR), and Explainable AI (SHAP/Grad-CAM).</p>
+        </div>
+
+        <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
+            <span>Undergraduate</span>
+            <span>2021 – 2025</span>
+          </div>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15">B.Tech in Computer Science and Engineering (AI)</div>
+          <div style="font-weight:700;font-size:14px;color:#D9541E">Adi Shankara Institute of Engineering & Technology — Kalady</div>
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 12px;font-weight:700;font-size:14px">CGPA: 7.18</span>
+          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">Foundations in algorithm design, computer vision, data structures, and neural network development.</p>
+        </div>
+
+        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
+            <span>Higher Secondary (ISC)</span>
+            <span>2021</span>
+          </div>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15">Class XII</div>
+          <div style="font-weight:700;font-size:14px;color:#D9541E">St. Aloysius Convent ISC School</div>
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 12px;font-weight:700;font-size:14px">87.2%</span>
+          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">Science stream with focus on Physics, Chemistry, Mathematics, and Computer Science.</p>
+        </div>
+
+        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:28px;padding:22px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
+            <span>Secondary (ICSE)</span>
+            <span>2019</span>
+          </div>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.15">Class X</div>
+          <div style="font-weight:700;font-size:14px;color:#D9541E">St. Aloysius Convent ISC School</div>
+          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 12px;font-weight:700;font-size:14px">87.17%</span>
+          <p style="margin:0;font-size:14px;line-height:1.5;font-weight:500">Distinction across all disciplines with academic honors in science and mathematics.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" style="background:#FFD86B;border-top:2px solid #4A3326;position:relative;overflow:hidden">
+      <span style="position:absolute;left:5%;bottom:70px;font-size:40px;color:#FF8FB8;animation:bob 3.4s ease-in-out infinite;--r:-10deg">♡</span>
+      <span style="position:absolute;right:6%;top:36px;font-size:36px;color:#FFA63D;animation:bob 4s ease-in-out infinite;--r:10deg">☼</span>
+      
+      <div style="max-width:1180px;margin:0 auto;padding:76px 24px;display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+        <div style="flex:1 1 420px;min-width:0">
+          <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(46px,7vw,90px);line-height:.95;margin:0 0 18px">
+            Let's make something <span style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">lovely</span>.
+          </h2>
+          <p style="font-size:18px;line-height:1.6;max-width:520px;margin:0;font-weight:500">
+            AI/ML research, Explainable AI, computer vision, engineering roles — or just hello. I'd love to hear from you.
           </p>
-          <div class="inline-flex flex-col gap-2 text-xs text-slate-400">
-            <span>📍 Location: Bangalore / Kochi, India</span>
-            <span>🗣️ Languages: English (Fluent), Malayalam (Native)</span>
+          <p style="font-size:15px;font-weight:700;margin:16px 0 0">
+            Bangalore / Kochi, India · English (fluent), Malayalam (native)
+          </p>
+        </div>
+
+        <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:14px">
+          
+          <div style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:10px 10px 10px 24px;box-shadow:0 4px 0 #4A3326;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <a href="mailto:nandanadas007@gmail.com" style="font-weight:700;font-size:16px;text-decoration:none">nandanadas007@gmail.com</a>
+            <button class="doodle-btn copy-btn" data-email="nandanadas007@gmail.com" style="font:700 14px Quicksand;background:#FFC9DE;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 18px;box-shadow:0 2px 0 #4A3326">Copy</button>
           </div>
-          <div class="mt-6 pt-6 border-t border-slate-800">
-            <a href="Resume.pdf" download class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-xs bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-all duration-200">
-              <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-              Download Full Resume (PDF)
-            </a>
+
+          <div style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:10px 10px 10px 24px;box-shadow:0 4px 0 #4A3326;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <a href="mailto:nandana.narayan.das@gmail.com" style="font-weight:700;font-size:16px;text-decoration:none">nandana.narayan.das@gmail.com</a>
+            <button class="doodle-btn copy-btn" data-email="nandana.narayan.das@gmail.com" style="font:700 14px Quicksand;background:#C6F0DA;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 18px;box-shadow:0 2px 0 #4A3326">Copy</button>
           </div>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="https://linkedin.com/in/nandana-narayan-das" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">LinkedIn</a>
+            <a href="https://github.com/nandana-das" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">GitHub</a>
+            <a href="Resume.pdf" download class="doodle-btn" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">Resume ↓</a>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="fixed bottom-6 right-6 w-11 h-11 bg-slate-800/90 hover:bg-sky-600 text-white rounded-full hidden items-center justify-center z-40 border border-slate-700 shadow-lg transition-all duration-300 hover:scale-110" aria-label="Back to top">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-    </svg>
-  </button>
-
-  <!-- Footer -->
-  <footer class="bg-[#020617] border-t border-slate-900 py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="text-xl font-bold text-white mb-2">
-        Nandana Narayan Das
+      <div style="max-width:1180px;margin:0 auto;padding:18px 24px 26px;border-top:2px dashed #4A3326;font-size:14px;font-weight:700;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <span>© 2026 Nandana Narayan Das</span>
+        <span>Made with ♡ and a lot of tea</span>
       </div>
-      <p class="text-xs text-slate-400 mb-6">
-        M.Tech AI & Data Science Candidate · Alliance University, Bangalore
-      </p>
+    </section>
 
-      <div class="flex items-center justify-center gap-6 mb-8 text-slate-400">
-        <a href="#about" class="hover:text-sky-400 text-xs transition-colors">About</a>
-        <a href="#publications" class="hover:text-sky-400 text-xs transition-colors">Publications</a>
-        <a href="#projects" class="hover:text-sky-400 text-xs transition-colors">Projects</a>
-        <a href="#experience" class="hover:text-sky-400 text-xs transition-colors">Experience</a>
-        <a href="#skills" class="hover:text-sky-400 text-xs transition-colors">Skills</a>
-        <a href="#contact" class="hover:text-sky-400 text-xs transition-colors">Contact</a>
-      </div>
+  </div>
 
-      <div class="text-xs text-slate-400 border-t border-slate-900 pt-6">
-        <p>© 2026 Nandana Narayan Das. All rights reserved.</p>
-        <p class="mt-1">Built with passion for research and engineering in AI & Data Science.</p>
-      </div>
-    </div>
-  </footer>
+  <script>
+    // Project Category Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
 
-  <script src="script.js"></script>
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.style.background = '#FFF7D6';
+          b.style.color = '#4A3326';
+        });
+        btn.classList.add('active');
+        btn.style.background = '#4A3326';
+        btn.style.color = '#FFF7D6';
+
+        const category = btn.getAttribute('data-filter');
+
+        projectItems.forEach(item => {
+          const itemCat = item.getAttribute('data-category');
+          if (category === 'all' || (itemCat && itemCat.includes(category))) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Copy Email Feedback
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    copyButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const email = btn.getAttribute('data-email');
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(email).then(() => {
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied! ♡';
+            setTimeout(() => {
+              btn.textContent = originalText;
+            }, 1800);
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
