@@ -65,10 +65,6 @@ nandana-das.github.io/
 │   ├── avatar.jpg                           # Profile avatar image
 │   └── nandana.jpg                          # Original portrait photography
 ├── index.html                               # Main single-page portfolio application
-├── Portfolio E - Sunlight Doodle.dc.html    # Design component template source
-├── styles.css                               # Custom styles and utility classes
-├── script.js                                # Interactive client-side scripts
-├── tailwind.config.js                       # Theme tokens and color configuration
 ├── Resume.pdf                               # Direct downloadable curriculum vitae
 ├── AI foundation certification infosys.png  # Verified Infosys certification preview
 ├── package.json                             # Project metadata and local scripts
