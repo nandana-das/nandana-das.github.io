@@ -82,9 +82,12 @@ The portfolio features a warm, playful **Sunlight Doodle / Neo-Brutalist** aesth
   - *Student Mentor* & *Social Media Team Lead* at CSI SB ASIET; *Editor* at Saakshin.
 - **Skills Toolbox**: Categorized into LLM & GenAI, Computer Vision, ML/DL & XAI, Data & Analytics, Languages & Tools, and Backend & Frameworks.
 - **Verified Certifications**: Featured credentials from Oracle, IBM, KNIME, and GitHub, alongside Microsoft & LinkedIn, LinkedIn Learning, and Infosys.
-- **Education**: Detailed academic background:
+- **Education & Relevant Coursework**:
   - **M.Tech in AI & Data Science (8.9 CGPA)** — Alliance University, Bangalore (2025–2027)
+    - *Key Coursework*: Applied Probability & Statistics · High Performance Computing for Big Data · Predictive Analysis · Cognitive AI · Human Machine Interaction · Virtual Reality
+    - *Current*: Decision Support Systems · Business Intelligence & Analytics
   - **B.Tech in CSE - AI (7.18 CGPA)** — Adi Shankara Institute of Engineering & Technology, Kalady (2021–2025)
+    - *Key Coursework*: Artificial Intelligence · Machine Learning · Deep Learning · NLP · Robotics & Intelligent Systems · Soft Computing · Data Structures & Algorithms
 - **1-Click Copy Contact**: Instant clipboard copy utility for direct email outreach.
 
 ---
