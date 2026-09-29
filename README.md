@@ -1,6 +1,6 @@
 # Nandana Narayan Das — Portfolio Website ✿
 
-Personal portfolio website for **Nandana Narayan Das** — M.Tech AI & Data Science Scholar at Alliance University, Bangalore. Showcases peer-reviewed scientific publications, machine learning & computer vision projects, industry engineering experience, verified credentials, and comprehensive technical competencies.
+Personal portfolio website for **Nandana Narayan Das** — AI/ML Researcher & Deep Learning Engineer and M.Tech AI & Data Science Scholar at Alliance University, Bangalore. Showcases peer-reviewed scientific publications, machine learning & computer vision systems, industry engineering experience, verified credentials, and comprehensive technical competencies.
 
 🌐 **Live Website**: [https://nandana-das.github.io/](https://nandana-das.github.io/)
 
