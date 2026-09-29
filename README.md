@@ -1,67 +1,50 @@
-# Nandana Narayan Das - Portfolio
+# Nandana Narayan Das — Portfolio Website
 
-A modern, responsive portfolio website built with Tailwind CSS and vanilla JavaScript, featuring a dark theme and single-page application (SPA) design.
+Personal portfolio website for **Nandana Narayan Das** — M.Tech AI & Data Science Scholar at Alliance University, Bangalore. Showcases peer-reviewed scientific publications, machine learning & computer vision projects, professional experience, verified credentials, and technical skillset.
 
-## 🚀 Features
+🌐 **Live Website**: [https://nandana-das.github.io/](https://nandana-das.github.io/)
 
-- **Dark Theme**: Professional dark color scheme with excellent contrast
-- **Responsive Design**: Mobile-first approach with single-page scroll on mobile
-- **Single Page Application**: Smooth navigation between sections on desktop
-- **Interactive Elements**: Hover effects, transitions, and loading animations
-- **Accessibility**: Proper ARIA labels and keyboard navigation
-- **Fast Loading**: Optimized with Tailwind CSS CDN
-- **Unified Design**: Consistent blue accent colors throughout
+---
+
+## 🌟 Highlights & Features
+
+- **Modern Glassmorphic Dark UI**: High contrast deep midnight palette (`#030712`) with curated glowing gradients (Cyan, Indigo, Purple, Emerald).
+- **Interactive Project Filtering**: Live client-side category filters across *All Projects*, *AI & Machine Learning*, *Computer Vision & Research*, and *Systems & Web*.
+- **Scientific Publications Showcase**: Direct access and DOI links to published IEEE Xplore research and accepted ICTEST publications with associated open-source repositories.
+- **Scrollspy Navigation & Smooth Scrolling**: Automatic active nav state tracking using `IntersectionObserver` with smooth scroll offsets.
+- **Responsive Mobile Navigation**: Collapsible mobile drawer menu with touch-friendly interactions and auto-close triggers.
+- **Copy-to-Clipboard Email Utilities**: 1-click clipboard copy feedback for primary and academic contact addresses.
+- **Fast & Accessible**: Clean semantic HTML5, SVG icons, Google Fonts (Inter), and optimized styling with Tailwind CSS.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **HTML5**: Semantic markup
-- **Tailwind CSS**: Utility-first CSS framework
-- **Vanilla JavaScript**: No frameworks, pure JS
-- **Google Fonts**: Inter font family
-- **SVG Icons**: Scalable vector graphics
+- **Core**: Semantic HTML5, Vanilla JavaScript (ES6+)
+- **Styling**: Tailwind CSS + Custom Vanilla CSS Design System (`styles.css`)
+- **Typography**: Google Fonts Inter
+- **Hosting**: GitHub Pages
 
-## 📁 Project Structure
+---
+
+## 📁 Repository Structure
 
 ```
 nandana-das.github.io/
-├── index.html              # Main HTML file
-├── styles.css              # Custom CSS and animations
-├── script.js               # JavaScript functionality
-├── tailwind.config.js      # Tailwind configuration
-├── Resume.pdf              # Downloadable resume
-├── AI foundation certification infosys.png  # Certification image
+├── index.html              # Main portfolio single-page application
+├── styles.css              # Custom glassmorphic styles, animations & scroll utilities
+├── script.js               # Interactive filtering, navigation scrollspy, clipboard handlers
+├── tailwind.config.js      # Custom theme color tokens and shadow configurations
+├── Resume.pdf              # Direct downloadable resume
+├── AI foundation certification infosys.png  # Verified certification asset
+├── package.json            # Project metadata and local server script
 ├── LICENSE                 # MIT License
-└── README.md               # This file
+└── README.md               # Repository documentation
 ```
 
-## 🎨 Design System
+---
 
-### Dark Theme Colors
-- **Primary**: #FFFFFF (White text)
-- **Secondary**: #E2E8F0 (Light gray text)
-- **Background Dark**: #020617 (Very dark blue)
-- **Background Light**: #0F172A (Dark slate)
-- **Background Gray**: #1E293B (Medium dark gray)
-- **Border**: #334155 (Dark border)
-- **Accent Colors**: Blue, Purple, Emerald, Orange, Cyan, Pink
-
-### Typography
-- **Font Family**: Inter (Google Fonts)
-- **Weights**: 400, 600, 700
-- **Text Color**: White for optimal contrast on dark backgrounds
-
-## 📱 Sections
-
-1. **Hero**: Introduction with dark gradient background and call-to-action
-2. **About**: Academic and professional background with unified blue accent colors
-3. **Projects**: Featured AI/ML projects with purple accent theme
-4. **Publications**: Research paper with IEEE publication details
-5. **Experience**: Work experience and technical skills with emerald accent theme
-6. **Certifications**: Professional certifications with orange accent theme
-7. **Education**: Academic qualifications with cyan accent theme
-8. **Contact**: Contact information and social links with pink accent theme
-
-## 🚀 Getting Started
+## 🚀 Running Locally
 
 1. **Clone the repository**:
    ```bash
@@ -69,52 +52,28 @@ nandana-das.github.io/
    cd nandana-das.github.io
    ```
 
-2. **Open in browser**:
-   - Simply open `index.html` in your web browser
-   - Or use a local server like Live Server in VS Code
+2. **Serve locally**:
+   You can open `index.html` directly in your browser or run a lightweight local server:
+   ```bash
+   # Using Python
+   python -m http.server 8000
 
-3. **Customize**:
-   - Edit `tailwind.config.js` for color scheme changes
-   - Modify `styles.css` for custom animations
-   - Update `script.js` for functionality changes
+   # Using Node (npx)
+   npx serve .
+   ```
+   Open [http://localhost:8000](http://localhost:8000) in your browser.
 
-## 🔧 Development
+---
 
-### File Organization
+## 📬 Contact & Connect
 
-- **`index.html`**: Main structure and content
-- **`styles.css`**: Custom CSS, animations, and SPA styles
-- **`script.js`**: Navigation, menu functionality, and interactions
-- **`tailwind.config.js`**: Tailwind CSS configuration and custom colors
+- **Portfolio**: [https://nandana-das.github.io/](https://nandana-das.github.io/)
+- **LinkedIn**: [linkedin.com/in/nandana-narayan-das](https://linkedin.com/in/nandana-narayan-das)
+- **GitHub**: [github.com/nandana-das](https://github.com/nandana-das)
+- **Email**: [nandanadas007@gmail.com](mailto:nandanadas007@gmail.com) · [nandana.narayan.das@gmail.com](mailto:nandana.narayan.das@gmail.com)
 
-### Key Features
-
-- **Dark Theme**: Professional dark color scheme with white text for optimal readability
-- **SPA Navigation**: Sections are hidden/shown based on menu selection on desktop
-- **Mobile Responsive**: Single-page scrollable layout on mobile devices
-- **Menu Auto-Close**: Menu closes automatically when navigating
-- **Loading Animations**: Smooth transitions between sections
-- **Unified Design**: Consistent blue accent colors for About section, other sections use their respective accent colors
-- **Accessibility**: Proper ARIA labels and keyboard support
-- **Global Text Override**: CSS ensures all text is white for maximum visibility
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-- **Email**: [nandana.narayan.das@gmail.com](mailto:nandana.narayan.das@gmail.com)
-- **LinkedIn**: [nandana-narayan-das](https://linkedin.com/in/nandana-narayan-das)
-- **GitHub**: [nandana-das](https://github.com/nandana-das)
-
-## 🌟 About
-
-This portfolio showcases my work as an M.Tech AI & DS student with expertise in:
-- Machine Learning & Deep Learning
-- Computer Vision & NLP
-- Python, Java, and C programming
-- Research and publications in AI
----
-
-**Built with ❤️ using Tailwind CSS and vanilla JavaScript**
+This project is licensed under the [MIT License](LICENSE).
