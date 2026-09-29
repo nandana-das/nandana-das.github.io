@@ -101,7 +101,8 @@ Then visit [http://localhost:8000](http://localhost:8000) in your browser.
 - **Portfolio**: [https://nandana-das.github.io/](https://nandana-das.github.io/)
 - **LinkedIn**: [linkedin.com/in/nandana-narayan-das](https://linkedin.com/in/nandana-narayan-das)
 - **GitHub**: [github.com/nandana-das](https://github.com/nandana-das)
-- **Email**: [nandanadas007@gmail.com](mailto:nandanadas007@gmail.com)
+- **Google Scholar**: [Nandana Narayan Das](https://scholar.google.com/citations?user=SenP3y4AAAAJ)
+- **Email**: [nandana.das001@gmail.com](mailto:nandana.das001@gmail.com)
 
 ---
 
