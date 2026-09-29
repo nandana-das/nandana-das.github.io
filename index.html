@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nandana Narayan Das — AI/ML Researcher & Engineer</title>
-  <meta name="description" content="Portfolio of Nandana Narayan Das — M.Tech AI & Data Science Scholar at Alliance University, specializing in Explainable AI, Computer Vision, Deep Learning, and Intelligent Systems." />
+  <meta name="description"
+    content="Portfolio of Nandana Narayan Das — M.Tech AI & Data Science Scholar at Alliance University, specializing in Explainable AI, Computer Vision, Deep Learning, and Intelligent Systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap"
+    rel="stylesheet">
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       background: #FFF7D6;
       color: #4A3326;
@@ -17,41 +22,75 @@
       -webkit-font-smoothing: antialiased;
       scroll-behavior: smooth;
     }
+
     * {
       box-sizing: border-box;
     }
+
     a {
       color: #4A3326;
       text-decoration-thickness: 2px;
       text-underline-offset: 3px;
-      transition: color 0.2s ease, transform 0.3s cubic-bezier(.34,1.9,.5,1);
+      transition: color 0.2s ease, transform 0.3s cubic-bezier(.34, 1.9, .5, 1);
     }
+
     a:hover {
       color: #D9541E;
     }
 
     /* Keyframe Animations */
     @keyframes bob {
-      0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
-      50% { transform: translateY(-10px) rotate(calc(var(--r, 0deg) + 6deg)); }
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(var(--r, 0deg));
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(calc(var(--r, 0deg) + 6deg));
+      }
     }
+
     @keyframes twinkle {
-      0%, 100% { transform: scale(1) rotate(0); }
-      50% { transform: scale(1.25) rotate(15deg); }
+
+      0%,
+      100% {
+        transform: scale(1) rotate(0);
+      }
+
+      50% {
+        transform: scale(1.25) rotate(15deg);
+      }
     }
+
     @keyframes spin {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
+
     @keyframes drop {
-      0% { transform: translateY(-30px) scale(.9); opacity: 0; }
-      60% { transform: translateY(6px) scale(1.02); opacity: 1; }
-      100% { transform: none; opacity: 1; }
+      0% {
+        transform: translateY(-30px) scale(.9);
+        opacity: 0;
+      }
+
+      60% {
+        transform: translateY(6px) scale(1.02);
+        opacity: 1;
+      }
+
+      100% {
+        transform: none;
+        opacity: 1;
+      }
     }
 
     /* Neo-Brutalist Interactive Micro-interactions */
     .doodle-card {
       transition: transform 0.4s cubic-bezier(.34, 1.9, .5, 1), box-shadow 0.4s ease;
     }
+
     .doodle-card:hover {
       transform: translateY(-6px) rotate(-1deg);
       box-shadow: 0 8px 0 #4A3326 !important;
@@ -61,10 +100,12 @@
       transition: transform 0.35s cubic-bezier(.34, 1.9, .5, 1), box-shadow 0.35s ease;
       cursor: pointer;
     }
+
     .doodle-btn:hover {
       transform: translateY(-4px) rotate(-2deg);
       box-shadow: 0 6px 0 #4A3326 !important;
     }
+
     .doodle-btn:active {
       transform: translateY(2px) rotate(0deg);
       box-shadow: 0 1px 0 #4A3326 !important;
@@ -73,6 +114,7 @@
     .pill-badge {
       transition: transform 0.3s cubic-bezier(.34, 2, .5, 1);
     }
+
     .pill-badge:hover {
       transform: translateY(-3px) scale(1.06);
     }
@@ -99,15 +141,18 @@
       transition: transform 0.35s cubic-bezier(.34, 1.9, .5, 1), box-shadow 0.35s ease;
       position: relative;
     }
+
     .project-item:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 0 #4A3326 !important;
     }
+
     .project-item:hover .project-arrow {
       transform: translate(2px, -2px);
       background: #FF8FB8;
       color: #4A3326;
     }
+
     .project-num {
       flex: none;
       width: 54px;
@@ -123,6 +168,7 @@
       color: #4A3326;
       margin-top: 2px;
     }
+
     .project-content {
       flex: 1 1 auto;
       min-width: 0;
@@ -130,12 +176,14 @@
       flex-direction: column;
       gap: 8px;
     }
+
     .project-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 16px;
     }
+
     .project-category {
       font-weight: 700;
       font-size: 12px;
@@ -144,6 +192,7 @@
       color: #C2571B;
       line-height: 1.3;
     }
+
     .project-title {
       font-family: 'Baloo 2', cursive;
       font-weight: 800;
@@ -152,6 +201,7 @@
       margin: 2px 0 0;
       color: #4A3326;
     }
+
     .project-desc {
       margin: 0;
       font-size: 15px;
@@ -160,6 +210,7 @@
       color: #4A3326;
       text-wrap: pretty;
     }
+
     .project-tags {
       display: flex;
       gap: 7px;
@@ -167,6 +218,7 @@
       align-items: center;
       margin-top: 4px;
     }
+
     .project-tags .pill-badge {
       font-size: 12px;
       font-weight: 700;
@@ -175,6 +227,7 @@
       padding: 2px 10px;
       color: #4A3326;
     }
+
     .project-arrow {
       flex: none;
       width: 36px;
@@ -206,6 +259,7 @@
       width: fit-content;
       margin-top: 2px;
     }
+
     .project-actions {
       display: flex;
       gap: 8px;
@@ -213,6 +267,7 @@
       align-items: center;
       margin-top: 6px;
     }
+
     .project-btn {
       display: inline-flex;
       align-items: center;
@@ -228,23 +283,28 @@
       box-shadow: 0 2px 0 #4A3326;
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
+
     .project-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 0 #4A3326;
       background: #FFD86B;
       color: #4A3326;
     }
+
     .project-btn.primary {
       background: #4A3326;
       color: #FFF7D6;
     }
+
     .project-btn.primary:hover {
       background: #D9541E;
       color: #FFFFFF;
     }
+
     .project-group {
       margin-bottom: 28px;
     }
+
     .project-group-title {
       font-family: 'Baloo 2', cursive;
       font-weight: 800;
@@ -261,6 +321,7 @@
       box-shadow: 0 3px 0 #4A3326;
       margin-bottom: 14px;
     }
+
     .project-group-list {
       display: flex;
       flex-direction: column;
@@ -271,9 +332,11 @@
     ::-webkit-scrollbar {
       width: 10px;
     }
+
     ::-webkit-scrollbar-track {
       background: #FFF7D6;
     }
+
     ::-webkit-scrollbar-thumb {
       background: #FFD86B;
       border: 2px solid #4A3326;
@@ -289,6 +352,7 @@
       margin: 12px auto 0;
       padding: 0 16px;
     }
+
     .nav-container {
       background: #FFFFFF;
       border: 2px solid #4A3326;
@@ -299,6 +363,7 @@
       gap: 16px;
       box-shadow: 0 4px 0 #FFD86B;
     }
+
     .nav-logo {
       font-family: 'Baloo 2', cursive;
       font-weight: 800;
@@ -310,6 +375,7 @@
       white-space: nowrap;
       color: #4A3326;
     }
+
     .desktop-nav-links {
       display: flex;
       gap: 18px;
@@ -318,15 +384,18 @@
       font-size: 15px;
       margin-left: auto;
     }
+
     .desktop-nav-links a {
       text-decoration: none;
       white-space: nowrap;
     }
+
     .nav-actions {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .mobile-menu-btn {
       display: none;
       background: #FFF0A8;
@@ -344,6 +413,7 @@
       cursor: pointer;
       user-select: none;
     }
+
     .mobile-drawer {
       display: none;
       overflow: hidden;
@@ -357,17 +427,20 @@
       margin-top: 0;
       padding: 0 16px;
     }
+
     .mobile-drawer.open {
       max-height: 520px;
       opacity: 1;
       margin-top: 10px;
       padding: 16px;
     }
+
     .mobile-drawer-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
     }
+
     .mobile-link {
       display: flex;
       align-items: center;
@@ -383,10 +456,13 @@
       box-shadow: 0 2px 0 #4A3326;
       transition: transform 0.2s ease, background 0.2s ease;
     }
-    .mobile-link:hover, .mobile-link:active {
+
+    .mobile-link:hover,
+    .mobile-link:active {
       transform: translateY(-2px);
       background: #FFD86B;
     }
+
     .mobile-link-num {
       width: 24px;
       height: 24px;
@@ -406,12 +482,15 @@
       .desktop-nav-links {
         display: none !important;
       }
+
       .mobile-menu-btn {
         display: inline-flex !important;
       }
+
       .mobile-drawer {
         display: block !important;
       }
+
       .nav-actions {
         margin-left: auto;
       }
@@ -422,49 +501,61 @@
         grid-template-columns: 1fr;
         gap: 8px;
       }
+
       .hero-header {
         padding: 32px 18px 24px !important;
         gap: 32px !important;
       }
+
       .hero-actions {
         flex-direction: column;
         width: 100%;
       }
+
       .hero-actions .doodle-btn {
         text-align: center;
         width: 100%;
       }
+
       .portrait-wrapper {
         max-width: 270px !important;
         min-width: 220px !important;
       }
+
       .portrait-badge-left {
         left: -10px !important;
         top: 2% !important;
         font-size: 12px !important;
         padding: 4px 10px !important;
       }
+
       .portrait-badge-right {
         right: -10px !important;
         bottom: 2% !important;
         font-size: 12px !important;
         padding: 4px 10px !important;
       }
-      .hero-sticker-sun, .hero-sticker-wave {
+
+      .hero-sticker-sun,
+      .hero-sticker-wave {
         display: none !important;
       }
+
       .stats-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 12px !important;
         padding: 12px 16px 24px !important;
       }
+
       .stat-card {
         padding: 16px 14px !important;
         border-radius: 20px !important;
       }
+
       .stat-card .stat-number {
         font-size: 34px !important;
       }
+
       .project-item {
         border-radius: 22px !important;
         padding: 16px 14px !important;
@@ -472,24 +563,29 @@
         flex-direction: row !important;
         align-items: flex-start !important;
       }
+
       .project-num {
         width: 42px !important;
         height: 42px !important;
         font-size: 16px !important;
         margin-top: 0 !important;
       }
+
       .project-title {
         font-size: 19px !important;
       }
+
       .project-desc {
         font-size: 14px !important;
         line-height: 1.5 !important;
       }
+
       .project-arrow {
         width: 32px !important;
         height: 32px !important;
         font-size: 14px !important;
       }
+
       .filter-container {
         width: 100%;
         overflow-x: auto;
@@ -497,9 +593,11 @@
         padding-bottom: 6px;
         flex-wrap: nowrap !important;
       }
+
       .filter-btn {
         flex-shrink: 0;
       }
+
       .contact-card {
         padding: 12px 16px !important;
         border-radius: 24px !important;
@@ -507,9 +605,10 @@
     }
   </style>
 </head>
+
 <body>
   <div style="min-height:100vh;background:#FFF7D6;overflow-x:hidden;position:relative">
-    
+
     <!-- Sticky Navigation -->
     <nav class="site-nav">
       <div class="nav-container">
@@ -527,10 +626,12 @@
           <a href="#contact">Contact</a>
         </div>
         <div class="nav-actions">
-          <a href="Resume.pdf" download class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:7px 18px;white-space:nowrap;box-shadow:0 3px 0 #4A3326;color:#4A3326">
+          <a href="Resume.pdf" download class="doodle-btn"
+            style="text-decoration:none;font-weight:700;font-size:14px;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:7px 18px;white-space:nowrap;box-shadow:0 3px 0 #4A3326;color:#4A3326">
             Resume ↓
           </a>
-          <button id="mobile-menu-toggle" class="mobile-menu-btn doodle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <button id="mobile-menu-toggle" class="mobile-menu-btn doodle-btn" aria-label="Toggle navigation menu"
+            aria-expanded="false">
             <span class="hamburger-icon">☰</span>
           </button>
         </div>
@@ -552,235 +653,367 @@
     </nav>
 
     <!-- Hero Header -->
-    <header id="hero" class="hero-header" style="max-width:1180px;margin:0 auto;padding:60px 24px 40px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;position:relative">
-      <span class="hero-sticker-sun" style="position:absolute;left:1%;top:26px;font-size:34px;color:#FFA63D;animation:bob 4s ease-in-out infinite;--r:-10deg">☼</span>
-      <span class="hero-sticker-star" style="position:absolute;left:46%;top:48px;width:26px;height:26px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.4s ease-in-out infinite"></span>
-      <svg class="hero-sticker-wave" width="90" height="24" viewBox="0 0 90 24" style="position:absolute;left:8%;bottom:14px" fill="none"><path d="M3 12 Q14 0 25 12 T47 12 T69 12 T87 12" stroke="#FF9E5E" stroke-width="5" stroke-linecap="round"/></svg>
-      
+    <header id="hero" class="hero-header"
+      style="max-width:1180px;margin:0 auto;padding:60px 24px 40px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;position:relative">
+      <span class="hero-sticker-sun"
+        style="position:absolute;left:1%;top:26px;font-size:34px;color:#FFA63D;animation:bob 4s ease-in-out infinite;--r:-10deg">☼</span>
+      <span class="hero-sticker-star"
+        style="position:absolute;left:46%;top:48px;width:26px;height:26px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.4s ease-in-out infinite"></span>
+      <svg class="hero-sticker-wave" width="90" height="24" viewBox="0 0 90 24"
+        style="position:absolute;left:8%;bottom:14px" fill="none">
+        <path d="M3 12 Q14 0 25 12 T47 12 T69 12 T87 12" stroke="#FF9E5E" stroke-width="5" stroke-linecap="round" />
+      </svg>
+
       <div style="flex:1 1 480px;min-width:0">
-        <div style="display:inline-flex;align-items:center;gap:8px;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;font-weight:700;font-size:14px;animation:drop .8s cubic-bezier(.34,1.6,.5,1) both">
+        <div
+          style="display:inline-flex;align-items:center;gap:8px;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;font-weight:700;font-size:14px;animation:drop .8s cubic-bezier(.34,1.6,.5,1) both">
           ☁ M.Tech AI & Data Science (8.9 CGPA) · Alliance University
         </div>
-        <h1 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(50px,7.5vw,96px);line-height:.95;letter-spacing:-.02em;margin:22px 0 18px;text-wrap:balance;animation:drop .9s .1s cubic-bezier(.34,1.6,.5,1) both">
-          Hi, I'm <span style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">Nandana</span> <span style="color:#FF8FB8">♡</span>
+        <h1
+          style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(50px,7.5vw,96px);line-height:.95;letter-spacing:-.02em;margin:22px 0 18px;text-wrap:balance;animation:drop .9s .1s cubic-bezier(.34,1.6,.5,1) both">
+          Hi, I'm <span
+            style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">Nandana</span>
+          <span style="color:#FF8FB8">♡</span>
         </h1>
-        <p style="font-family:'Baloo 2', cursive;font-weight:700;font-size:clamp(20px,2.2vw,28px);margin:0 0 12px;line-height:1.2;color:#C2571B">
+        <p
+          style="font-family:'Baloo 2', cursive;font-weight:700;font-size:clamp(20px,2.2vw,28px);margin:0 0 12px;line-height:1.2;color:#C2571B">
           AI/ML Researcher & Deep Learning Engineer
         </p>
         <p style="font-size:18px;line-height:1.6;max-width:540px;margin:0 0 20px;font-weight:500;text-wrap:pretty">
-          I build intelligent systems across computer vision, multimodal learning, explainable AI, and generative AI — from research prototypes and scientific data pipelines to deployable AI applications.
+          I build intelligent systems across computer vision, multimodal learning, explainable AI, and generative AI —
+          from research prototypes and scientific data pipelines to deployable AI applications.
         </p>
 
         <!-- Opportunity Focus Statement -->
-        <div style="background:#FFFBEA;border:2px solid #4A3326;border-radius:18px;padding:12px 18px;max-width:560px;margin:0 0 20px;box-shadow:0 3px 0 #4A3326;display:flex;align-items:flex-start;gap:12px">
+        <div
+          style="background:#FFFBEA;border:2px solid #4A3326;border-radius:18px;padding:12px 18px;max-width:560px;margin:0 0 20px;box-shadow:0 3px 0 #4A3326;display:flex;align-items:flex-start;gap:12px">
           <span style="font-size:20px;flex:none;line-height:1.2">🎯</span>
           <p style="margin:0;font-size:14px;line-height:1.55;font-weight:600;color:#4A3326">
-            <strong>Currently exploring AI/ML engineering and applied research opportunities</strong> involving deep learning, computer vision, GenAI, and intelligent systems.
+            <strong>Currently exploring AI/ML engineering and applied research opportunities</strong> involving deep
+            learning, computer vision, GenAI, and intelligent systems.
           </p>
         </div>
 
         <!-- Research Interests -->
         <div style="margin:0 0 26px;max-width:560px">
-          <div style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#C2571B;margin-bottom:8px">Research Interests</div>
+          <div
+            style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#C2571B;margin-bottom:8px">
+            Research Interests</div>
           <div style="display:flex;gap:7px;flex-wrap:wrap">
-            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Explainable AI</span>
-            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Multimodal Deep Learning</span>
-            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Computer Vision</span>
-            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Remote Sensing</span>
-            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Generative AI</span>
-            <span class="pill-badge" style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Knowledge-Augmented RAG</span>
+            <span class="pill-badge"
+              style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Explainable
+              AI</span>
+            <span class="pill-badge"
+              style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Multimodal
+              Deep Learning</span>
+            <span class="pill-badge"
+              style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Computer
+              Vision</span>
+            <span class="pill-badge"
+              style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Remote
+              Sensing</span>
+            <span class="pill-badge"
+              style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Generative
+              AI</span>
+            <span class="pill-badge"
+              style="background:#FFFFFF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Knowledge-Augmented
+              RAG</span>
           </div>
         </div>
 
         <div class="hero-actions" style="display:flex;gap:14px;flex-wrap:wrap">
-          <a href="#work" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:17px;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:13px 28px;box-shadow:0 4px 0 #4A3326;color:#4A3326">
+          <a href="#work" class="doodle-btn"
+            style="text-decoration:none;font-weight:700;font-size:17px;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:13px 28px;box-shadow:0 4px 0 #4A3326;color:#4A3326">
             See my work →
           </a>
-          <a href="#contact" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:17px;background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:13px 28px;box-shadow:0 4px 0 #4A3326;color:#4A3326">
+          <a href="#contact" class="doodle-btn"
+            style="text-decoration:none;font-weight:700;font-size:17px;background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:13px 28px;box-shadow:0 4px 0 #4A3326;color:#4A3326">
             Say hello
           </a>
         </div>
         <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;font-weight:700;font-size:15px">
           <a href="https://linkedin.com/in/nandana-narayan-das" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           <a href="https://github.com/nandana-das" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+          <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank"
+            rel="noopener noreferrer">Google Scholar ↗</a>
           <a href="mailto:nandana.das001@gmail.com">Email ↗</a>
         </div>
       </div>
 
       <!-- Illustrated Portrait Frame -->
       <div class="portrait-wrapper" style="flex:0 1 380px;min-width:280px;margin:0 auto;position:relative">
-        <div style="position:absolute;inset:-46px;border-radius:50%;background:repeating-conic-gradient(#FFDD66 0 9deg,transparent 9deg 22deg);animation:spin 50s linear infinite"></div>
-        <div style="position:absolute;inset:-14px;border-radius:50%;background:#FFD84D;border:2.5px solid #4A3326"></div>
-        <div style="position:relative;border:2.5px solid #4A3326;border-radius:44% 56% 50% 50% / 40% 40% 60% 60%;overflow:hidden;aspect-ratio:1/1.08;background:#CFE3F7;box-shadow:0 6px 0 #4A3326;transition:transform .5s cubic-bezier(.34,1.9,.5,1)" class="doodle-card">
-          <img src="assets/avatar.jpg?v=3" alt="Illustrated portrait of Nandana" style="width:100%;height:100%;object-fit:cover;object-position:50% 32%;display:block">
+        <div
+          style="position:absolute;inset:-46px;border-radius:50%;background:repeating-conic-gradient(#FFDD66 0 9deg,transparent 9deg 22deg);animation:spin 50s linear infinite">
         </div>
-        <div style="position:absolute;right:-16px;top:-8px;width:54px;height:54px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.8s ease-in-out infinite"></div>
-        <div style="position:absolute;left:-26px;bottom:18%;font-size:36px;color:#FF8FB8;animation:bob 3.6s ease-in-out infinite;--r:-8deg">♡</div>
-        <div class="portrait-badge-right" style="position:absolute;right:-20px;bottom:6%;background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transform:rotate(5deg);box-shadow:0 2px 0 #4A3326">
+        <div style="position:absolute;inset:-14px;border-radius:50%;background:#FFD84D;border:2.5px solid #4A3326">
+        </div>
+        <div
+          style="position:relative;border:2.5px solid #4A3326;border-radius:44% 56% 50% 50% / 40% 40% 60% 60%;overflow:hidden;aspect-ratio:1/1.08;background:#CFE3F7;box-shadow:0 6px 0 #4A3326;transition:transform .5s cubic-bezier(.34,1.9,.5,1)"
+          class="doodle-card">
+          <img src="assets/avatar.jpg?v=3" alt="Illustrated portrait of Nandana"
+            style="width:100%;height:100%;object-fit:cover;object-position:50% 32%;display:block">
+        </div>
+        <div
+          style="position:absolute;right:-16px;top:-8px;width:54px;height:54px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.8s ease-in-out infinite">
+        </div>
+        <div
+          style="position:absolute;left:-26px;bottom:18%;font-size:36px;color:#FF8FB8;animation:bob 3.6s ease-in-out infinite;--r:-8deg">
+          ♡</div>
+        <div class="portrait-badge-right"
+          style="position:absolute;right:-20px;bottom:6%;background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transform:rotate(5deg);box-shadow:0 2px 0 #4A3326">
           Bangalore · Kochi
         </div>
-        <div class="portrait-badge-left" style="position:absolute;left:-24px;top:8%;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transform:rotate(-6deg);box-shadow:0 2px 0 #4A3326">
+        <div class="portrait-badge-left"
+          style="position:absolute;left:-24px;top:8%;background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transform:rotate(-6deg);box-shadow:0 2px 0 #4A3326">
           Explainable AI · Multimodal Learning
         </div>
       </div>
     </header>
 
     <!-- Stats Bar -->
-    <div class="stats-grid" style="max-width:1180px;margin:0 auto;padding:16px 24px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px">
-      <div class="doodle-card stat-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
-        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">02</div>
-        <div style="font-weight:700;font-size:15px;margin-top:4px">Research Works — 01 Published · 01 Accepted/In Press</div>
+    <div class="stats-grid"
+      style="max-width:1180px;margin:0 auto;padding:16px 24px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px">
+      <div class="doodle-card stat-card"
+        style="background:#FFC9DE;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
+        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">02
+        </div>
+        <div style="font-weight:700;font-size:15px;margin-top:4px">Research Works — 01 Published · 01 Accepted/In Press
+        </div>
       </div>
-      <div class="doodle-card stat-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
-        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">09+</div>
+      <div class="doodle-card stat-card"
+        style="background:#C4E4FF;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
+        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">09+
+        </div>
         <div style="font-weight:700;font-size:15px;margin-top:4px">AI/ML & Systems Projects</div>
       </div>
-      <div class="doodle-card stat-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
-        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">8.9</div>
+      <div class="doodle-card stat-card"
+        style="background:#FFF0A8;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
+        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">8.9
+        </div>
         <div style="font-weight:700;font-size:15px;margin-top:4px">M.Tech CGPA (Alliance Univ) · B.Tech 7.18</div>
       </div>
-      <div class="doodle-card stat-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
-        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">07</div>
+      <div class="doodle-card stat-card"
+        style="background:#C6F0DA;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326">
+        <div class="stat-number" style="font-family:'Baloo 2', cursive;font-weight:800;font-size:46px;line-height:1">07
+        </div>
         <div style="font-weight:700;font-size:15px;margin-top:4px">Professional Certifications</div>
       </div>
     </div>
 
     <!-- About Section -->
     <section id="about" style="max-width:1180px;margin:0 auto;padding:56px 24px;position:relative">
-      <span style="position:absolute;right:40px;top:30px;font-size:30px;color:#FFA63D;animation:bob 4.2s ease-in-out infinite;--r:8deg">✧</span>
+      <span
+        style="position:absolute;right:40px;top:30px;font-size:30px;color:#FFA63D;animation:bob 4.2s ease-in-out infinite;--r:8deg">✧</span>
       <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(38px,5vw,60px);margin:0 0 26px">
         About me <span style="color:#FF8FB8">✿</span>
       </h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px">
-        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">01</div>
-          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Academic & Research Journey</h3>
+        <div class="doodle-card"
+          style="background:#C4E4FF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
+          <div
+            style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">
+            01</div>
+          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Academic &
+            Research Journey</h3>
           <p style="margin:0;font-size:15px;line-height:1.6;flex:1;font-weight:500;text-wrap:pretty">
-            Currently pursuing an M.Tech in Artificial Intelligence & Data Science at Alliance University, building on a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence. My work spans explainable deep learning, computer vision, remote sensing, knowledge-augmented generation, and applied machine learning research.
+            Currently pursuing an M.Tech in Artificial Intelligence & Data Science at Alliance University, building on a
+            B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence. My work spans
+            explainable deep learning, computer vision, remote sensing, knowledge-augmented generation, and applied
+            machine learning research.
           </p>
-          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Explainable AI & Applied Research</div>
+          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Explainable AI &
+            Applied Research</div>
         </div>
 
-        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">02</div>
-          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Technical Depth & AI Systems</h3>
+        <div class="doodle-card"
+          style="background:#C6F0DA;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
+          <div
+            style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">
+            02</div>
+          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Technical
+            Depth & AI Systems</h3>
           <p style="margin:0;font-size:15px;line-height:1.6;flex:1;font-weight:500;text-wrap:pretty">
-            I work with PyTorch, TensorFlow, Scikit-learn, OpenCV, YOLO, RT-DETR, LangChain, LangGraph, FAISS, spaCy, and Python. I also build backend systems using Java, Spring Boot, FastAPI, Flask, and REST APIs, with experience connecting machine-learning pipelines to interactive applications.
+            I work with PyTorch, TensorFlow, Scikit-learn, OpenCV, YOLO, RT-DETR, LangChain, LangGraph, FAISS, spaCy,
+            and Python. I also build backend systems using Java, Spring Boot, FastAPI, Flask, and REST APIs, with
+            experience connecting machine-learning pipelines to interactive applications.
           </p>
-          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Deep Learning & Resilient Systems</div>
+          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Deep Learning &
+            Resilient Systems</div>
         </div>
 
-        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">03</div>
-          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Research → Engineering</h3>
+        <div class="doodle-card"
+          style="background:#FFC9DE;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
+          <div
+            style="font-family:'Baloo 2', cursive;font-weight:800;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;align-self:flex-start">
+            03</div>
+          <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:24px;margin:0;line-height:1.15">Research →
+            Engineering</h3>
           <p style="margin:0;font-size:15px;line-height:1.6;flex:1;font-weight:500;text-wrap:pretty">
-            My projects focus on turning research ideas into reproducible systems: designing data pipelines, implementing and evaluating models, performing ablation and comparative studies, and exposing the resulting systems through practical interfaces and APIs.
+            My projects focus on turning research ideas into reproducible systems: designing data pipelines,
+            implementing and evaluating models, performing ablation and comparative studies, and exposing the resulting
+            systems through practical interfaces and APIs.
           </p>
-          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Reproducibility & Deployment</div>
+          <div style="font-weight:700;font-size:14px;border-top:2px dashed #4A3326;padding-top:10px">♡ Reproducibility &
+            Deployment</div>
         </div>
       </div>
 
       <!-- Compact Engineering & Systems Section (Item 7) -->
-      <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326;margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+      <div class="doodle-card"
+        style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px 24px;box-shadow:0 4px 0 #4A3326;margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
         <div>
           <div style="display:flex;align-items:center;gap:8px">
             <span style="font-size:18px">⚙️</span>
-            <span style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Engineering & Systems Core</span>
+            <span style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Engineering & Systems
+              Core</span>
           </div>
-          <p style="margin:2px 0 0;font-size:14px;color:#4A3326;font-weight:600">Production ML pipelines, backend services, and scalable deployment engineering:</p>
+          <p style="margin:2px 0 0;font-size:14px;color:#4A3326;font-weight:600">Production ML pipelines, backend
+            services, and scalable deployment engineering:</p>
         </div>
         <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
-          <span class="pill-badge" style="background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Python</span>
-          <span class="pill-badge" style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">PyTorch</span>
-          <span class="pill-badge" style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">TensorFlow</span>
-          <span class="pill-badge" style="background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Java</span>
-          <span class="pill-badge" style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">FastAPI</span>
-          <span class="pill-badge" style="background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Spring Boot</span>
-          <span class="pill-badge" style="background:#FFD86B;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">REST APIs</span>
-          <span class="pill-badge" style="background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">SQL</span>
-          <span class="pill-badge" style="background:#FFD8B8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Git</span>
+          <span class="pill-badge"
+            style="background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Python</span>
+          <span class="pill-badge"
+            style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">PyTorch</span>
+          <span class="pill-badge"
+            style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">TensorFlow</span>
+          <span class="pill-badge"
+            style="background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Java</span>
+          <span class="pill-badge"
+            style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">FastAPI</span>
+          <span class="pill-badge"
+            style="background:#C6F0DA;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Spring
+            Boot</span>
+          <span class="pill-badge"
+            style="background:#FFD86B;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">REST
+            APIs</span>
+          <span class="pill-badge"
+            style="background:#FFF0A8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">SQL</span>
+          <span class="pill-badge"
+            style="background:#FFD8B8;border:1.5px solid #4A3326;border-radius:999px;padding:3px 12px;font-weight:700;font-size:13px">Git</span>
         </div>
       </div>
     </section>
 
     <!-- Research & Publications Section (Item 2) -->
     <section id="work" style="background:#FFF1B8;border-top:2px solid #4A3326;position:relative">
-      <span style="position:absolute;left:20px;top:22px;font-size:34px;color:#FFA63D;animation:bob 3.8s ease-in-out infinite;--r:-8deg">☼</span>
-      <svg width="110" height="26" viewBox="0 0 110 26" style="position:absolute;right:36px;top:22px" fill="none"><path d="M3 13 Q16 0 29 13 T55 13 T81 13 T107 13" stroke="#FF8FB8" stroke-width="5" stroke-linecap="round"/></svg>
+      <span
+        style="position:absolute;left:20px;top:22px;font-size:34px;color:#FFA63D;animation:bob 3.8s ease-in-out infinite;--r:-8deg">☼</span>
+      <svg width="110" height="26" viewBox="0 0 110 26" style="position:absolute;right:36px;top:22px" fill="none">
+        <path d="M3 13 Q16 0 29 13 T55 13 T81 13 T107 13" stroke="#FF8FB8" stroke-width="5" stroke-linecap="round" />
+      </svg>
       <div id="publications" style="max-width:1180px;margin:0 auto;padding:72px 24px 64px">
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+        <div
+          style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px">
           <div>
-            <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0">Research & Publications ✧</h2>
-            <p style="margin:4px 0 0;font-weight:600;font-size:15px;color:#C2571B">Peer-reviewed publications in Explainable AI, computer vision, and scientific deep learning</p>
+            <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0">Research
+              & Publications ✧</h2>
+            <p style="margin:4px 0 0;font-weight:600;font-size:15px;color:#C2571B">Peer-reviewed publications in
+              Explainable AI, computer vision, and scientific deep learning</p>
           </div>
-          <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:8px 18px;box-shadow:0 3px 0 #4A3326;color:#4A3326">
+          <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer"
+            class="doodle-btn"
+            style="text-decoration:none;font-weight:700;font-size:14px;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:8px 18px;box-shadow:0 3px 0 #4A3326;color:#4A3326">
             Google Scholar Profile ↗
           </a>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px">
-          
+
           <!-- Publication 1: Published -->
-          <article class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:14px">
+          <article class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:14px">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
-              <span style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:13px;letter-spacing:0.04em">✓ PUBLISHED</span>
+              <span
+                style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:13px;letter-spacing:0.04em">✓
+                PUBLISHED</span>
               <div style="display:flex;gap:6px">
-                <span style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">IEEE Xplore</span>
-                <span style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">ICTEST 2025</span>
+                <span
+                  style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">IEEE
+                  Xplore</span>
+                <span
+                  style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">ICTEST
+                  2025</span>
               </div>
             </div>
-            
-            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2;margin:0;color:#4A3326">
+
+            <h3
+              style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2;margin:0;color:#4A3326">
               Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging
             </h3>
 
             <!-- 3 Compact Facts: Problem → Method → Contribution -->
-            <div style="background:#FFFBEA;border:1.5px solid #4A3326;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5">
-              <div><strong style="color:#C2571B">Problem:</strong> Subjective clinician variability and lack of standardized visual diagnostics in non-invasive health screening.</div>
-              <div><strong style="color:#C2571B">Method:</strong> Deep CNN feature extraction coupled with Explainable AI (Grad-CAM & feature attribution) mapped to Traditional Chinese Medicine (TCM) criteria.</div>
-              <div><strong style="color:#C2571B">Contribution:</strong> Clinician-interpretable visual biomarker mapping (color, coating thickness, texture) with high diagnostic concordance.</div>
+            <div
+              style="background:#FFFBEA;border:1.5px solid #4A3326;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5">
+              <div><strong style="color:#C2571B">Problem:</strong> Subjective clinician variability and lack of
+                standardized visual diagnostics in non-invasive health screening.</div>
+              <div><strong style="color:#C2571B">Method:</strong> Deep CNN feature extraction coupled with Explainable
+                AI (Grad-CAM & feature attribution) mapped to Traditional Chinese Medicine (TCM) criteria.</div>
+              <div><strong style="color:#C2571B">Contribution:</strong> Clinician-interpretable visual biomarker mapping
+                (color, coating thickness, texture) with high diagnostic concordance.</div>
             </div>
 
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px">
-              <a href="https://ieeexplore.ieee.org/document/11042469" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 18px;box-shadow:0 2px 0 #4A3326">
+              <a href="https://ieeexplore.ieee.org/document/11042469" target="_blank" rel="noopener noreferrer"
+                class="doodle-btn"
+                style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 18px;box-shadow:0 2px 0 #4A3326">
                 IEEE Xplore Paper ↗
               </a>
-              <a href="https://github.com/nandana-das/Tongue_disease_detection" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFD86B;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;box-shadow:0 2px 0 #4A3326">
+              <a href="https://github.com/nandana-das/Tongue_disease_detection" target="_blank"
+                rel="noopener noreferrer" class="doodle-btn"
+                style="text-decoration:none;font-weight:700;font-size:14px;background:#FFD86B;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;box-shadow:0 2px 0 #4A3326">
                 Source Code ↗
               </a>
-              <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#FFFFFF;color:#4A3326;border:1.5px solid #4A3326;border-radius:999px;padding:7px 14px;box-shadow:0 2px 0 #4A3326">
+              <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer"
+                class="doodle-btn"
+                style="text-decoration:none;font-weight:700;font-size:14px;background:#FFFFFF;color:#4A3326;border:1.5px solid #4A3326;border-radius:999px;padding:7px 14px;box-shadow:0 2px 0 #4A3326">
                 Scholar ↗
               </a>
             </div>
           </article>
 
           <!-- Publication 2: Accepted / In Press -->
-          <article class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:14px">
+          <article class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:30px;padding:26px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:14px">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
-              <span style="background:#FFE27A;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:13px;letter-spacing:0.04em">⏳ ACCEPTED / IN PRESS</span>
+              <span
+                style="background:#FFE27A;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:13px;letter-spacing:0.04em">⏳
+                ACCEPTED / IN PRESS</span>
               <div style="display:flex;gap:6px">
-                <span style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">ICTEST 2026</span>
-                <span style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">Remote Sensing</span>
+                <span
+                  style="background:#C4E4FF;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">ICTEST
+                  2026</span>
+                <span
+                  style="background:#FFC9DE;border:1.5px solid #4A3326;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px">Remote
+                  Sensing</span>
               </div>
             </div>
 
-            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2;margin:0;color:#4A3326">
-              Physics-Informed Explainable Multimodal Deep Learning for Satellite-Based Air Pollution Source Attribution in Delhi NCR
+            <h3
+              style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2;margin:0;color:#4A3326">
+              Physics-Informed Explainable Multimodal Deep Learning for Satellite-Based Air Pollution Source Attribution
+              in Delhi NCR
             </h3>
 
             <!-- 3 Compact Facts: Problem → Method → Contribution -->
-            <div style="background:#FFFBEA;border:1.5px solid #4A3326;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5">
-              <div><strong style="color:#C2571B">Problem:</strong> Disentangling regional aerosol pollution sources (industrial, vehicular, agricultural) in severe atmospheric conditions.</div>
-              <div><strong style="color:#C2571B">Method:</strong> Multimodal fusion of multispectral satellite remote sensing, ground sensor telemetry, and Physics-Informed Neural Networks (PINNs).</div>
-              <div><strong style="color:#C2571B">Contribution:</strong> Physics-constrained source attribution preserving aerosol transport physics with actionable spatial interpretability.</div>
+            <div
+              style="background:#FFFBEA;border:1.5px solid #4A3326;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5">
+              <div><strong style="color:#C2571B">Problem:</strong> Disentangling regional aerosol pollution sources
+                (industrial, vehicular, agricultural) in severe atmospheric conditions.</div>
+              <div><strong style="color:#C2571B">Method:</strong> Multimodal fusion of multispectral satellite remote
+                sensing, ground sensor telemetry, and Physics-Informed Neural Networks (PINNs).</div>
+              <div><strong style="color:#C2571B">Contribution:</strong> Physics-constrained source attribution
+                preserving aerosol transport physics with actionable spatial interpretability.</div>
             </div>
 
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px">
-              <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 18px;box-shadow:0 2px 0 #4A3326">
+              <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer"
+                class="doodle-btn"
+                style="text-decoration:none;font-weight:700;font-size:14px;background:#4A3326;color:#FFF7D6;border-radius:999px;padding:8px 18px;box-shadow:0 2px 0 #4A3326">
                 Google Scholar Profile ↗
               </a>
-              <span style="display:inline-flex;align-items:center;background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;font-weight:700;font-size:13px;box-shadow:0 2px 0 #4A3326;color:#4A3326">
+              <span
+                style="display:inline-flex;align-items:center;background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:7px 16px;font-weight:700;font-size:13px;box-shadow:0 2px 0 #4A3326;color:#4A3326">
                 Accepted (ICTEST 2026 Proceedings)
               </span>
             </div>
@@ -791,21 +1024,34 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" style="background:#FFC94D;border-top:2px solid #4A3326;border-bottom:2px solid #4A3326;position:relative;overflow:hidden">
-      <div style="position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:repeating-conic-gradient(#FFD877 0 8deg,transparent 8deg 24deg);animation:spin 40s linear infinite"></div>
-      <span style="position:absolute;left:4%;bottom:26px;font-size:34px;color:#FF8FB8;animation:bob 3.6s ease-in-out infinite;--r:-8deg">♡</span>
-      
+    <section id="projects"
+      style="background:#FFC94D;border-top:2px solid #4A3326;border-bottom:2px solid #4A3326;position:relative;overflow:hidden">
+      <div
+        style="position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:repeating-conic-gradient(#FFD877 0 8deg,transparent 8deg 24deg);animation:spin 40s linear infinite">
+      </div>
+      <span
+        style="position:absolute;left:4%;bottom:26px;font-size:34px;color:#FF8FB8;animation:bob 3.6s ease-in-out infinite;--r:-8deg">♡</span>
+
       <div style="max-width:1050px;margin:0 auto;padding:72px 24px;position:relative">
-        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px">
-          <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1;margin:0">
+        <div
+          style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px">
+          <h2
+            style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(38px,5vw,64px);line-height:1;margin:0">
             Projects <span style="color:#FFFFFF;-webkit-text-stroke:2px #4A3326">☼</span>
           </h2>
           <!-- Filter Tabs -->
           <div class="filter-container" style="display:flex;gap:8px;flex-wrap:wrap">
-            <button class="filter-btn active" data-filter="all" style="font:700 14px Quicksand;color:#FFF7D6;background:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">All</button>
-            <button class="filter-btn" data-filter="ai-ml" style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">AI & ML</button>
-            <button class="filter-btn" data-filter="vision-research" style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">Vision & Research</button>
-            <button class="filter-btn" data-filter="systems-web" style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">Systems & Web</button>
+            <button class="filter-btn active" data-filter="all"
+              style="font:700 14px Quicksand;color:#FFF7D6;background:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">All</button>
+            <button class="filter-btn" data-filter="ai-ml"
+              style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">AI
+              & ML</button>
+            <button class="filter-btn" data-filter="vision-research"
+              style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">Vision
+              & Research</button>
+            <button class="filter-btn" data-filter="systems-web"
+              style="font:700 14px Quicksand;color:#4A3326;background:#FFF7D6;border:2px solid #4A3326;border-radius:999px;padding:6px 16px;cursor:pointer">Systems
+              & Web</button>
           </div>
         </div>
 
@@ -817,7 +1063,7 @@
               <span>🔭</span> Research & Deep Learning
             </div>
             <div class="project-group-list">
-              
+
               <!-- P1: Lunar Boulder Detection -->
               <div class="project-item doodle-card" data-category="ai-ml vision-research">
                 <div class="project-num" style="background:#FFC9DE">01</div>
@@ -827,17 +1073,23 @@
                       <div class="project-category">Planetary Computer Vision & Remote Sensing</div>
                       <h3 class="project-title">Lunar Boulder Detection from Chandrayaan-2 OHRC Imagery</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/chandrayaan-2-ohrc-boulder-detection" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/chandrayaan-2-ohrc-boulder-detection" target="_blank"
+                      rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">Computer-vision pipeline for Chandrayaan-2 OHRC imagery, covering PDS4 preprocessing, 640×640 tiling, dataset preparation, and boulder detection using multiple object-detection models.</p>
-                  
+                  <p class="project-desc">Computer-vision pipeline for Chandrayaan-2 OHRC imagery, covering PDS4
+                    preprocessing, 640×640 tiling, dataset preparation, and boulder detection using multiple
+                    object-detection models.</p>
+
                   <div class="project-results">
-                    <span>📊 Selected Results:</span> 640×640 OHRC tiling · 4 detector architectures · Regional inference analysis
+                    <span>📊 Selected Results:</span> 640×640 OHRC tiling · 4 detector architectures · Regional
+                    inference analysis
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/chandrayaan-2-ohrc-boulder-detection" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
-                    <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank" rel="noopener noreferrer" class="project-btn">Research Context ↗</a>
+                    <a href="https://github.com/nandana-das/chandrayaan-2-ohrc-boulder-detection" target="_blank"
+                      rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://scholar.google.com/citations?user=SenP3y4AAAAJ" target="_blank"
+                      rel="noopener noreferrer" class="project-btn">Research Context ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -858,16 +1110,19 @@
                       <div class="project-category">Urban AI & Traffic Forecasting</div>
                       <h3 class="project-title">Smart City Traffic Prediction & Decision Support</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/smart-city-traffic-prediction" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/smart-city-traffic-prediction" target="_blank"
+                      rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">End-to-end traffic prediction system using live traffic data, temporal and weather features, sliding-window sequences, LSTM forecasting, and an interactive web interface.</p>
-                  
+                  <p class="project-desc">End-to-end traffic prediction system using live traffic data, temporal and
+                    weather features, sliding-window sequences, LSTM forecasting, and an interactive web interface.</p>
+
                   <div class="project-results">
                     <span>📊 Selected Results:</span> Live API ingest · Sliding-window LSTM · Interactive web dashboard
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/smart-city-traffic-prediction" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://github.com/nandana-das/smart-city-traffic-prediction" target="_blank"
+                      rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -888,16 +1143,19 @@
                       <div class="project-category">Knowledge Graph & Local RAG</div>
                       <h3 class="project-title">ISRO Knowledge Graph RAG</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/isro-knowledge-graph-rag" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/isro-knowledge-graph-rag" target="_blank"
+                      rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">Knowledge Graph RAG system for querying ISRO mission documentation using entity extraction, graph retrieval, FAISS vector search, and local LLM inference.</p>
-                  
+                  <p class="project-desc">Knowledge Graph RAG system for querying ISRO mission documentation using
+                    entity extraction, graph retrieval, FAISS vector search, and local LLM inference.</p>
+
                   <div class="project-results">
                     <span>📊 Selected Results:</span> 4,557 chunks · 31K+ graph nodes · 95K+ edges
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/isro-knowledge-graph-rag" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://github.com/nandana-das/isro-knowledge-graph-rag" target="_blank"
+                      rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -918,16 +1176,21 @@
                       <div class="project-category">Environmental ML & Optimization</div>
                       <h3 class="project-title">Air Quality Prediction & Feature Optimization</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/air-quality-prediction-aco" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/air-quality-prediction-aco" target="_blank"
+                      rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">Air-quality prediction pipeline using Ant Colony Optimization for feature selection, with convergence analysis and interpretable machine-learning outputs for AQI forecasting.</p>
-                  
+                  <p class="project-desc">Air-quality prediction pipeline using Ant Colony Optimization for feature
+                    selection, with convergence analysis and interpretable machine-learning outputs for AQI forecasting.
+                  </p>
+
                   <div class="project-results">
-                    <span>📊 Selected Results:</span> Ant Colony Optimization · Multi-objective convergence · Feature subset interpretability
+                    <span>📊 Selected Results:</span> Ant Colony Optimization · Multi-objective convergence · Feature
+                    subset interpretability
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/air-quality-prediction-aco" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://github.com/nandana-das/air-quality-prediction-aco" target="_blank"
+                      rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -948,16 +1211,19 @@
                       <div class="project-category">Customer Analytics & Fuzzy FCA</div>
                       <h3 class="project-title">RFMS-Fuzzy FCA Customer Segmentation</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank"
+                      rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">Customer-segmentation framework combining RFMS metrics with Fuzzy Formal Concept Analysis, stability analysis, clustering, benchmarking, and cross-domain validation.</p>
-                  
+                  <p class="project-desc">Customer-segmentation framework combining RFMS metrics with Fuzzy Formal
+                    Concept Analysis, stability analysis, clustering, benchmarking, and cross-domain validation.</p>
+
                   <div class="project-results">
                     <span>📊 Selected Results:</span> 93,357 customers · 45 F* levels · Cross-domain validation
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://github.com/nandana-das/rfms-fuzzy-fca-segmentation" target="_blank"
+                      rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -978,7 +1244,7 @@
               <span>⚡</span> Generative AI & Applications
             </div>
             <div class="project-group-list">
-              
+
               <!-- P6: AI Study Buddy -->
               <div class="project-item doodle-card" data-category="ai-ml systems-web">
                 <div class="project-num" style="background:#FFD8B8">06</div>
@@ -988,17 +1254,22 @@
                       <div class="project-category">Generative AI & Educational Assistant</div>
                       <h3 class="project-title">AI Study Buddy</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/ai-study-buddy" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/ai-study-buddy" target="_blank" rel="noopener noreferrer"
+                      class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">Streamlit-based educational assistant using Google Gemini to explain concepts, generate examples, and create interactive quizzes from user-provided topics.</p>
-                  
+                  <p class="project-desc">Streamlit-based educational assistant using Google Gemini to explain concepts,
+                    generate examples, and create interactive quizzes from user-provided topics.</p>
+
                   <div class="project-results">
-                    <span>📊 Selected Results:</span> Google Gemini integration · Dynamic quiz engine · Interactive Streamlit UI
+                    <span>📊 Selected Results:</span> Google Gemini integration · Dynamic quiz engine · Interactive
+                    Streamlit UI
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/ai-study-buddy" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
-                    <a href="https://ai-study-beny.streamlit.app" target="_blank" rel="noopener noreferrer" class="project-btn">Live Demo ↗</a>
+                    <a href="https://github.com/nandana-das/ai-study-buddy" target="_blank" rel="noopener noreferrer"
+                      class="project-btn primary">GitHub ↗</a>
+                    <a href="https://ai-study-beny.streamlit.app" target="_blank" rel="noopener noreferrer"
+                      class="project-btn">Live Demo ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -1019,17 +1290,22 @@
                       <div class="project-category">Multi-Agent Generative AI</div>
                       <h3 class="project-title">AI Resume Agent</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/ai-resume-agent-langgraph" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/ai-resume-agent-langgraph" target="_blank"
+                      rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">Multi-agent LangGraph workflow that parses job descriptions, evaluates resumes, identifies skill gaps, and generates tailored resume content.</p>
-                  
+                  <p class="project-desc">Multi-agent LangGraph workflow that parses job descriptions, evaluates
+                    resumes, identifies skill gaps, and generates tailored resume content.</p>
+
                   <div class="project-results">
-                    <span>📊 Selected Results:</span> Multi-agent LangGraph orchestration · Automated JD parsing · Skill gap scoring
+                    <span>📊 Selected Results:</span> Multi-agent LangGraph orchestration · Automated JD parsing · Skill
+                    gap scoring
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/ai-resume-agent-langgraph" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
-                    <a href="https://resumeforgeagent.streamlit.app" target="_blank" rel="noopener noreferrer" class="project-btn">Live Demo ↗</a>
+                    <a href="https://github.com/nandana-das/ai-resume-agent-langgraph" target="_blank"
+                      rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://resumeforgeagent.streamlit.app" target="_blank" rel="noopener noreferrer"
+                      class="project-btn">Live Demo ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -1050,16 +1326,20 @@
                       <div class="project-category">Speech-to-Text & NLP</div>
                       <h3 class="project-title">Video Meeting Summarizer</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/video-meeting-summarizer" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/video-meeting-summarizer" target="_blank"
+                      rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">Automated speech-to-text and NLP pipeline that converts recorded lectures and meetings into concise summaries and key points.</p>
-                  
+                  <p class="project-desc">Automated speech-to-text and NLP pipeline that converts recorded lectures and
+                    meetings into concise summaries and key points.</p>
+
                   <div class="project-results">
-                    <span>📊 Selected Results:</span> Speech-to-text pipeline · Extractive NLP summarization · Action item generation
+                    <span>📊 Selected Results:</span> Speech-to-text pipeline · Extractive NLP summarization · Action
+                    item generation
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/video-meeting-summarizer" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://github.com/nandana-das/video-meeting-summarizer" target="_blank"
+                      rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -1080,7 +1360,7 @@
               <span>🌐</span> Interactive Systems
             </div>
             <div class="project-group-list">
-              
+
               <!-- P9: Interactive 3D Virtual Museum -->
               <div class="project-item doodle-card" data-category="systems-web">
                 <div class="project-num" style="background:#FFF0A8">09</div>
@@ -1090,16 +1370,20 @@
                       <div class="project-category">Interactive 3D Web Graphics</div>
                       <h3 class="project-title">Interactive 3D Virtual Museum</h3>
                     </div>
-                    <a href="https://github.com/nandana-das/interactive-3d-virtual-museum" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
+                    <a href="https://github.com/nandana-das/interactive-3d-virtual-museum" target="_blank"
+                      rel="noopener noreferrer" class="project-arrow" aria-label="View on GitHub">↗</a>
                   </div>
-                  <p class="project-desc">Browser-based 3D educational environment built with Three.js and WebGL, featuring interactive scenes, lighting, geometry, and camera controls.</p>
-                  
+                  <p class="project-desc">Browser-based 3D educational environment built with Three.js and WebGL,
+                    featuring interactive scenes, lighting, geometry, and camera controls.</p>
+
                   <div class="project-results">
-                    <span>📊 Selected Results:</span> WebGL & Three.js rendering · 3D spatial navigation · Interactive lighting & geometry
+                    <span>📊 Selected Results:</span> WebGL & Three.js rendering · 3D spatial navigation · Interactive
+                    lighting & geometry
                   </div>
 
                   <div class="project-actions">
-                    <a href="https://github.com/nandana-das/interactive-3d-virtual-museum" target="_blank" rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
+                    <a href="https://github.com/nandana-das/interactive-3d-virtual-museum" target="_blank"
+                      rel="noopener noreferrer" class="project-btn primary">GitHub ↗</a>
                   </div>
 
                   <div class="project-tags">
@@ -1115,32 +1399,41 @@
           </div>
 
         </div>
-        <a href="https://github.com/nandana-das?tab=repositories" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:24px;font-weight:700;font-size:15px">
+        <a href="https://github.com/nandana-das?tab=repositories" target="_blank" rel="noopener noreferrer"
+          style="display:inline-block;margin-top:24px;font-weight:700;font-size:15px">
           All repositories on GitHub →
         </a>
       </div>
     </section>
 
     <!-- Experience & Leadership Section -->
-    <section id="experience" style="max-width:1180px;margin:0 auto;padding:72px 24px;display:flex;flex-wrap:wrap;gap:32px;position:relative">
-      
+    <section id="experience"
+      style="max-width:1180px;margin:0 auto;padding:72px 24px;display:flex;flex-wrap:wrap;gap:32px;position:relative">
+
       <!-- Work Experience -->
       <div style="flex:1 1 420px;min-width:0">
-        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 20px">Experience</h2>
-        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:30px;padding:28px;box-shadow:0 5px 0 #4A3326">
+        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 20px">
+          Experience</h2>
+        <div class="doodle-card"
+          style="background:#C4E4FF;border:2px solid #4A3326;border-radius:30px;padding:28px;box-shadow:0 5px 0 #4A3326">
           <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline">
-            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:26px;margin:0">Backend Servicing Intern</h3>
-            <span style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">June 2024 – July 2024</span>
+            <h3 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:26px;margin:0">Backend Servicing Intern
+            </h3>
+            <span
+              style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px">June
+              2024 – July 2024</span>
           </div>
           <div style="font-weight:700;margin:6px 0 16px;color:#D9541E">Covacsis Technologies · Remote</div>
           <div style="display:flex;flex-direction:column;gap:10px">
             <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;font-weight:500">
               <span style="color:#D9541E;font-weight:700">♡</span>
-              <span>Engineered backend service lifecycle components using <strong style="font-weight:700">Java, Apache Pinot, and Spring Boot</strong> framework.</span>
+              <span>Engineered backend service lifecycle components using <strong style="font-weight:700">Java, Apache
+                  Pinot, and Spring Boot</strong> framework.</span>
             </div>
             <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;font-weight:500">
               <span style="color:#D9541E;font-weight:700">♡</span>
-              <span>Implemented dynamic service registration, heartbeat scheduling mechanisms, and deregistration ensuring high microservice availability.</span>
+              <span>Implemented dynamic service registration, heartbeat scheduling mechanisms, and deregistration
+                ensuring high microservice availability.</span>
             </div>
             <div style="display:flex;gap:10px;font-size:15px;line-height:1.5;font-weight:500">
               <span style="color:#D9541E;font-weight:700">♡</span>
@@ -1148,52 +1441,72 @@
             </div>
           </div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:18px">
-            <span class="pill-badge" style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Java</span>
-            <span class="pill-badge" style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Spring Boot</span>
-            <span class="pill-badge" style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Apache Pinot</span>
-            <span class="pill-badge" style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">REST APIs</span>
+            <span class="pill-badge"
+              style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Java</span>
+            <span class="pill-badge"
+              style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Spring
+              Boot</span>
+            <span class="pill-badge"
+              style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">Apache
+              Pinot</span>
+            <span class="pill-badge"
+              style="font-size:13px;font-weight:700;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 11px">REST
+              APIs</span>
           </div>
         </div>
       </div>
 
       <!-- Leadership -->
       <div style="flex:1 1 420px;min-width:0">
-        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 20px">Leadership</h2>
+        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 20px">
+          Leadership</h2>
         <div style="display:flex;flex-direction:column;gap:14px">
-          
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
-            <div style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#FFC9DE;border:2px solid #4A3326"></div>
+
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
+            <div
+              style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#FFC9DE;border:2px solid #4A3326">
+            </div>
             <div style="flex:1;min-width:0">
               <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
                 <b style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Student Mentor</b>
                 <span style="font-weight:700;font-size:14px">2024 – 2025</span>
               </div>
               <div style="font-weight:700;font-size:14px;margin:2px 0 6px;color:#D9541E">CSI SB ASIET</div>
-              <div style="font-size:14px;line-height:1.5;font-weight:500">Mentored junior engineering undergraduates in core computer science, algorithm design, and AI fundamentals.</div>
+              <div style="font-size:14px;line-height:1.5;font-weight:500">Mentored junior engineering undergraduates in
+                core computer science, algorithm design, and AI fundamentals.</div>
             </div>
           </div>
 
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
-            <div style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#C6F0DA;border:2px solid #4A3326"></div>
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
+            <div
+              style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#C6F0DA;border:2px solid #4A3326">
+            </div>
             <div style="flex:1;min-width:0">
               <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
                 <b style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Social Media Team Lead</b>
                 <span style="font-weight:700;font-size:14px">2023 – 2024</span>
               </div>
               <div style="font-weight:700;font-size:14px;margin:2px 0 6px;color:#D9541E">CSI SB ASIET</div>
-              <div style="font-size:14px;line-height:1.5;font-weight:500">Led the chapter's social media outreach strategy, digital branding, technical event promotions, and community engagement.</div>
+              <div style="font-size:14px;line-height:1.5;font-weight:500">Led the chapter's social media outreach
+                strategy, digital branding, technical event promotions, and community engagement.</div>
             </div>
           </div>
 
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
-            <div style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#FFE27A;border:2px solid #4A3326"></div>
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:24px;padding:16px 20px;box-shadow:0 4px 0 #4A3326;display:flex;gap:16px;align-items:flex-start">
+            <div
+              style="flex:none;width:18px;height:18px;margin-top:6px;border-radius:50%;background:#FFE27A;border:2px solid #4A3326">
+            </div>
             <div style="flex:1;min-width:0">
               <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
                 <b style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px">Editor</b>
                 <span style="font-weight:700;font-size:14px">2022 – 2024</span>
               </div>
               <div style="font-weight:700;font-size:14px;margin:2px 0 6px;color:#D9541E">Saakshin</div>
-              <div style="font-size:14px;line-height:1.5;font-weight:500">Supervised editorial reviews, technical writing verification, and publication workflows for student magazine releases.</div>
+              <div style="font-size:14px;line-height:1.5;font-weight:500">Supervised editorial reviews, technical
+                writing verification, and publication workflows for student magazine releases.</div>
             </div>
           </div>
 
@@ -1202,80 +1515,139 @@
     </section>
 
     <!-- Toolbox / Skills Section -->
-    <section id="skills" style="background:#FFE9B8;border-top:2px solid #4A3326;border-bottom:2px solid #4A3326;position:relative">
-      <span style="position:absolute;right:30px;top:24px;width:34px;height:34px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.5s ease-in-out infinite"></span>
+    <section id="skills"
+      style="background:#FFE9B8;border-top:2px solid #4A3326;border-bottom:2px solid #4A3326;position:relative">
+      <span
+        style="position:absolute;right:30px;top:24px;width:34px;height:34px;background:#FFE27A;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 2.5s ease-in-out infinite"></span>
       <div style="max-width:1180px;margin:0 auto;padding:72px 24px">
-        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Toolbox ✧</h2>
+        <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">
+          Toolbox ✧</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px">
-          
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
-            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">LLM & GenAI</div>
+
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">
+              LLM & GenAI</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LangChain</span>
-              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LangGraph</span>
-              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RAG</span>
-              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Knowledge Graph RAG</span>
-              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">FAISS</span>
-              <span class="pill-badge" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Prompt Engineering</span>
+              <span class="pill-badge"
+                style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LangChain</span>
+              <span class="pill-badge"
+                style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LangGraph</span>
+              <span class="pill-badge"
+                style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RAG</span>
+              <span class="pill-badge"
+                style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Knowledge
+                Graph RAG</span>
+              <span class="pill-badge"
+                style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">FAISS</span>
+              <span class="pill-badge"
+                style="background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Prompt
+                Engineering</span>
             </div>
           </div>
 
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
-            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">Computer Vision</div>
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">
+              Computer Vision</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">OpenCV</span>
-              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">YOLO</span>
-              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RT-DETR</span>
-              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">CNNs</span>
-              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Object Detection</span>
-              <span class="pill-badge" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Image Classification</span>
+              <span class="pill-badge"
+                style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">OpenCV</span>
+              <span class="pill-badge"
+                style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">YOLO</span>
+              <span class="pill-badge"
+                style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RT-DETR</span>
+              <span class="pill-badge"
+                style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">CNNs</span>
+              <span class="pill-badge"
+                style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Object
+                Detection</span>
+              <span class="pill-badge"
+                style="background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Image
+                Classification</span>
             </div>
           </div>
 
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
-            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">ML / DL & Explainable AI</div>
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">
+              ML / DL & Explainable AI</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">PyTorch</span>
-              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">TensorFlow</span>
-              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Scikit-Learn</span>
-              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">SHAP</span>
-              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Grad-CAM</span>
-              <span class="pill-badge" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LIME</span>
+              <span class="pill-badge"
+                style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">PyTorch</span>
+              <span class="pill-badge"
+                style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">TensorFlow</span>
+              <span class="pill-badge"
+                style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Scikit-Learn</span>
+              <span class="pill-badge"
+                style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">SHAP</span>
+              <span class="pill-badge"
+                style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Grad-CAM</span>
+              <span class="pill-badge"
+                style="background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">LIME</span>
             </div>
           </div>
 
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
-            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">Data & Analytics</div>
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">
+              Data & Analytics</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Pandas</span>
-              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">NumPy</span>
-              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">SQL</span>
-              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Power BI</span>
-              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Matplotlib</span>
-              <span class="pill-badge" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">spaCy</span>
+              <span class="pill-badge"
+                style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Pandas</span>
+              <span class="pill-badge"
+                style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">NumPy</span>
+              <span class="pill-badge"
+                style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">SQL</span>
+              <span class="pill-badge"
+                style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Power
+                BI</span>
+              <span class="pill-badge"
+                style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Matplotlib</span>
+              <span class="pill-badge"
+                style="background:#C6F0DA;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">spaCy</span>
             </div>
           </div>
 
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
-            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">Languages & Tools</div>
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">
+              Languages & Tools</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Python</span>
-              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Java</span>
-              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">C</span>
-              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Git & GitHub</span>
-              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Jupyter</span>
-              <span class="pill-badge" style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Colab</span>
+              <span class="pill-badge"
+                style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Python</span>
+              <span class="pill-badge"
+                style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Java</span>
+              <span class="pill-badge"
+                style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">C</span>
+              <span class="pill-badge"
+                style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Git
+                & GitHub</span>
+              <span class="pill-badge"
+                style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Jupyter</span>
+              <span class="pill-badge"
+                style="background:#FFD86B;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Colab</span>
             </div>
           </div>
 
-          <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
-            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">Backend & Frameworks</div>
+          <div class="doodle-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:26px;padding:20px;box-shadow:0 4px 0 #4A3326">
+            <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:20px;margin-bottom:12px;color:#C2571B">
+              Backend & Frameworks</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Spring Boot</span>
-              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RESTful APIs</span>
-              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Streamlit</span>
-              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Flask</span>
-              <span class="pill-badge" style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Apache Pinot</span>
+              <span class="pill-badge"
+                style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Spring
+                Boot</span>
+              <span class="pill-badge"
+                style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">RESTful
+                APIs</span>
+              <span class="pill-badge"
+                style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Streamlit</span>
+              <span class="pill-badge"
+                style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Flask</span>
+              <span class="pill-badge"
+                style="background:#FFD8B8;border:2px solid #4A3326;border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px">Apache
+                Pinot</span>
             </div>
           </div>
 
@@ -1285,115 +1657,136 @@
 
     <!-- Certifications Section (Item 6) -->
     <section id="certifications" style="max-width:1180px;margin:0 auto;padding:72px 24px 40px">
-      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+      <div
+        style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px">
         <div>
           <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0">
             Certifications <span style="color:#FF8FB8">♡</span>
           </h2>
-          <p style="margin:4px 0 0;font-weight:600;font-size:15px;color:#C2571B">Industry-verified credentials in AI systems, Java engineering, and data science</p>
+          <p style="margin:4px 0 0;font-weight:600;font-size:15px;color:#C2571B">Industry-verified credentials in AI
+            systems, Java engineering, and data science</p>
         </div>
       </div>
 
       <!-- Top 4 Featured Certifications -->
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px">
-        
-        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">Oracle</span>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Oracle Certified Java Foundations Associate</div>
+
+        <div class="doodle-card"
+          style="background:#C6F0DA;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span
+            style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">Oracle</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Oracle
+            Certified Java Foundations Associate</div>
           <span style="font-weight:700;font-size:14px;color:#059669">✓ Verified Credential</span>
         </div>
 
-        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">IBM</span>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Artificial Intelligence Foundation Digital Credential</div>
-          <a href="https://www.credly.com/badges/8cc05afc-9b8b-46b7-a26f-04c243d404da/linked_in?t=sqsi62" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify on Credly ↗</a>
+        <div class="doodle-card"
+          style="background:#FFC9DE;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span
+            style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">IBM</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Artificial
+            Intelligence Foundation Digital Credential</div>
+          <a href="https://www.credly.com/badges/8cc05afc-9b8b-46b7-a26f-04c243d404da/linked_in?t=sqsi62"
+            target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify on Credly ↗</a>
         </div>
 
-        <div class="doodle-card" style="background:#FFD86B;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">KNIME</span>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Data Science Professional Certificate</div>
-          <a href="https://www.linkedin.com/learning/certificates/589d0ec89ecbe07a2e8961cb48dc0790156acc70fe9a0132cfacab3cb3776abb" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
+        <div class="doodle-card"
+          style="background:#FFD86B;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span
+            style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">KNIME</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Data Science
+            Professional Certificate</div>
+          <a href="https://www.linkedin.com/learning/certificates/589d0ec89ecbe07a2e8961cb48dc0790156acc70fe9a0132cfacab3cb3776abb"
+            target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
         </div>
 
-        <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">GitHub</span>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Career Essentials in GitHub Certificate</div>
-          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d" target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
+        <div class="doodle-card"
+          style="background:#FFF0A8;border:2px solid #4A3326;border-radius:24px;padding:20px;box-shadow:0 4px 0 #4A3326;display:flex;flex-direction:column;gap:8px">
+          <span
+            style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px">GitHub</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:18px;line-height:1.2;flex:1">Career
+            Essentials in GitHub Certificate</div>
+          <a href="https://www.linkedin.com/learning/certificates/ce80feae80f3d80310a83631ade075f1d9b02b4706f76571d3b3760f6211409d"
+            target="_blank" rel="noopener noreferrer" style="font-weight:700;font-size:14px">Verify Certificate ↗</a>
         </div>
 
       </div>
 
       <!-- Compact Additional Credentials Strip -->
-      <div class="doodle-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:22px;padding:16px 22px;box-shadow:0 3px 0 #4A3326;margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div class="doodle-card"
+        style="background:#FFFFFF;border:2px solid #4A3326;border-radius:22px;padding:16px 22px;box-shadow:0 3px 0 #4A3326;margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
         <span style="font-weight:800;font-size:14px;color:#C2571B">Additional Credentials:</span>
         <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:600">
-          <span>Microsoft & LinkedIn Generative AI · <a href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2" target="_blank" rel="noopener noreferrer" style="font-weight:700">Verify ↗</a></span>
+          <span>Microsoft & LinkedIn Generative AI · <a
+              href="https://www.linkedin.com/learning/certificates/b0626c9a1492d998f677d1ed32795b86f9bc47dc74649582b6867f808bfb75c2"
+              target="_blank" rel="noopener noreferrer" style="font-weight:700">Verify ↗</a></span>
           <span>•</span>
-          <span>LinkedIn Java OOP · <a href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177" target="_blank" rel="noopener noreferrer" style="font-weight:700">Verify ↗</a></span>
+          <span>LinkedIn Java OOP · <a
+              href="https://www.linkedin.com/learning/certificates/5b62b7b02e4a0576bd4263111033c94993d97e1a314319cac0775f50f2129177"
+              target="_blank" rel="noopener noreferrer" style="font-weight:700">Verify ↗</a></span>
           <span>•</span>
-          <span>Infosys AI Foundation · <a href="AI foundation certification infosys.png" target="_blank" style="font-weight:700">View Image ↗</a></span>
+          <span>Infosys AI Foundation · <a href="AI foundation certification infosys.png" target="_blank"
+              style="font-weight:700">View Image ↗</a></span>
         </div>
       </div>
     </section>
 
     <!-- Education Section (Item 1) -->
     <section id="education" style="max-width:1180px;margin:0 auto;padding:32px 24px 72px">
-      <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">Education ☁</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
-        
+      <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(34px,4vw,50px);margin:0 0 24px">
+        Education ☁</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px">
+
         <!-- Postgraduate: M.Tech with 8.9 CGPA -->
-        <div class="doodle-card" style="background:#C4E4FF;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
+        <div class="doodle-card"
+          style="background:#C4E4FF;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
           <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
             <span>Postgraduate</span>
             <span>2025 – 2027</span>
           </div>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">M.Tech in Artificial Intelligence & Data Science</div>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">M.Tech in
+            Artificial Intelligence & Data Science</div>
           <div style="font-weight:700;font-size:14px;color:#D9541E">Alliance University · Bangalore</div>
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:15px;color:#059669">8.9 CGPA (Current)</span>
+          <span
+            style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:15px;color:#059669">8.9
+            CGPA (Current)</span>
           <div style="margin-top:2px;font-size:13.5px;line-height:1.55;font-weight:500;color:#4A3326">
-            <div style="font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#C2571B;margin-bottom:3px">Key Coursework</div>
-            Applied Probability & Statistics · High Performance Computing for Big Data · Predictive Analysis · Cognitive AI · Human Machine Interaction · Virtual Reality
-            <div style="margin-top:6px;font-weight:600"><strong style="color:#C2571B">Current:</strong> Decision Support Systems · Business Intelligence & Analytics</div>
+            <div
+              style="font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#C2571B;margin-bottom:3px">
+              Key Coursework</div>
+            Applied Probability & Statistics · High Performance Computing for Big Data · Predictive Analysis · Cognitive
+            AI · Human Machine Interaction · Virtual Reality
+            <div style="margin-top:6px;font-weight:600"><strong style="color:#C2571B">Current:</strong> Decision Support
+              Systems · Business Intelligence & Analytics</div>
           </div>
         </div>
 
         <!-- Undergraduate: B.Tech with 7.18 CGPA -->
-        <div class="doodle-card" style="background:#FFF0A8;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
+        <div class="doodle-card"
+          style="background:#FFF0A8;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
           <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
             <span>Undergraduate</span>
             <span>2021 – 2025</span>
           </div>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">B.Tech in Computer Science and Engineering (AI)</div>
-          <div style="font-weight:700;font-size:14px;color:#D9541E">Adi Shankara Institute of Engineering & Technology (ASIET) · Kalady</div>
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:15px">7.18 CGPA</span>
+          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">B.Tech in Computer
+            Science and Engineering (AI)</div>
+          <div style="font-weight:700;font-size:14px;color:#D9541E">Adi Shankara Institute of Engineering & Technology
+            (ASIET) · Kalady</div>
+          <span
+            style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:3px 14px;font-weight:800;font-size:15px">7.18
+            CGPA</span>
           <div style="margin-top:2px;font-size:13.5px;line-height:1.55;font-weight:500;color:#4A3326">
-            <div style="font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#C2571B;margin-bottom:3px">Key Coursework</div>
-            Artificial Intelligence · Machine Learning · Deep Learning · NLP · Robotics & Intelligent Systems · Soft Computing · Data Structures & Algorithms
+            <div
+              style="font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:#C2571B;margin-bottom:3px">
+              Key Coursework</div>
+            Artificial Intelligence · Machine Learning · Deep Learning · NLP · Robotics & Intelligent Systems · Soft
+            Computing · Data Structures & Algorithms
           </div>
-        </div>
-
-        <!-- Higher Secondary -->
-        <div class="doodle-card" style="background:#FFC9DE;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
-          <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
-            <span>Higher Secondary (ISC)</span>
-            <span>2021</span>
+          <div
+            style="margin-top:auto;padding-top:10px;border-top:1.5px dashed #4A3326;font-size:13px;line-height:1.45;color:#4A3326">
+            <div style="font-weight:700">Prior: ISC Class XII — 87.2% · Computer Science: 93%</div>
+            <div style="font-weight:500;font-size:12px">St. Aloysius Convent I.S.C. School</div>
           </div>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">Class XII</div>
-          <div style="font-weight:700;font-size:14px;color:#D9541E">St. Aloysius Convent ISC School</div>
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:14px">87.2%</span>
-          <p style="margin:0;font-size:14px;line-height:1.55;font-weight:500">Science stream with focus on Physics, Chemistry, Mathematics, and Computer Science.</p>
-        </div>
-
-        <!-- Secondary -->
-        <div class="doodle-card" style="background:#C6F0DA;border:2px solid #4A3326;border-radius:28px;padding:24px;box-shadow:0 5px 0 #4A3326;display:flex;flex-direction:column;gap:10px">
-          <div style="display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:13px">
-            <span>Secondary (ICSE)</span>
-            <span>2019</span>
-          </div>
-          <div style="font-family:'Baloo 2', cursive;font-weight:800;font-size:22px;line-height:1.2">Class X</div>
-          <div style="font-weight:700;font-size:14px;color:#D9541E">St. Aloysius Convent ISC School</div>
-          <span style="align-self:flex-start;background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:2px 12px;font-weight:700;font-size:14px">87.17%</span>
-          <p style="margin:0;font-size:14px;line-height:1.55;font-weight:500">Distinction across all disciplines with academic honors in science and mathematics.</p>
         </div>
 
       </div>
@@ -1401,16 +1794,22 @@
 
     <!-- Contact & Footer Section -->
     <section id="contact" style="background:#FFD86B;border-top:2px solid #4A3326;position:relative;overflow:hidden">
-      <span style="position:absolute;left:5%;bottom:70px;font-size:40px;color:#FF8FB8;animation:bob 3.4s ease-in-out infinite;--r:-10deg">♡</span>
-      <span style="position:absolute;right:6%;top:36px;font-size:36px;color:#FFA63D;animation:bob 4s ease-in-out infinite;--r:10deg">☼</span>
-      
-      <div style="max-width:1180px;margin:0 auto;padding:76px 24px;display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+      <span
+        style="position:absolute;left:5%;bottom:70px;font-size:40px;color:#FF8FB8;animation:bob 3.4s ease-in-out infinite;--r:-10deg">♡</span>
+      <span
+        style="position:absolute;right:6%;top:36px;font-size:36px;color:#FFA63D;animation:bob 4s ease-in-out infinite;--r:10deg">☼</span>
+
+      <div
+        style="max-width:1180px;margin:0 auto;padding:76px 24px;display:flex;flex-wrap:wrap;gap:40px;align-items:center">
         <div style="flex:1 1 420px;min-width:0">
-          <h2 style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(46px,7vw,90px);line-height:.95;margin:0 0 18px">
-            Let's make something <span style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">lovely</span>.
+          <h2
+            style="font-family:'Baloo 2', cursive;font-weight:800;font-size:clamp(46px,7vw,90px);line-height:.95;margin:0 0 18px">
+            Let's make something <span
+              style="background:linear-gradient(transparent 55%,#FFE27A 55%,#FFE27A 92%,transparent 92%)">lovely</span>.
           </h2>
           <p style="font-size:18px;line-height:1.6;max-width:520px;margin:0;font-weight:500">
-            AI/ML research, Explainable AI, computer vision, engineering roles — or just hello. I'd love to hear from you.
+            AI/ML research, Explainable AI, computer vision, engineering roles — or just hello. I'd love to hear from
+            you.
           </p>
           <p style="font-size:15px;font-weight:700;margin:16px 0 0">
             Bangalore / Kochi, India · English (fluent), Malayalam (native)
@@ -1418,22 +1817,31 @@
         </div>
 
         <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:14px">
-          
-          <div class="contact-card" style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:10px 10px 10px 24px;box-shadow:0 4px 0 #4A3326;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-            <a href="mailto:nandana.das001@gmail.com" style="font-weight:700;font-size:16px;text-decoration:none;word-break:break-all">nandana.das001@gmail.com</a>
-            <button class="doodle-btn copy-btn" data-email="nandana.das001@gmail.com" style="font:700 14px Quicksand;background:#FFC9DE;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 18px;box-shadow:0 2px 0 #4A3326">Copy</button>
+
+          <div class="contact-card"
+            style="background:#FFFFFF;border:2px solid #4A3326;border-radius:999px;padding:10px 10px 10px 24px;box-shadow:0 4px 0 #4A3326;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <a href="mailto:nandana.das001@gmail.com"
+              style="font-weight:700;font-size:16px;text-decoration:none;word-break:break-all">nandana.das001@gmail.com</a>
+            <button class="doodle-btn copy-btn" data-email="nandana.das001@gmail.com"
+              style="font:700 14px Quicksand;background:#FFC9DE;color:#4A3326;border:2px solid #4A3326;border-radius:999px;padding:7px 18px;box-shadow:0 2px 0 #4A3326">Copy</button>
           </div>
 
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="https://linkedin.com/in/nandana-narayan-das" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">LinkedIn</a>
-            <a href="https://github.com/nandana-das" target="_blank" rel="noopener noreferrer" class="doodle-btn" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">GitHub</a>
-            <a href="Resume.pdf" download class="doodle-btn" style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">Resume ↓</a>
+            <a href="https://linkedin.com/in/nandana-narayan-das" target="_blank" rel="noopener noreferrer"
+              class="doodle-btn"
+              style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#C4E4FF;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">LinkedIn</a>
+            <a href="https://github.com/nandana-das" target="_blank" rel="noopener noreferrer" class="doodle-btn"
+              style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#FFF0A8;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">GitHub</a>
+            <a href="Resume.pdf" download class="doodle-btn"
+              style="flex:1;text-align:center;text-decoration:none;font-weight:700;background:#FFC9DE;border:2px solid #4A3326;border-radius:999px;padding:11px;box-shadow:0 4px 0 #4A3326">Resume
+              ↓</a>
           </div>
 
         </div>
       </div>
 
-      <div style="max-width:1180px;margin:0 auto;padding:18px 24px 26px;border-top:2px dashed #4A3326;font-size:14px;font-weight:700;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div
+        style="max-width:1180px;margin:0 auto;padding:18px 24px 26px;border-top:2px dashed #4A3326;font-size:14px;font-weight:700;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <span>© 2026 Nandana Narayan Das</span>
         <span>Made with ♡ and a lot of tea</span>
       </div>
@@ -1546,4 +1954,5 @@
     });
   </script>
 </body>
+
 </html>

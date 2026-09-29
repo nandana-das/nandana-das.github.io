@@ -88,6 +88,7 @@ The portfolio features a warm, playful **Sunlight Doodle / Neo-Brutalist** aesth
     - *Current*: Decision Support Systems · Business Intelligence & Analytics
   - **B.Tech in CSE - AI (7.18 CGPA)** — Adi Shankara Institute of Engineering & Technology, Kalady (2021–2025)
     - *Key Coursework*: Artificial Intelligence · Machine Learning · Deep Learning · NLP · Robotics & Intelligent Systems · Soft Computing · Data Structures & Algorithms
+    - *Prior Schooling*: ISC Class XII — 87.2% · Computer Science: 93% (St. Aloysius Convent I.S.C. School)
 - **1-Click Copy Contact**: Instant clipboard copy utility for direct email outreach.
 
 ---
