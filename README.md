@@ -1,6 +1,6 @@
 # Nandana Narayan Das — Portfolio Website ✿
 
-Personal portfolio website for **Nandana Narayan Das** — AI/ML Researcher & Deep Learning Engineer and M.Tech AI & Data Science Scholar at Alliance University, Bangalore (**8.9 CGPA**). Showcases peer-reviewed scientific publications, deep learning & computer vision pipelines, multi-agent GenAI applications, backend engineering systems, verified credentials, and comprehensive technical competencies.
+Personal portfolio website for **Nandana Narayan Das** — M.Tech AI & Data Science student at Alliance University, Bangalore (expected 2027), AI/ML Researcher, and Deep Learning Engineer. Showcases peer-reviewed scientific publications, deep learning and computer vision pipelines, multi-agent GenAI applications, backend engineering systems, verified credentials, and comprehensive technical competencies.
 
 🎯 **Current Focus**: *Currently exploring AI/ML engineering and applied research opportunities involving deep learning, computer vision, GenAI, and intelligent systems.*
 
@@ -31,24 +31,24 @@ The portfolio features a warm, playful **Sunlight Doodle / Neo-Brutalist** aesth
 
 ## 🌟 Key Features & Sections
 
-- **Hero & Profile**: Illustrated avatar portrait, current affiliation at Alliance University (**8.9 CGPA**), factual opportunity statement, and instant resume download.
-- **Impact Metrics**: Quick stats highlighting 2 research works (1 published, 1 accepted/in press), 9+ projects, current M.Tech track record (**8.9 CGPA** · B.Tech 7.18), and verified certifications.
+- **Hero & Profile**: Illustrated avatar portrait, current affiliation at Alliance University (expected 2027), factual opportunity statement, and instant resume download.
+- **Impact Metrics**: Quick stats highlighting 2 published research works, 9+ projects, current M.Tech track and B.Tech result (7.18 CGPA), and verified certifications.
 - **Scientific Research & Publications**:
   - **Published**: *Explainable AI for Disease Detection and Body Constitution Analysis Using Tongue Imaging* — Published in **IEEE Xplore** ([10.1109/ICTEST65242.2025.11042469](https://ieeexplore.ieee.org/document/11042469)).
     - **Problem**: Subjective clinician variability and lack of standardized visual diagnostics in non-invasive health screening.
     - **Method**: Deep CNN feature extraction coupled with Explainable AI (Grad-CAM & feature attribution) mapped to Traditional Chinese Medicine (TCM) criteria.
     - **Contribution**: Clinician-interpretable visual biomarker mapping (color, coating thickness, texture) with high diagnostic concordance.
-  - **Accepted / In Press**: *Physics-Informed Explainable Multimodal Deep Learning for Satellite-Based Air Pollution Source Attribution in Delhi NCR* — Accepted at **ICTEST 2026** (In Press).
+  - **Published**: *Physics-Informed Explainable Multimodal Deep Learning for Satellite-Based Air Pollution Source Attribution in Delhi NCR* — Published in **IEEE Xplore** as part of **ICTEST 2026** ([IEEE Xplore paper](https://ieeexplore.ieee.org/abstract/document/11722555/)).
     - **Problem**: Disentangling regional aerosol pollution sources (industrial, vehicular, agricultural) in severe atmospheric conditions.
     - **Method**: Multimodal fusion of multispectral satellite remote sensing, ground sensor telemetry, and Physics-Informed Neural Networks (PINNs).
     - **Contribution**: Physics-constrained source attribution preserving aerosol transport physics with actionable spatial interpretability.
 - **Structured Project Hierarchy & Selected Results**:
 
   ### 🔭 Research & Deep Learning
-  1. [**Lunar Boulder Detection from Chandrayaan-2 OHRC Imagery**](https://github.com/nandana-das/chandrayaan-2-ohrc-boulder-detection): Computer-vision pipeline for Chandrayaan-2 OHRC imagery, covering PDS4 preprocessing, 640×640 tiling, dataset preparation, and boulder detection using multiple object-detection models.
+  1. [**Lunar Boulder Detection from Chandrayaan-2 OHRC Imagery**](https://github.com/nandana-das/lunar-landslide-boulder-detection): Computer-vision pipeline for Chandrayaan-2 OHRC imagery, covering PDS4 preprocessing, 640×640 tiling, dataset preparation, and boulder detection using YOLO26n, YOLOv8n, YOLOv5s, and RT-DETR.
      - *Selected Results*: `640×640 OHRC tiling · 4 detector architectures · Regional inference analysis`
      - *Stack*: `YOLO · RT-DETR · PyTorch · Remote Sensing`
-  2. [**Smart City Traffic Prediction & Decision Support**](https://github.com/nandana-das/smart-city-traffic-prediction): End-to-end traffic prediction system using live traffic data, temporal and weather features, sliding-window sequences, LSTM forecasting, and an interactive web interface.
+  2. [**Smart City Traffic Prediction & Decision Support**](https://github.com/nandana-das/smart-city-traffic-ai-bengaluru): End-to-end traffic prediction system using live TomTom traffic data, temporal and weather features, sliding-window sequences, LSTM forecasting, and an interactive web interface.
      - *Selected Results*: `Live API ingest · Sliding-window LSTM · Interactive web dashboard`
      - *Stack*: `LSTM · FastAPI · React · TomTom API`
   3. [**ISRO Knowledge Graph RAG**](https://github.com/nandana-das/isro-knowledge-graph-rag): Knowledge Graph RAG system for querying ISRO mission documentation using entity extraction, graph retrieval, FAISS vector search, and local LLM inference.
@@ -83,7 +83,7 @@ The portfolio features a warm, playful **Sunlight Doodle / Neo-Brutalist** aesth
 - **Skills Toolbox**: Categorized into LLM & GenAI, Computer Vision, ML/DL & XAI, Data & Analytics, Languages & Tools, and Backend & Frameworks.
 - **Verified Certifications**: Featured credentials from Oracle, IBM, KNIME, and GitHub, alongside Microsoft & LinkedIn, LinkedIn Learning, and Infosys.
 - **Education & Relevant Coursework**:
-  - **M.Tech in AI & Data Science (8.9 CGPA)** — Alliance University, Bangalore (2025–2027)
+  - **M.Tech in AI & Data Science (Expected 2027)** — Alliance University, Bangalore (2025–2027)
     - *Key Coursework*: Applied Probability & Statistics · High Performance Computing for Big Data · Predictive Analysis · Cognitive AI · Human Machine Interaction · Virtual Reality
     - *Current*: Decision Support Systems · Business Intelligence & Analytics
   - **B.Tech in CSE - AI (7.18 CGPA)** — Adi Shankara Institute of Engineering & Technology, Kalady (2021–2025)
